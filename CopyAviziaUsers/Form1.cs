@@ -38,12 +38,64 @@ namespace CopyAviziaUsers
 
         private void btnGetMisingGroups_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                DataTable dtGroupFrom = dbCommandsFrom.GetGroupsList();
+                DataTable dtGroupTo = dbCommandsTo.GetGroupsList();
+                DataTable dtMissingGroups = dtGroupFrom.Clone();
+                foreach (DataRow dr in dtGroupFrom.Rows)
+                {
+                    string vrGroupName = dr["GroupName"].ToString().Replace("'", "");
+                    DataRow[] dr2 = dtGroupTo.Select("GroupName = '" + vrGroupName + "'");
+                    if (dr2.Count() == 0)
+                    {
+                        dtMissingGroups.ImportRow(dr);
+                    }
+                }
+                gvMissingGroups.DataSource = null;
+                gvMissingGroups.Refresh();
+                gvMissingGroups.DataSource = dtMissingGroups;
+                lblTotalMissingGroups.Text = "Missing Groups Count :" + dtMissingGroups.Rows.Count.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnLoadMissingUsers_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DataTable dtUsersFrom = dbCommandsFrom.GetStaffUsersList();
+                DataTable dtUsersTo = dbCommandsTo.GetStaffUsersList();
+                DataTable dtMissingUsers = dtUsersFrom.Clone();
+                foreach (DataRow dr in dtUsersFrom.Rows)
+                {
+                    string vrGroupName = dr["UserName"].ToString().Replace("'", "");
+                    DataRow[] dr2 = dtUsersTo.Select("UserName = '" + vrGroupName + "'");
+                    if (dr2.Count() == 0)
+                    {
+                        dtMissingUsers.ImportRow(dr);
+                    }
+                }
+                gvMissingUsers.DataSource = null;
+                gvMissingUsers.Refresh();
+                gvMissingUsers.DataSource = dtMissingUsers;
+                lblMissingUsersCount.Text = "Missing Users Count :" + dtMissingUsers.Rows.Count.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void gvMissingGroups_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                DataGridViewRow dr = gvMissingGroups.Rows[e.RowIndex];
+            }
         }
     }
 }

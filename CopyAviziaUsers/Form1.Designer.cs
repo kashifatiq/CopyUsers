@@ -30,7 +30,7 @@
         {
             this.btnGetMisingGroups = new System.Windows.Forms.Button();
             this.btnLoadMissingUsers = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.gvMissingUsers = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtTotalUsersTo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,17 +46,24 @@
             this.txtTotalGroupsTo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.gvMissingGroups = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.btnCopyGroup = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTotalMissingGroups = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblMissingUsersCount = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gvMissingUsers)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvMissingGroups)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGetMisingGroups
             // 
-            this.btnGetMisingGroups.Location = new System.Drawing.Point(3, 23);
+            this.btnGetMisingGroups.Location = new System.Drawing.Point(3, 3);
             this.btnGetMisingGroups.Name = "btnGetMisingGroups";
-            this.btnGetMisingGroups.Size = new System.Drawing.Size(231, 24);
+            this.btnGetMisingGroups.Size = new System.Drawing.Size(229, 24);
             this.btnGetMisingGroups.TabIndex = 0;
             this.btnGetMisingGroups.Text = "Load Missing Groups from (TO) database";
             this.btnGetMisingGroups.UseVisualStyleBackColor = true;
@@ -64,22 +71,22 @@
             // 
             // btnLoadMissingUsers
             // 
-            this.btnLoadMissingUsers.Location = new System.Drawing.Point(3, 282);
+            this.btnLoadMissingUsers.Location = new System.Drawing.Point(3, 3);
             this.btnLoadMissingUsers.Name = "btnLoadMissingUsers";
-            this.btnLoadMissingUsers.Size = new System.Drawing.Size(231, 24);
+            this.btnLoadMissingUsers.Size = new System.Drawing.Size(229, 24);
             this.btnLoadMissingUsers.TabIndex = 2;
             this.btnLoadMissingUsers.Text = "Load Missing Users from (TO) database";
             this.btnLoadMissingUsers.UseVisualStyleBackColor = true;
             this.btnLoadMissingUsers.Click += new System.EventHandler(this.btnLoadMissingUsers_Click);
             // 
-            // dataGridView2
+            // gvMissingUsers
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 312);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1290, 204);
-            this.dataGridView2.TabIndex = 3;
+            this.gvMissingUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvMissingUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvMissingUsers.Location = new System.Drawing.Point(3, 354);
+            this.gvMissingUsers.Name = "gvMissingUsers";
+            this.gvMissingUsers.Size = new System.Drawing.Size(1290, 229);
+            this.gvMissingUsers.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
@@ -252,37 +259,100 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.btnGetMisingGroups, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.gvMissingGroups, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView2, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.btnLoadMissingUsers, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.gvMissingUsers, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 93);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1296, 519);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1296, 586);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // gvMissingGroups
             // 
             this.gvMissingGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvMissingGroups.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnCopyGroup});
             this.gvMissingGroups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvMissingGroups.Location = new System.Drawing.Point(3, 53);
+            this.gvMissingGroups.Location = new System.Drawing.Point(3, 60);
             this.gvMissingGroups.Name = "gvMissingGroups";
-            this.gvMissingGroups.Size = new System.Drawing.Size(1290, 203);
+            this.gvMissingGroups.Size = new System.Drawing.Size(1290, 228);
             this.gvMissingGroups.TabIndex = 2;
+            this.gvMissingGroups.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMissingGroups_CellContentClick);
+            // 
+            // btnCopyGroup
+            // 
+            this.btnCopyGroup.HeaderText = "CopyGroup";
+            this.btnCopyGroup.Name = "btnCopyGroup";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 930F));
+            this.tableLayoutPanel3.Controls.Add(this.btnGetMisingGroups, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lblTotalMissingGroups, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 23);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1290, 31);
+            this.tableLayoutPanel3.TabIndex = 4;
+            // 
+            // lblTotalMissingGroups
+            // 
+            this.lblTotalMissingGroups.AutoSize = true;
+            this.lblTotalMissingGroups.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTotalMissingGroups.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalMissingGroups.Location = new System.Drawing.Point(238, 0);
+            this.lblTotalMissingGroups.Name = "lblTotalMissingGroups";
+            this.lblTotalMissingGroups.Size = new System.Drawing.Size(116, 31);
+            this.lblTotalMissingGroups.TabIndex = 1;
+            this.lblTotalMissingGroups.Text = "Missing Groups Count :";
+            this.lblTotalMissingGroups.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.lblMissingUsersCount, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnLoadMissingUsers, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 314);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1290, 34);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // lblMissingUsersCount
+            // 
+            this.lblMissingUsersCount.AutoSize = true;
+            this.lblMissingUsersCount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblMissingUsersCount.ForeColor = System.Drawing.Color.Red;
+            this.lblMissingUsersCount.Location = new System.Drawing.Point(238, 0);
+            this.lblMissingUsersCount.Name = "lblMissingUsersCount";
+            this.lblMissingUsersCount.Size = new System.Drawing.Size(109, 34);
+            this.lblMissingUsersCount.TabIndex = 3;
+            this.lblMissingUsersCount.Text = "Missing Users Count :";
+            this.lblMissingUsersCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 612);
+            this.ClientSize = new System.Drawing.Size(1296, 679);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
@@ -290,11 +360,15 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvMissingUsers)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvMissingGroups)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -303,7 +377,7 @@
 
         private System.Windows.Forms.Button btnGetMisingGroups;
         private System.Windows.Forms.Button btnLoadMissingUsers;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView gvMissingUsers;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDbFromCon;
@@ -319,6 +393,11 @@
         private System.Windows.Forms.TextBox txtTotalGroupsTo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView gvMissingGroups;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lblTotalMissingGroups;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label lblMissingUsersCount;
+        private System.Windows.Forms.DataGridViewButtonColumn btnCopyGroup;
     }
 }
 

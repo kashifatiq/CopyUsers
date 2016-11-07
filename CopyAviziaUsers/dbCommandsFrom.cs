@@ -15,8 +15,9 @@ namespace CopyAviziaUsers
             DataTable dt = new DataTable();
             try
             {
+                
                 DbConnection.con1.Open();
-                SqlCommand cmd = new SqlCommand("select (select COUNT(1) from AppSettings) StaffUsersCount, (select COUNT(1) from BredadaOrderItems) GroupsCount", DbConnection.con1);
+                SqlCommand cmd = new SqlCommand(Helpers.QueryForCounters, DbConnection.con1);
                 SqlDataAdapter dap = new SqlDataAdapter(cmd);
                 dap.Fill(dt);
                 return dt;
@@ -26,13 +27,30 @@ namespace CopyAviziaUsers
                 DbConnection.con1.Close();
             }
         }
-        public static DataTable GetUsersList()
+        public static DataTable GetGroupsList()
         {
             DataTable dt = new DataTable();
             try
             {
                 DbConnection.con1.Open();
-                SqlCommand cmd = new SqlCommand("select * from AppSettings", DbConnection.con1);
+                SqlCommand cmd = new SqlCommand(Helpers.QueryForAllGroups, DbConnection.con1);
+                SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                dap.Fill(dt);
+                return dt;
+            }
+            finally
+            {
+                DbConnection.con1.Close();
+            }
+        }
+
+        public static DataTable GetStaffUsersList()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                DbConnection.con1.Open();
+                SqlCommand cmd = new SqlCommand(Helpers.QueryForAllStaffUsers, DbConnection.con1);
                 SqlDataAdapter dap = new SqlDataAdapter(cmd);
                 dap.Fill(dt);
                 return dt;

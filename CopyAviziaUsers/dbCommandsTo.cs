@@ -19,7 +19,7 @@ namespace CopyAviziaUsers
             try
             {
                 DbConnection.con2.Open();
-                SqlCommand cmd = new SqlCommand("select (select COUNT(1) from AppSettings) StaffUsersCount, (select COUNT(1) from BredadaOrderItems) GroupsCount", DbConnection.con2);
+                SqlCommand cmd = new SqlCommand(Helpers.QueryForCounters, DbConnection.con2);
                 SqlDataAdapter dap = new SqlDataAdapter(cmd);
                 dap.Fill(dt);
                 return dt;
@@ -34,26 +34,37 @@ namespace CopyAviziaUsers
                 DbConnection.con2.Close();
             }
         }
-        public static DataTable GetUsersList()
+        public static DataTable GetGroupsList()
         {
-            Exception = null;
             DataTable dt = new DataTable();
             try
             {
-                DbConnection.con1.Open();
-                SqlCommand cmd = new SqlCommand("select * from AppSettings", DbConnection.con2);
+                DbConnection.con2.Open();
+                SqlCommand cmd = new SqlCommand(Helpers.QueryForAllGroups, DbConnection.con2);
                 SqlDataAdapter dap = new SqlDataAdapter(cmd);
                 dap.Fill(dt);
                 return dt;
             }
-            catch (Exception ex)
+            finally
             {
-                Exception = ex;
+                DbConnection.con2.Close();
+            }
+        }
+
+        public static DataTable GetStaffUsersList()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                DbConnection.con2.Open();
+                SqlCommand cmd = new SqlCommand(Helpers.QueryForAllStaffUsers, DbConnection.con2);
+                SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                dap.Fill(dt);
                 return dt;
             }
             finally
             {
-                DbConnection.con1.Close();
+                DbConnection.con2.Close();
             }
         }
 
@@ -63,7 +74,7 @@ namespace CopyAviziaUsers
             DataTable dt = new DataTable();
             try
             {
-                DbConnection.con1.Open();
+                DbConnection.con2.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO AppSettings (SettingKey, SettingValue) VALUES ('test','test')", DbConnection.con2);
                 SqlDataAdapter dap = new SqlDataAdapter(cmd);
                 dap.Fill(dt);
@@ -75,7 +86,7 @@ namespace CopyAviziaUsers
             }
             finally
             {
-                DbConnection.con1.Close();
+                DbConnection.con2.Close();
             }
         }
     }
