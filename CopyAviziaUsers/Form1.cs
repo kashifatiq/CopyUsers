@@ -38,6 +38,11 @@ namespace CopyAviziaUsers
 
         private void btnGetMisingGroups_Click(object sender, EventArgs e)
         {
+            GetMissingGroups();
+        }
+
+        private void GetMissingGroups()
+        {
             try
             {
                 DataTable dtGroupFrom = dbCommandsFrom.GetGroupsList();
@@ -92,9 +97,62 @@ namespace CopyAviziaUsers
 
         private void gvMissingGroups_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 0)
+            try
             {
-                DataGridViewRow dr = gvMissingGroups.Rows[e.RowIndex];
+                if (e.ColumnIndex == 0)
+                {
+
+                    DataGridViewRow dr = gvMissingGroups.Rows[e.RowIndex];
+                    Byte[] binaryimagevalue = null;
+                    if (!string.IsNullOrEmpty(dr.Cells["binaryimagevalue"].Value.ToString()))
+                        binaryimagevalue = (byte[])dr.Cells["binaryimagevalue"].Value;
+                    dbCommandsTo.CreateUser(dr.Cells["groupname"].Value.ToString().Replace("'",""),
+                                          dr.Cells["description"].Value.ToString().Replace("'",""),
+                                          Convert.ToBoolean(dr.Cells["ispublic"].Value),
+                                          Convert.ToInt32(dr.Cells["membershiptermindays"].Value),
+                                          Convert.ToBoolean(dr.Cells["isdomain"].Value),
+                                          Convert.ToInt32(dr.Cells["defaultrole"].Value),
+                                          Convert.ToInt32(dr.Cells["isregistrationdefault"].Value),
+                                          dr.Cells["customattributes"].Value.ToString()
+                                          , (dr.Cells["inviteemailtext"].Value == null) ? null : dr.Cells["inviteemailtext"].Value.ToString()
+                                          , (dr.Cells["termsofuse"].Value == null) ? null : dr.Cells["termsofuse"].Value.ToString()
+                                          , (dr.Cells["iconurl"].Value == null) ? null : dr.Cells["iconurl"].Value.ToString()
+                                          , (string.IsNullOrEmpty(dr.Cells["isenduserregistrationdefault"].Value.ToString())) ? 0 : Convert.ToInt32(dr.Cells["isenduserregistrationdefault"].Value)
+                                          , (string.IsNullOrEmpty(dr.Cells["isstaffregistrationdefault"].Value.ToString())) ? 0 : Convert.ToInt32(dr.Cells["isstaffregistrationdefault"].Value),
+                                            (string.IsNullOrEmpty(dr.Cells["isopen"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["isopen"].Value),
+                                            Convert.ToBoolean(dr.Cells["ispatientcareteam"].Value)
+                                        , dr.Cells["imageurl"].Value.ToString()
+                                        , (string.IsNullOrEmpty(dr.Cells["isopenstaff"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["isopenstaff"].Value)
+                                        , (string.IsNullOrEmpty(dr.Cells["isserviceline"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["isserviceline"].Value)
+                                        , (string.IsNullOrEmpty(dr.Cells["iscommunity"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["iscommunity"].Value)
+                                        , (string.IsNullOrEmpty(dr.Cells["iscoregroup"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["iscoregroup"].Value),
+                                        dr.Cells["faxnumber"].Value.ToString(),
+                                        dr.Cells["facilityid"].Value.ToString()
+                                        , (string.IsNullOrEmpty(dr.Cells["displayorder"].Value.ToString())) ? 0 : Convert.ToInt32(dr.Cells["displayorder"].Value),
+                                        dr.Cells["copaydiscount"].Value.ToString(),
+                                        dr.Cells["servicelinecopayamount"].Value.ToString()
+                                        , binaryimagevalue
+                                        , dr.Cells["providernotetemplate"].Value.ToString(),
+                                        (string.IsNullOrEmpty(dr.Cells["minutesbeforeescalating"].Value.ToString())) ? null : (global::System.Nullable<int>)dr.Cells["minutesbeforeescalating"].Value,
+                                        dr.Cells["customcss"].Value.ToString()
+                                        , (string.IsNullOrEmpty(dr.Cells["minutesbeforeadminescalating"].Value.ToString())) ? null : (global::System.Nullable<int>)dr.Cells["minutesbeforeadminescalating"].Value
+                                        , (string.IsNullOrEmpty(dr.Cells["checkforoncalldoctor"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["checkforoncalldoctor"].Value),
+                                        dr.Cells["offdutywarningmessage"].Value.ToString(),
+                                        dr.Cells["nofuturescheduleswarningmessage"].Value.ToString(),
+                                        dr.Cells["apptremindernoticetextpatient"].Value.ToString(),
+                                        dr.Cells["apptremindernoticeperiodpatient"].Value.ToString(),
+                                        dr.Cells["apptremindernoticetextstaff"].Value.ToString(),
+                                        dr.Cells["apptremindernoticeperiodstaff"].Value.ToString()
+                                        , (string.IsNullOrEmpty(dr.Cells["ispagerequired"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["ispagerequired"].Value)
+                                        , (string.IsNullOrEmpty(dr.Cells["isenableforcart"].Value.ToString())) ? false : Convert.ToBoolean(dr.Cells["isenableforcart"].Value),
+                                        dr.Cells["atomiconurl"].Value.ToString()
+                                          );
+                    GetMissingGroups();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

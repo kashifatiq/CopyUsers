@@ -48,6 +48,20 @@
     <Compile Include="dbCommandsTo.cs" />
     <Compile Include="dbCommandsFrom.cs" />
     <Compile Include="DbConnection.cs" />
+    <Compile Include="DsFrom.cs">
+      <DependentUpon>DsFrom.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DsFrom.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsFrom.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsTo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsTo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +83,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DsFrom.xsc">
+      <DependentUpon>DsFrom.xsd</DependentUpon>
+    </None>
+    <None Include="DsFrom.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsFrom.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsFrom.xss">
+      <DependentUpon>DsFrom.xsd</DependentUpon>
+    </None>
+    <None Include="DsTo.xsc">
+      <DependentUpon>DsTo.xsd</DependentUpon>
+    </None>
+    <None Include="DsTo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsTo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsTo.xss">
+      <DependentUpon>DsTo.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db changes\zz_CopyGroup.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

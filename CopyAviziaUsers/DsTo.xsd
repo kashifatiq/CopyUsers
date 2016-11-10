@@ -1,0 +1,1086 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsTo" targetNamespace="http://tempuri.org/DsTo.xsd" xmlns:mstns="http://tempuri.org/DsTo.xsd" xmlns="http://tempuri.org/DsTo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConStrTo" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConStrTo (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CopyAviziaUsers.Properties.Settings.GlobalReference.Default.ConStrTo" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ToCountersTableAdapter" GeneratorDataComponentClassName="ToCountersTableAdapter" Name="ToCounters" UserDataComponentName="ToCountersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConStrTo (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select (SELECT count(rz_User.UserID) FROM rz_User INNER JOIN rz_UserRoles ON rz_User.UserID = rz_UserRoles.UserID where Role = 2) StaffUsersCount,(select count(1) from rz_Group) GroupsCount</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StaffUsersCount" DataSetColumn="StaffUsersCount" />
+              <Mapping SourceColumn="GroupsCount" DataSetColumn="GroupsCount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="rz_GroupTableAdapter" GeneratorDataComponentClassName="rz_GroupTableAdapter" Name="rz_Group" UserDataComponentName="rz_GroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConStrTo (Settings)" DbObjectName="consult_phx_dev.dbo.rz_Group" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [rz_Group] WHERE (([GroupID] = @Original_GroupID) AND ((@IsNull_GroupName = 1 AND [GroupName] IS NULL) OR ([GroupName] = @Original_GroupName)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_IsPublic = 1 AND [IsPublic] IS NULL) OR ([IsPublic] = @Original_IsPublic)) AND ((@IsNull_MembershipTermInDays = 1 AND [MembershipTermInDays] IS NULL) OR ([MembershipTermInDays] = @Original_MembershipTermInDays)) AND ((@IsNull_IsDomain = 1 AND [IsDomain] IS NULL) OR ([IsDomain] = @Original_IsDomain)) AND ((@IsNull_DefaultRole = 1 AND [DefaultRole] IS NULL) OR ([DefaultRole] = @Original_DefaultRole)) AND ((@IsNull_IsRegistrationDefault = 1 AND [IsRegistrationDefault] IS NULL) OR ([IsRegistrationDefault] = @Original_IsRegistrationDefault)) AND ((@IsNull_IconUrl = 1 AND [IconUrl] IS NULL) OR ([IconUrl] = @Original_IconUrl)) AND ((@IsNull_IsEndUserRegistrationDefault = 1 AND [IsEndUserRegistrationDefault] IS NULL) OR ([IsEndUserRegistrationDefault] = @Original_IsEndUserRegistrationDefault)) AND ((@IsNull_IsStaffRegistrationDefault = 1 AND [IsStaffRegistrationDefault] IS NULL) OR ([IsStaffRegistrationDefault] = @Original_IsStaffRegistrationDefault)) AND ((@IsNull_IsOpen = 1 AND [IsOpen] IS NULL) OR ([IsOpen] = @Original_IsOpen)) AND ([IsPatientCareTeam] = @Original_IsPatientCareTeam) AND ((@IsNull_ImageUrl = 1 AND [ImageUrl] IS NULL) OR ([ImageUrl] = @Original_ImageUrl)) AND ((@IsNull_IsOpenStaff = 1 AND [IsOpenStaff] IS NULL) OR ([IsOpenStaff] = @Original_IsOpenStaff)) AND ([IsServiceLine] = @Original_IsServiceLine) AND ([IsCommunity] = @Original_IsCommunity) AND ([IsCoreGroup] = @Original_IsCoreGroup) AND ((@IsNull_FaxNumber = 1 AND [FaxNumber] IS NULL) OR ([FaxNumber] = @Original_FaxNumber)) AND ((@IsNull_FacilityID = 1 AND [FacilityID] IS NULL) OR ([FacilityID] = @Original_FacilityID)) AND ((@IsNull_DisplayOrder = 1 AND [DisplayOrder] IS NULL) OR ([DisplayOrder] = @Original_DisplayOrder)) AND ((@IsNull_CopayDiscount = 1 AND [CopayDiscount] IS NULL) OR ([CopayDiscount] = @Original_CopayDiscount)) AND ((@IsNull_ServiceLineCopayAmount = 1 AND [ServiceLineCopayAmount] IS NULL) OR ([ServiceLineCopayAmount] = @Original_ServiceLineCopayAmount)) AND ((@IsNull_MinutesBeforeEscalating = 1 AND [MinutesBeforeEscalating] IS NULL) OR ([MinutesBeforeEscalating] = @Original_MinutesBeforeEscalating)) AND ((@IsNull_MinutesBeforeAdminEscalating = 1 AND [MinutesBeforeAdminEscalating] IS NULL) OR ([MinutesBeforeAdminEscalating] = @Original_MinutesBeforeAdminEscalating)) AND ([CheckForOnCallDoctor] = @Original_CheckForOnCallDoctor))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GroupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GroupID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GroupName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GroupName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GroupName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GroupName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsPublic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsPublic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MembershipTermInDays" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MembershipTermInDays" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MembershipTermInDays" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MembershipTermInDays" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsDomain" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsDomain" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsDomain" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsDomain" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DefaultRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultRole" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DefaultRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultRole" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsRegistrationDefault" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IsRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IconUrl" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IconUrl" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IconUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IconUrl" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsEndUserRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEndUserRegistrationDefault" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IsEndUserRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEndUserRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsStaffRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsStaffRegistrationDefault" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IsStaffRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsStaffRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsOpen" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsOpen" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsOpen" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpen" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPatientCareTeam" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPatientCareTeam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ImageUrl" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ImageUrl" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ImageUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ImageUrl" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsOpenStaff" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsOpenStaff" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsOpenStaff" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpenStaff" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsServiceLine" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsServiceLine" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsCommunity" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCommunity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsCoreGroup" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCoreGroup" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FaxNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FaxNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FaxNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FaxNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FacilityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FacilityID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FacilityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FacilityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DisplayOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DisplayOrder" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DisplayOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DisplayOrder" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CopayDiscount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CopayDiscount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CopayDiscount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CopayDiscount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ServiceLineCopayAmount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ServiceLineCopayAmount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ServiceLineCopayAmount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceLineCopayAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MinutesBeforeEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeEscalating" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MinutesBeforeEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeEscalating" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MinutesBeforeAdminEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeAdminEscalating" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MinutesBeforeAdminEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeAdminEscalating" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_CheckForOnCallDoctor" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CheckForOnCallDoctor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [rz_Group] ([GroupName], [Description], [DateCreated], [CreatedBy], [IsPublic], [MembershipTermInDays], [IsDomain], [DefaultRole], [IsRegistrationDefault], [CustomAttributes], [InviteEmailText], [TermsOfUse], [IconUrl], [IsEndUserRegistrationDefault], [IsStaffRegistrationDefault], [IsOpen], [IsPatientCareTeam], [ImageUrl], [IsOpenStaff], [IsServiceLine], [IsCommunity], [IsCoreGroup], [FaxNumber], [FacilityID], [DisplayOrder], [CopayDiscount], [ServiceLineCopayAmount], [BinaryImageValue], [ProviderNoteTemplate], [MinutesBeforeEscalating], [CustomCSS], [MinutesBeforeAdminEscalating], [CheckForOnCallDoctor], [OffDutyWarningMessage], [NoFutureSchedulesWarningMessage]) VALUES (@GroupName, @Description, @DateCreated, @CreatedBy, @IsPublic, @MembershipTermInDays, @IsDomain, @DefaultRole, @IsRegistrationDefault, @CustomAttributes, @InviteEmailText, @TermsOfUse, @IconUrl, @IsEndUserRegistrationDefault, @IsStaffRegistrationDefault, @IsOpen, @IsPatientCareTeam, @ImageUrl, @IsOpenStaff, @IsServiceLine, @IsCommunity, @IsCoreGroup, @FaxNumber, @FacilityID, @DisplayOrder, @CopayDiscount, @ServiceLineCopayAmount, @BinaryImageValue, @ProviderNoteTemplate, @MinutesBeforeEscalating, @CustomCSS, @MinutesBeforeAdminEscalating, @CheckForOnCallDoctor, @OffDutyWarningMessage, @NoFutureSchedulesWarningMessage);
+SELECT GroupID, GroupName, Description, DateCreated, CreatedBy, IsPublic, MembershipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault, CustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDefault, IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenStaff, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrder, CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate, MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCallDoctor, OffDutyWarningMessage, NoFutureSchedulesWarningMessage FROM rz_Group WHERE (GroupID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GroupName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GroupName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MembershipTermInDays" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MembershipTermInDays" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsDomain" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsDomain" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DefaultRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultRole" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Xml" Direction="Input" ParameterName="@CustomAttributes" Precision="0" ProviderType="Xml" Scale="0" Size="0" SourceColumn="CustomAttributes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@InviteEmailText" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="InviteEmailText" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TermsOfUse" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TermsOfUse" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IconUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IconUrl" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsEndUserRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEndUserRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsStaffRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsStaffRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsOpen" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpen" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPatientCareTeam" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPatientCareTeam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ImageUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ImageUrl" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsOpenStaff" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpenStaff" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsServiceLine" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsServiceLine" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsCommunity" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCommunity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsCoreGroup" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCoreGroup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FaxNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FaxNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FacilityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FacilityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DisplayOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DisplayOrder" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CopayDiscount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CopayDiscount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ServiceLineCopayAmount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceLineCopayAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@BinaryImageValue" Precision="0" ProviderType="VarBinary" Scale="0" Size="0" SourceColumn="BinaryImageValue" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ProviderNoteTemplate" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProviderNoteTemplate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MinutesBeforeEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeEscalating" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CustomCSS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CustomCSS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MinutesBeforeAdminEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeAdminEscalating" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@CheckForOnCallDoctor" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CheckForOnCallDoctor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@OffDutyWarningMessage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="OffDutyWarningMessage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@NoFutureSchedulesWarningMessage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NoFutureSchedulesWarningMessage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select * from rz_Group</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [rz_Group] SET [GroupName] = @GroupName, [Description] = @Description, [DateCreated] = @DateCreated, [CreatedBy] = @CreatedBy, [IsPublic] = @IsPublic, [MembershipTermInDays] = @MembershipTermInDays, [IsDomain] = @IsDomain, [DefaultRole] = @DefaultRole, [IsRegistrationDefault] = @IsRegistrationDefault, [CustomAttributes] = @CustomAttributes, [InviteEmailText] = @InviteEmailText, [TermsOfUse] = @TermsOfUse, [IconUrl] = @IconUrl, [IsEndUserRegistrationDefault] = @IsEndUserRegistrationDefault, [IsStaffRegistrationDefault] = @IsStaffRegistrationDefault, [IsOpen] = @IsOpen, [IsPatientCareTeam] = @IsPatientCareTeam, [ImageUrl] = @ImageUrl, [IsOpenStaff] = @IsOpenStaff, [IsServiceLine] = @IsServiceLine, [IsCommunity] = @IsCommunity, [IsCoreGroup] = @IsCoreGroup, [FaxNumber] = @FaxNumber, [FacilityID] = @FacilityID, [DisplayOrder] = @DisplayOrder, [CopayDiscount] = @CopayDiscount, [ServiceLineCopayAmount] = @ServiceLineCopayAmount, [BinaryImageValue] = @BinaryImageValue, [ProviderNoteTemplate] = @ProviderNoteTemplate, [MinutesBeforeEscalating] = @MinutesBeforeEscalating, [CustomCSS] = @CustomCSS, [MinutesBeforeAdminEscalating] = @MinutesBeforeAdminEscalating, [CheckForOnCallDoctor] = @CheckForOnCallDoctor, [OffDutyWarningMessage] = @OffDutyWarningMessage, [NoFutureSchedulesWarningMessage] = @NoFutureSchedulesWarningMessage WHERE (([GroupID] = @Original_GroupID) AND ((@IsNull_GroupName = 1 AND [GroupName] IS NULL) OR ([GroupName] = @Original_GroupName)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_IsPublic = 1 AND [IsPublic] IS NULL) OR ([IsPublic] = @Original_IsPublic)) AND ((@IsNull_MembershipTermInDays = 1 AND [MembershipTermInDays] IS NULL) OR ([MembershipTermInDays] = @Original_MembershipTermInDays)) AND ((@IsNull_IsDomain = 1 AND [IsDomain] IS NULL) OR ([IsDomain] = @Original_IsDomain)) AND ((@IsNull_DefaultRole = 1 AND [DefaultRole] IS NULL) OR ([DefaultRole] = @Original_DefaultRole)) AND ((@IsNull_IsRegistrationDefault = 1 AND [IsRegistrationDefault] IS NULL) OR ([IsRegistrationDefault] = @Original_IsRegistrationDefault)) AND ((@IsNull_IconUrl = 1 AND [IconUrl] IS NULL) OR ([IconUrl] = @Original_IconUrl)) AND ((@IsNull_IsEndUserRegistrationDefault = 1 AND [IsEndUserRegistrationDefault] IS NULL) OR ([IsEndUserRegistrationDefault] = @Original_IsEndUserRegistrationDefault)) AND ((@IsNull_IsStaffRegistrationDefault = 1 AND [IsStaffRegistrationDefault] IS NULL) OR ([IsStaffRegistrationDefault] = @Original_IsStaffRegistrationDefault)) AND ((@IsNull_IsOpen = 1 AND [IsOpen] IS NULL) OR ([IsOpen] = @Original_IsOpen)) AND ([IsPatientCareTeam] = @Original_IsPatientCareTeam) AND ((@IsNull_ImageUrl = 1 AND [ImageUrl] IS NULL) OR ([ImageUrl] = @Original_ImageUrl)) AND ((@IsNull_IsOpenStaff = 1 AND [IsOpenStaff] IS NULL) OR ([IsOpenStaff] = @Original_IsOpenStaff)) AND ([IsServiceLine] = @Original_IsServiceLine) AND ([IsCommunity] = @Original_IsCommunity) AND ([IsCoreGroup] = @Original_IsCoreGroup) AND ((@IsNull_FaxNumber = 1 AND [FaxNumber] IS NULL) OR ([FaxNumber] = @Original_FaxNumber)) AND ((@IsNull_FacilityID = 1 AND [FacilityID] IS NULL) OR ([FacilityID] = @Original_FacilityID)) AND ((@IsNull_DisplayOrder = 1 AND [DisplayOrder] IS NULL) OR ([DisplayOrder] = @Original_DisplayOrder)) AND ((@IsNull_CopayDiscount = 1 AND [CopayDiscount] IS NULL) OR ([CopayDiscount] = @Original_CopayDiscount)) AND ((@IsNull_ServiceLineCopayAmount = 1 AND [ServiceLineCopayAmount] IS NULL) OR ([ServiceLineCopayAmount] = @Original_ServiceLineCopayAmount)) AND ((@IsNull_MinutesBeforeEscalating = 1 AND [MinutesBeforeEscalating] IS NULL) OR ([MinutesBeforeEscalating] = @Original_MinutesBeforeEscalating)) AND ((@IsNull_MinutesBeforeAdminEscalating = 1 AND [MinutesBeforeAdminEscalating] IS NULL) OR ([MinutesBeforeAdminEscalating] = @Original_MinutesBeforeAdminEscalating)) AND ([CheckForOnCallDoctor] = @Original_CheckForOnCallDoctor));
+SELECT GroupID, GroupName, Description, DateCreated, CreatedBy, IsPublic, MembershipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault, CustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDefault, IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenStaff, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrder, CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate, MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCallDoctor, OffDutyWarningMessage, NoFutureSchedulesWarningMessage FROM rz_Group WHERE (GroupID = @GroupID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GroupName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GroupName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MembershipTermInDays" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MembershipTermInDays" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsDomain" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsDomain" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DefaultRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultRole" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Xml" Direction="Input" ParameterName="@CustomAttributes" Precision="0" ProviderType="Xml" Scale="0" Size="0" SourceColumn="CustomAttributes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@InviteEmailText" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="InviteEmailText" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TermsOfUse" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TermsOfUse" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IconUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IconUrl" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsEndUserRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEndUserRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsStaffRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsStaffRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsOpen" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpen" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPatientCareTeam" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPatientCareTeam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ImageUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ImageUrl" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsOpenStaff" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpenStaff" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsServiceLine" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsServiceLine" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsCommunity" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCommunity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsCoreGroup" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCoreGroup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FaxNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FaxNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FacilityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FacilityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DisplayOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DisplayOrder" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CopayDiscount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CopayDiscount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ServiceLineCopayAmount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceLineCopayAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@BinaryImageValue" Precision="0" ProviderType="VarBinary" Scale="0" Size="0" SourceColumn="BinaryImageValue" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ProviderNoteTemplate" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProviderNoteTemplate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MinutesBeforeEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeEscalating" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CustomCSS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CustomCSS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MinutesBeforeAdminEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeAdminEscalating" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@CheckForOnCallDoctor" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CheckForOnCallDoctor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@OffDutyWarningMessage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="OffDutyWarningMessage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@NoFutureSchedulesWarningMessage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NoFutureSchedulesWarningMessage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GroupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GroupID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GroupName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GroupName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GroupName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GroupName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreated" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateCreated" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsPublic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsPublic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MembershipTermInDays" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MembershipTermInDays" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MembershipTermInDays" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MembershipTermInDays" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsDomain" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsDomain" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsDomain" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsDomain" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DefaultRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultRole" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DefaultRole" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultRole" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsRegistrationDefault" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IsRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IconUrl" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IconUrl" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IconUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IconUrl" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsEndUserRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEndUserRegistrationDefault" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IsEndUserRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEndUserRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsStaffRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsStaffRegistrationDefault" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IsStaffRegistrationDefault" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsStaffRegistrationDefault" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsOpen" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsOpen" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsOpen" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpen" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPatientCareTeam" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPatientCareTeam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ImageUrl" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ImageUrl" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ImageUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ImageUrl" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsOpenStaff" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsOpenStaff" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsOpenStaff" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsOpenStaff" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsServiceLine" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsServiceLine" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsCommunity" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCommunity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsCoreGroup" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCoreGroup" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FaxNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FaxNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FaxNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FaxNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FacilityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FacilityID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FacilityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FacilityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DisplayOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DisplayOrder" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DisplayOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DisplayOrder" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CopayDiscount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CopayDiscount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CopayDiscount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CopayDiscount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ServiceLineCopayAmount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ServiceLineCopayAmount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ServiceLineCopayAmount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceLineCopayAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MinutesBeforeEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeEscalating" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MinutesBeforeEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeEscalating" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MinutesBeforeAdminEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeAdminEscalating" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MinutesBeforeAdminEscalating" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MinutesBeforeAdminEscalating" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_CheckForOnCallDoctor" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CheckForOnCallDoctor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="GroupID" ColumnName="GroupID" DataSourceName="consult_phx_dev.dbo.rz_Group" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@GroupID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="GroupID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GroupID" DataSetColumn="GroupID" />
+              <Mapping SourceColumn="GroupName" DataSetColumn="GroupName" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="IsPublic" DataSetColumn="IsPublic" />
+              <Mapping SourceColumn="MembershipTermInDays" DataSetColumn="MembershipTermInDays" />
+              <Mapping SourceColumn="IsDomain" DataSetColumn="IsDomain" />
+              <Mapping SourceColumn="DefaultRole" DataSetColumn="DefaultRole" />
+              <Mapping SourceColumn="IsRegistrationDefault" DataSetColumn="IsRegistrationDefault" />
+              <Mapping SourceColumn="CustomAttributes" DataSetColumn="CustomAttributes" />
+              <Mapping SourceColumn="InviteEmailText" DataSetColumn="InviteEmailText" />
+              <Mapping SourceColumn="TermsOfUse" DataSetColumn="TermsOfUse" />
+              <Mapping SourceColumn="IconUrl" DataSetColumn="IconUrl" />
+              <Mapping SourceColumn="IsEndUserRegistrationDefault" DataSetColumn="IsEndUserRegistrationDefault" />
+              <Mapping SourceColumn="IsStaffRegistrationDefault" DataSetColumn="IsStaffRegistrationDefault" />
+              <Mapping SourceColumn="IsOpen" DataSetColumn="IsOpen" />
+              <Mapping SourceColumn="IsPatientCareTeam" DataSetColumn="IsPatientCareTeam" />
+              <Mapping SourceColumn="ImageUrl" DataSetColumn="ImageUrl" />
+              <Mapping SourceColumn="IsOpenStaff" DataSetColumn="IsOpenStaff" />
+              <Mapping SourceColumn="IsServiceLine" DataSetColumn="IsServiceLine" />
+              <Mapping SourceColumn="IsCommunity" DataSetColumn="IsCommunity" />
+              <Mapping SourceColumn="IsCoreGroup" DataSetColumn="IsCoreGroup" />
+              <Mapping SourceColumn="FaxNumber" DataSetColumn="FaxNumber" />
+              <Mapping SourceColumn="FacilityID" DataSetColumn="FacilityID" />
+              <Mapping SourceColumn="DisplayOrder" DataSetColumn="DisplayOrder" />
+              <Mapping SourceColumn="CopayDiscount" DataSetColumn="CopayDiscount" />
+              <Mapping SourceColumn="ServiceLineCopayAmount" DataSetColumn="ServiceLineCopayAmount" />
+              <Mapping SourceColumn="BinaryImageValue" DataSetColumn="BinaryImageValue" />
+              <Mapping SourceColumn="ProviderNoteTemplate" DataSetColumn="ProviderNoteTemplate" />
+              <Mapping SourceColumn="MinutesBeforeEscalating" DataSetColumn="MinutesBeforeEscalating" />
+              <Mapping SourceColumn="CustomCSS" DataSetColumn="CustomCSS" />
+              <Mapping SourceColumn="MinutesBeforeAdminEscalating" DataSetColumn="MinutesBeforeAdminEscalating" />
+              <Mapping SourceColumn="CheckForOnCallDoctor" DataSetColumn="CheckForOnCallDoctor" />
+              <Mapping SourceColumn="OffDutyWarningMessage" DataSetColumn="OffDutyWarningMessage" />
+              <Mapping SourceColumn="NoFutureSchedulesWarningMessage" DataSetColumn="NoFutureSchedulesWarningMessage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StaffUsersListTableAdapter" GeneratorDataComponentClassName="StaffUsersListTableAdapter" Name="StaffUsersList" UserDataComponentName="StaffUsersListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConStrTo (Settings)" DbObjectName="consult_phx_dev.dbo.rz_User" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT rz_User.* FROM rz_User INNER JOIN rz_UserRoles ON rz_User.UserID = rz_UserRoles.UserID where Role = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="Password" DataSetColumn="Password" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="MiddleName" DataSetColumn="MiddleName" />
+              <Mapping SourceColumn="CellPhone" DataSetColumn="CellPhone" />
+              <Mapping SourceColumn="WorkPhone" DataSetColumn="WorkPhone" />
+              <Mapping SourceColumn="HomePhone" DataSetColumn="HomePhone" />
+              <Mapping SourceColumn="DOB" DataSetColumn="DOB" />
+              <Mapping SourceColumn="GUID" DataSetColumn="GUID" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="DateEdited" DataSetColumn="DateEdited" />
+              <Mapping SourceColumn="DateDeleted" DataSetColumn="DateDeleted" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="IsPublic" DataSetColumn="IsPublic" />
+              <Mapping SourceColumn="IsDomain" DataSetColumn="IsDomain" />
+              <Mapping SourceColumn="Inactive" DataSetColumn="Inactive" />
+              <Mapping SourceColumn="ReasonInactive" DataSetColumn="ReasonInactive" />
+              <Mapping SourceColumn="ChangePassword" DataSetColumn="ChangePassword" />
+              <Mapping SourceColumn="Verified" DataSetColumn="Verified" />
+              <Mapping SourceColumn="Online" DataSetColumn="Online" />
+              <Mapping SourceColumn="IsDeleted" DataSetColumn="IsDeleted" />
+              <Mapping SourceColumn="agreed_terms" DataSetColumn="agreed_terms" />
+              <Mapping SourceColumn="ResponseID" DataSetColumn="ResponseID" />
+              <Mapping SourceColumn="PreferredLanguage" DataSetColumn="PreferredLanguage" />
+              <Mapping SourceColumn="FailedLoginAttempts" DataSetColumn="FailedLoginAttempts" />
+              <Mapping SourceColumn="LastLogin" DataSetColumn="LastLogin" />
+              <Mapping SourceColumn="LastActive" DataSetColumn="LastActive" />
+              <Mapping SourceColumn="HealthVaultID" DataSetColumn="HealthVaultID" />
+              <Mapping SourceColumn="GoogleUserName" DataSetColumn="GoogleUserName" />
+              <Mapping SourceColumn="GooglePassword" DataSetColumn="GooglePassword" />
+              <Mapping SourceColumn="ConferencingUserName" DataSetColumn="ConferencingUserName" />
+              <Mapping SourceColumn="ConferencingPassword" DataSetColumn="ConferencingPassword" />
+              <Mapping SourceColumn="IsLocked" DataSetColumn="IsLocked" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="State" DataSetColumn="State" />
+              <Mapping SourceColumn="Contact" DataSetColumn="Contact" />
+              <Mapping SourceColumn="ContactPhone" DataSetColumn="ContactPhone" />
+              <Mapping SourceColumn="PhysPhone" DataSetColumn="PhysPhone" />
+              <Mapping SourceColumn="ZipCode" DataSetColumn="ZipCode" />
+              <Mapping SourceColumn="Sex" DataSetColumn="Sex" />
+              <Mapping SourceColumn="StaffNPI" DataSetColumn="StaffNPI" />
+              <Mapping SourceColumn="StaffDEANumber" DataSetColumn="StaffDEANumber" />
+              <Mapping SourceColumn="StaffMedicalLicenseNumber" DataSetColumn="StaffMedicalLicenseNumber" />
+              <Mapping SourceColumn="StaffCredentials" DataSetColumn="StaffCredentials" />
+              <Mapping SourceColumn="PagerNumber" DataSetColumn="PagerNumber" />
+              <Mapping SourceColumn="FaxNumber" DataSetColumn="FaxNumber" />
+              <Mapping SourceColumn="Address1" DataSetColumn="Address1" />
+              <Mapping SourceColumn="Address2" DataSetColumn="Address2" />
+              <Mapping SourceColumn="PhysName" DataSetColumn="PhysName" />
+              <Mapping SourceColumn="PhysAddress" DataSetColumn="PhysAddress" />
+              <Mapping SourceColumn="onepassuserid" DataSetColumn="onepassuserid" />
+              <Mapping SourceColumn="TelepresenceNumber" DataSetColumn="TelepresenceNumber" />
+              <Mapping SourceColumn="ImportedUserID" DataSetColumn="ImportedUserID" />
+              <Mapping SourceColumn="MRN" DataSetColumn="MRN" />
+              <Mapping SourceColumn="CellPhoneVerified" DataSetColumn="CellPhoneVerified" />
+              <Mapping SourceColumn="Ethnicity" DataSetColumn="Ethnicity" />
+              <Mapping SourceColumn="Race" DataSetColumn="Race" />
+              <Mapping SourceColumn="ExternalID" DataSetColumn="ExternalID" />
+              <Mapping SourceColumn="ExternalUserID" DataSetColumn="ExternalUserID" />
+              <Mapping SourceColumn="Patient" DataSetColumn="Patient" />
+              <Mapping SourceColumn="SourceFacility" DataSetColumn="SourceFacility" />
+              <Mapping SourceColumn="SourceFacility_FacilityID" DataSetColumn="SourceFacility_FacilityID" />
+              <Mapping SourceColumn="onepass_agreed_terms" DataSetColumn="onepass_agreed_terms" />
+              <Mapping SourceColumn="PatientNotes" DataSetColumn="PatientNotes" />
+              <Mapping SourceColumn="XmppUserName" DataSetColumn="XmppUserName" />
+              <Mapping SourceColumn="XmppPassword" DataSetColumn="XmppPassword" />
+              <Mapping SourceColumn="GroupPager" DataSetColumn="GroupPager" />
+              <Mapping SourceColumn="AnsweringServicePhone" DataSetColumn="AnsweringServicePhone" />
+              <Mapping SourceColumn="AdditionalLocationPhone" DataSetColumn="AdditionalLocationPhone" />
+              <Mapping SourceColumn="ContactPrefVoiceOnCall" DataSetColumn="ContactPrefVoiceOnCall" />
+              <Mapping SourceColumn="ContactPrefVoiceOffCall" DataSetColumn="ContactPrefVoiceOffCall" />
+              <Mapping SourceColumn="ContactPrefNotificationOnCall" DataSetColumn="ContactPrefNotificationOnCall" />
+              <Mapping SourceColumn="ContactPrefNotificationOffCall" DataSetColumn="ContactPrefNotificationOffCall" />
+              <Mapping SourceColumn="UniquePatientGUID" DataSetColumn="UniquePatientGUID" />
+              <Mapping SourceColumn="vCard" DataSetColumn="vCard" />
+              <Mapping SourceColumn="PracticeAreas" DataSetColumn="PracticeAreas" />
+              <Mapping SourceColumn="PracticeFacilities" DataSetColumn="PracticeFacilities" />
+              <Mapping SourceColumn="PracticeZipCodes" DataSetColumn="PracticeZipCodes" />
+              <Mapping SourceColumn="ParentUserID" DataSetColumn="ParentUserID" />
+              <Mapping SourceColumn="SSN" DataSetColumn="SSN" />
+              <Mapping SourceColumn="SearchValues" DataSetColumn="SearchValues" />
+              <Mapping SourceColumn="VideoAddress" DataSetColumn="VideoAddress" />
+              <Mapping SourceColumn="UniqueValue" DataSetColumn="UniqueValue" />
+              <Mapping SourceColumn="Photo" DataSetColumn="Photo" />
+              <Mapping SourceColumn="FileServiceKey" DataSetColumn="FileServiceKey" />
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="zz_CopyGroupTableAdapter" GeneratorDataComponentClassName="zz_CopyGroupTableAdapter" Name="zz_CopyGroup" UserDataComponentName="zz_CopyGroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConStrTo (Settings)" DbObjectName="Dev10p.dbo.zz_CopyGroup" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.zz_CopyGroup</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@GroupName" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsPublic" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MembershipTermInDays" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsDomain" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DefaultRole" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsRegistrationDefault" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="xml" DbType="Xml" Direction="Input" ParameterName="@CustomAttributes" Precision="0" ProviderType="Xml" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@InviteEmailText" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@TermsOfUse" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@IconUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsEndUserRegistrationDefault" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsStaffRegistrationDefault" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsOpen" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsPatientCareTeam" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@ImageUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsOpenStaff" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsServiceLine" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsCommunity" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsCoreGroup" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@FaxNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@FacilityID" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DisplayOrder" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@CopayDiscount" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@ServiceLineCopayAmount" Precision="0" ProviderType="VarChar" Scale="0" Size="250" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varbinary" DbType="Binary" Direction="Input" ParameterName="@BinaryImageValue" Precision="0" ProviderType="VarBinary" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@ProviderNoteTemplate" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MinutesBeforeEscalating" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@CustomCSS" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MinutesBeforeAdminEscalating" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@CheckForOnCallDoctor" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@OffDutyWarningMessage" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@NoFutureSchedulesWarningMessage" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@ApptReminderNoticeTextPatient" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@ApptReminderNoticePeriodPatient" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@ApptReminderNoticeTextStaff" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@ApptReminderNoticePeriodStaff" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsPageRequired" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsEnableForCart" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@AtomIconUrl" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsTo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsTo" msprop:Generator_UserDSName="DsTo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ToCounters" msprop:Generator_TableClassName="ToCountersDataTable" msprop:Generator_TableVarName="tableToCounters" msprop:Generator_TablePropName="ToCounters" msprop:Generator_RowDeletingName="ToCountersRowDeleting" msprop:Generator_RowChangingName="ToCountersRowChanging" msprop:Generator_RowEvHandlerName="ToCountersRowChangeEventHandler" msprop:Generator_RowDeletedName="ToCountersRowDeleted" msprop:Generator_UserTableName="ToCounters" msprop:Generator_RowChangedName="ToCountersRowChanged" msprop:Generator_RowEvArgName="ToCountersRowChangeEvent" msprop:Generator_RowClassName="ToCountersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StaffUsersCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStaffUsersCount" msprop:Generator_ColumnPropNameInRow="StaffUsersCount" msprop:Generator_ColumnPropNameInTable="StaffUsersCountColumn" msprop:Generator_UserColumnName="StaffUsersCount" type="xs:int" minOccurs="0" />
+              <xs:element name="GroupsCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGroupsCount" msprop:Generator_ColumnPropNameInRow="GroupsCount" msprop:Generator_ColumnPropNameInTable="GroupsCountColumn" msprop:Generator_UserColumnName="GroupsCount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rz_Group" msprop:Generator_TableClassName="rz_GroupDataTable" msprop:Generator_TableVarName="tablerz_Group" msprop:Generator_TablePropName="rz_Group" msprop:Generator_RowDeletingName="rz_GroupRowDeleting" msprop:Generator_RowChangingName="rz_GroupRowChanging" msprop:Generator_RowEvHandlerName="rz_GroupRowChangeEventHandler" msprop:Generator_RowDeletedName="rz_GroupRowDeleted" msprop:Generator_UserTableName="rz_Group" msprop:Generator_RowChangedName="rz_GroupRowChanged" msprop:Generator_RowEvArgName="rz_GroupRowChangeEvent" msprop:Generator_RowClassName="rz_GroupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GroupID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnGroupID" msprop:Generator_ColumnPropNameInRow="GroupID" msprop:Generator_ColumnPropNameInTable="GroupIDColumn" msprop:Generator_UserColumnName="GroupID" type="xs:int" />
+              <xs:element name="GroupName" msprop:Generator_ColumnVarNameInTable="columnGroupName" msprop:Generator_ColumnPropNameInRow="GroupName" msprop:Generator_ColumnPropNameInTable="GroupNameColumn" msprop:Generator_UserColumnName="GroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" msprop:Generator_UserColumnName="DateCreated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy" type="xs:int" minOccurs="0" />
+              <xs:element name="IsPublic" msprop:Generator_ColumnVarNameInTable="columnIsPublic" msprop:Generator_ColumnPropNameInRow="IsPublic" msprop:Generator_ColumnPropNameInTable="IsPublicColumn" msprop:Generator_UserColumnName="IsPublic" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MembershipTermInDays" msprop:Generator_ColumnVarNameInTable="columnMembershipTermInDays" msprop:Generator_ColumnPropNameInRow="MembershipTermInDays" msprop:Generator_ColumnPropNameInTable="MembershipTermInDaysColumn" msprop:Generator_UserColumnName="MembershipTermInDays" type="xs:int" minOccurs="0" />
+              <xs:element name="IsDomain" msprop:Generator_ColumnVarNameInTable="columnIsDomain" msprop:Generator_ColumnPropNameInRow="IsDomain" msprop:Generator_ColumnPropNameInTable="IsDomainColumn" msprop:Generator_UserColumnName="IsDomain" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DefaultRole" msprop:Generator_ColumnVarNameInTable="columnDefaultRole" msprop:Generator_ColumnPropNameInRow="DefaultRole" msprop:Generator_ColumnPropNameInTable="DefaultRoleColumn" msprop:Generator_UserColumnName="DefaultRole" type="xs:int" minOccurs="0" />
+              <xs:element name="IsRegistrationDefault" msprop:Generator_ColumnVarNameInTable="columnIsRegistrationDefault" msprop:Generator_ColumnPropNameInRow="IsRegistrationDefault" msprop:Generator_ColumnPropNameInTable="IsRegistrationDefaultColumn" msprop:Generator_UserColumnName="IsRegistrationDefault" type="xs:int" minOccurs="0" />
+              <xs:element name="CustomAttributes" msprop:Generator_ColumnVarNameInTable="columnCustomAttributes" msprop:Generator_ColumnPropNameInRow="CustomAttributes" msprop:Generator_ColumnPropNameInTable="CustomAttributesColumn" msprop:Generator_UserColumnName="CustomAttributes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InviteEmailText" msprop:Generator_ColumnVarNameInTable="columnInviteEmailText" msprop:Generator_ColumnPropNameInRow="InviteEmailText" msprop:Generator_ColumnPropNameInTable="InviteEmailTextColumn" msprop:Generator_UserColumnName="InviteEmailText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TermsOfUse" msprop:Generator_ColumnVarNameInTable="columnTermsOfUse" msprop:Generator_ColumnPropNameInRow="TermsOfUse" msprop:Generator_ColumnPropNameInTable="TermsOfUseColumn" msprop:Generator_UserColumnName="TermsOfUse" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IconUrl" msprop:Generator_ColumnVarNameInTable="columnIconUrl" msprop:Generator_ColumnPropNameInRow="IconUrl" msprop:Generator_ColumnPropNameInTable="IconUrlColumn" msprop:Generator_UserColumnName="IconUrl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsEndUserRegistrationDefault" msprop:Generator_ColumnVarNameInTable="columnIsEndUserRegistrationDefault" msprop:Generator_ColumnPropNameInRow="IsEndUserRegistrationDefault" msprop:Generator_ColumnPropNameInTable="IsEndUserRegistrationDefaultColumn" msprop:Generator_UserColumnName="IsEndUserRegistrationDefault" type="xs:int" minOccurs="0" />
+              <xs:element name="IsStaffRegistrationDefault" msprop:Generator_ColumnVarNameInTable="columnIsStaffRegistrationDefault" msprop:Generator_ColumnPropNameInRow="IsStaffRegistrationDefault" msprop:Generator_ColumnPropNameInTable="IsStaffRegistrationDefaultColumn" msprop:Generator_UserColumnName="IsStaffRegistrationDefault" type="xs:int" minOccurs="0" />
+              <xs:element name="IsOpen" msprop:Generator_ColumnVarNameInTable="columnIsOpen" msprop:Generator_ColumnPropNameInRow="IsOpen" msprop:Generator_ColumnPropNameInTable="IsOpenColumn" msprop:Generator_UserColumnName="IsOpen" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsPatientCareTeam" msprop:Generator_ColumnVarNameInTable="columnIsPatientCareTeam" msprop:Generator_ColumnPropNameInRow="IsPatientCareTeam" msprop:Generator_ColumnPropNameInTable="IsPatientCareTeamColumn" msprop:Generator_UserColumnName="IsPatientCareTeam" type="xs:boolean" />
+              <xs:element name="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn" msprop:Generator_UserColumnName="ImageUrl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsOpenStaff" msprop:Generator_ColumnVarNameInTable="columnIsOpenStaff" msprop:Generator_ColumnPropNameInRow="IsOpenStaff" msprop:Generator_ColumnPropNameInTable="IsOpenStaffColumn" msprop:Generator_UserColumnName="IsOpenStaff" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsServiceLine" msprop:Generator_ColumnVarNameInTable="columnIsServiceLine" msprop:Generator_ColumnPropNameInRow="IsServiceLine" msprop:Generator_ColumnPropNameInTable="IsServiceLineColumn" msprop:Generator_UserColumnName="IsServiceLine" type="xs:boolean" />
+              <xs:element name="IsCommunity" msprop:Generator_ColumnVarNameInTable="columnIsCommunity" msprop:Generator_ColumnPropNameInRow="IsCommunity" msprop:Generator_ColumnPropNameInTable="IsCommunityColumn" msprop:Generator_UserColumnName="IsCommunity" type="xs:boolean" />
+              <xs:element name="IsCoreGroup" msprop:Generator_ColumnVarNameInTable="columnIsCoreGroup" msprop:Generator_ColumnPropNameInRow="IsCoreGroup" msprop:Generator_ColumnPropNameInTable="IsCoreGroupColumn" msprop:Generator_UserColumnName="IsCoreGroup" type="xs:boolean" />
+              <xs:element name="FaxNumber" msprop:Generator_ColumnVarNameInTable="columnFaxNumber" msprop:Generator_ColumnPropNameInRow="FaxNumber" msprop:Generator_ColumnPropNameInTable="FaxNumberColumn" msprop:Generator_UserColumnName="FaxNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityID" msprop:Generator_ColumnVarNameInTable="columnFacilityID" msprop:Generator_ColumnPropNameInRow="FacilityID" msprop:Generator_ColumnPropNameInTable="FacilityIDColumn" msprop:Generator_UserColumnName="FacilityID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DisplayOrder" msprop:Generator_ColumnVarNameInTable="columnDisplayOrder" msprop:Generator_ColumnPropNameInRow="DisplayOrder" msprop:Generator_ColumnPropNameInTable="DisplayOrderColumn" msprop:Generator_UserColumnName="DisplayOrder" type="xs:int" minOccurs="0" />
+              <xs:element name="CopayDiscount" msprop:Generator_ColumnVarNameInTable="columnCopayDiscount" msprop:Generator_ColumnPropNameInRow="CopayDiscount" msprop:Generator_ColumnPropNameInTable="CopayDiscountColumn" msprop:Generator_UserColumnName="CopayDiscount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceLineCopayAmount" msprop:Generator_ColumnVarNameInTable="columnServiceLineCopayAmount" msprop:Generator_ColumnPropNameInRow="ServiceLineCopayAmount" msprop:Generator_ColumnPropNameInTable="ServiceLineCopayAmountColumn" msprop:Generator_UserColumnName="ServiceLineCopayAmount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinaryImageValue" msprop:Generator_ColumnVarNameInTable="columnBinaryImageValue" msprop:Generator_ColumnPropNameInRow="BinaryImageValue" msprop:Generator_ColumnPropNameInTable="BinaryImageValueColumn" msprop:Generator_UserColumnName="BinaryImageValue" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="ProviderNoteTemplate" msprop:Generator_ColumnVarNameInTable="columnProviderNoteTemplate" msprop:Generator_ColumnPropNameInRow="ProviderNoteTemplate" msprop:Generator_ColumnPropNameInTable="ProviderNoteTemplateColumn" msprop:Generator_UserColumnName="ProviderNoteTemplate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MinutesBeforeEscalating" msprop:Generator_ColumnVarNameInTable="columnMinutesBeforeEscalating" msprop:Generator_ColumnPropNameInRow="MinutesBeforeEscalating" msprop:Generator_ColumnPropNameInTable="MinutesBeforeEscalatingColumn" msprop:Generator_UserColumnName="MinutesBeforeEscalating" type="xs:int" minOccurs="0" />
+              <xs:element name="CustomCSS" msprop:Generator_ColumnVarNameInTable="columnCustomCSS" msprop:Generator_ColumnPropNameInRow="CustomCSS" msprop:Generator_ColumnPropNameInTable="CustomCSSColumn" msprop:Generator_UserColumnName="CustomCSS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MinutesBeforeAdminEscalating" msprop:Generator_ColumnVarNameInTable="columnMinutesBeforeAdminEscalating" msprop:Generator_ColumnPropNameInRow="MinutesBeforeAdminEscalating" msprop:Generator_ColumnPropNameInTable="MinutesBeforeAdminEscalatingColumn" msprop:Generator_UserColumnName="MinutesBeforeAdminEscalating" type="xs:int" minOccurs="0" />
+              <xs:element name="CheckForOnCallDoctor" msprop:Generator_ColumnVarNameInTable="columnCheckForOnCallDoctor" msprop:Generator_ColumnPropNameInRow="CheckForOnCallDoctor" msprop:Generator_ColumnPropNameInTable="CheckForOnCallDoctorColumn" msprop:Generator_UserColumnName="CheckForOnCallDoctor" type="xs:boolean" />
+              <xs:element name="OffDutyWarningMessage" msprop:Generator_ColumnVarNameInTable="columnOffDutyWarningMessage" msprop:Generator_ColumnPropNameInRow="OffDutyWarningMessage" msprop:Generator_ColumnPropNameInTable="OffDutyWarningMessageColumn" msprop:Generator_UserColumnName="OffDutyWarningMessage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoFutureSchedulesWarningMessage" msprop:Generator_ColumnVarNameInTable="columnNoFutureSchedulesWarningMessage" msprop:Generator_ColumnPropNameInRow="NoFutureSchedulesWarningMessage" msprop:Generator_ColumnPropNameInTable="NoFutureSchedulesWarningMessageColumn" msprop:Generator_UserColumnName="NoFutureSchedulesWarningMessage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StaffUsersList" msprop:Generator_TableClassName="StaffUsersListDataTable" msprop:Generator_TableVarName="tableStaffUsersList" msprop:Generator_TablePropName="StaffUsersList" msprop:Generator_RowDeletingName="StaffUsersListRowDeleting" msprop:Generator_RowChangingName="StaffUsersListRowChanging" msprop:Generator_RowEvHandlerName="StaffUsersListRowChangeEventHandler" msprop:Generator_RowDeletedName="StaffUsersListRowDeleted" msprop:Generator_UserTableName="StaffUsersList" msprop:Generator_RowChangedName="StaffUsersListRowChanged" msprop:Generator_RowEvArgName="StaffUsersListRowChangeEvent" msprop:Generator_RowClassName="StaffUsersListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MiddleName" msprop:Generator_ColumnVarNameInTable="columnMiddleName" msprop:Generator_ColumnPropNameInRow="MiddleName" msprop:Generator_ColumnPropNameInTable="MiddleNameColumn" msprop:Generator_UserColumnName="MiddleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CellPhone" msprop:Generator_ColumnVarNameInTable="columnCellPhone" msprop:Generator_ColumnPropNameInRow="CellPhone" msprop:Generator_ColumnPropNameInTable="CellPhoneColumn" msprop:Generator_UserColumnName="CellPhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkPhone" msprop:Generator_ColumnVarNameInTable="columnWorkPhone" msprop:Generator_ColumnPropNameInRow="WorkPhone" msprop:Generator_ColumnPropNameInTable="WorkPhoneColumn" msprop:Generator_UserColumnName="WorkPhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HomePhone" msprop:Generator_ColumnVarNameInTable="columnHomePhone" msprop:Generator_ColumnPropNameInRow="HomePhone" msprop:Generator_ColumnPropNameInTable="HomePhoneColumn" msprop:Generator_UserColumnName="HomePhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOB" msprop:Generator_ColumnVarNameInTable="columnDOB" msprop:Generator_ColumnPropNameInRow="DOB" msprop:Generator_ColumnPropNameInTable="DOBColumn" msprop:Generator_UserColumnName="DOB" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GUID" msprop:Generator_ColumnVarNameInTable="columnGUID" msprop:Generator_ColumnPropNameInRow="GUID" msprop:Generator_ColumnPropNameInTable="GUIDColumn" msprop:Generator_UserColumnName="GUID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" msprop:Generator_UserColumnName="DateCreated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateEdited" msprop:Generator_ColumnVarNameInTable="columnDateEdited" msprop:Generator_ColumnPropNameInRow="DateEdited" msprop:Generator_ColumnPropNameInTable="DateEditedColumn" msprop:Generator_UserColumnName="DateEdited" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateDeleted" msprop:Generator_ColumnVarNameInTable="columnDateDeleted" msprop:Generator_ColumnPropNameInRow="DateDeleted" msprop:Generator_ColumnPropNameInTable="DateDeletedColumn" msprop:Generator_UserColumnName="DateDeleted" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy" type="xs:int" minOccurs="0" />
+              <xs:element name="IsPublic" msprop:Generator_ColumnVarNameInTable="columnIsPublic" msprop:Generator_ColumnPropNameInRow="IsPublic" msprop:Generator_ColumnPropNameInTable="IsPublicColumn" msprop:Generator_UserColumnName="IsPublic" type="xs:int" minOccurs="0" />
+              <xs:element name="IsDomain" msprop:Generator_ColumnVarNameInTable="columnIsDomain" msprop:Generator_ColumnPropNameInRow="IsDomain" msprop:Generator_ColumnPropNameInTable="IsDomainColumn" msprop:Generator_UserColumnName="IsDomain" type="xs:boolean" />
+              <xs:element name="Inactive" msprop:Generator_ColumnVarNameInTable="columnInactive" msprop:Generator_ColumnPropNameInRow="Inactive" msprop:Generator_ColumnPropNameInTable="InactiveColumn" msprop:Generator_UserColumnName="Inactive">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReasonInactive" msprop:Generator_ColumnVarNameInTable="columnReasonInactive" msprop:Generator_ColumnPropNameInRow="ReasonInactive" msprop:Generator_ColumnPropNameInTable="ReasonInactiveColumn" msprop:Generator_UserColumnName="ReasonInactive" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChangePassword" msprop:Generator_ColumnVarNameInTable="columnChangePassword" msprop:Generator_ColumnPropNameInRow="ChangePassword" msprop:Generator_ColumnPropNameInTable="ChangePasswordColumn" msprop:Generator_UserColumnName="ChangePassword" type="xs:boolean" />
+              <xs:element name="Verified" msprop:Generator_ColumnVarNameInTable="columnVerified" msprop:Generator_ColumnPropNameInRow="Verified" msprop:Generator_ColumnPropNameInTable="VerifiedColumn" msprop:Generator_UserColumnName="Verified">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Online" msprop:Generator_ColumnVarNameInTable="columnOnline" msprop:Generator_ColumnPropNameInRow="Online" msprop:Generator_ColumnPropNameInTable="OnlineColumn" msprop:Generator_UserColumnName="Online">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" type="xs:boolean" minOccurs="0" />
+              <xs:element name="agreed_terms" msprop:Generator_ColumnVarNameInTable="columnagreed_terms" msprop:Generator_ColumnPropNameInRow="agreed_terms" msprop:Generator_ColumnPropNameInTable="agreed_termsColumn" msprop:Generator_UserColumnName="agreed_terms" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ResponseID" msprop:Generator_ColumnVarNameInTable="columnResponseID" msprop:Generator_ColumnPropNameInRow="ResponseID" msprop:Generator_ColumnPropNameInTable="ResponseIDColumn" msprop:Generator_UserColumnName="ResponseID" type="xs:int" minOccurs="0" />
+              <xs:element name="PreferredLanguage" msprop:Generator_ColumnVarNameInTable="columnPreferredLanguage" msprop:Generator_ColumnPropNameInRow="PreferredLanguage" msprop:Generator_ColumnPropNameInTable="PreferredLanguageColumn" msprop:Generator_UserColumnName="PreferredLanguage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FailedLoginAttempts" msprop:Generator_ColumnVarNameInTable="columnFailedLoginAttempts" msprop:Generator_ColumnPropNameInRow="FailedLoginAttempts" msprop:Generator_ColumnPropNameInTable="FailedLoginAttemptsColumn" msprop:Generator_UserColumnName="FailedLoginAttempts" type="xs:int" minOccurs="0" />
+              <xs:element name="LastLogin" msprop:Generator_ColumnVarNameInTable="columnLastLogin" msprop:Generator_ColumnPropNameInRow="LastLogin" msprop:Generator_ColumnPropNameInTable="LastLoginColumn" msprop:Generator_UserColumnName="LastLogin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastActive" msprop:Generator_ColumnVarNameInTable="columnLastActive" msprop:Generator_ColumnPropNameInRow="LastActive" msprop:Generator_ColumnPropNameInTable="LastActiveColumn" msprop:Generator_UserColumnName="LastActive" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HealthVaultID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnHealthVaultID" msprop:Generator_ColumnPropNameInRow="HealthVaultID" msprop:Generator_ColumnPropNameInTable="HealthVaultIDColumn" msprop:Generator_UserColumnName="HealthVaultID" type="xs:string" minOccurs="0" />
+              <xs:element name="GoogleUserName" msprop:Generator_ColumnVarNameInTable="columnGoogleUserName" msprop:Generator_ColumnPropNameInRow="GoogleUserName" msprop:Generator_ColumnPropNameInTable="GoogleUserNameColumn" msprop:Generator_UserColumnName="GoogleUserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GooglePassword" msprop:Generator_ColumnVarNameInTable="columnGooglePassword" msprop:Generator_ColumnPropNameInRow="GooglePassword" msprop:Generator_ColumnPropNameInTable="GooglePasswordColumn" msprop:Generator_UserColumnName="GooglePassword" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ConferencingUserName" msprop:Generator_ColumnVarNameInTable="columnConferencingUserName" msprop:Generator_ColumnPropNameInRow="ConferencingUserName" msprop:Generator_ColumnPropNameInTable="ConferencingUserNameColumn" msprop:Generator_UserColumnName="ConferencingUserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ConferencingPassword" msprop:Generator_ColumnVarNameInTable="columnConferencingPassword" msprop:Generator_ColumnPropNameInRow="ConferencingPassword" msprop:Generator_ColumnPropNameInTable="ConferencingPasswordColumn" msprop:Generator_UserColumnName="ConferencingPassword" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsLocked" msprop:Generator_ColumnVarNameInTable="columnIsLocked" msprop:Generator_ColumnPropNameInRow="IsLocked" msprop:Generator_ColumnPropNameInTable="IsLockedColumn" msprop:Generator_UserColumnName="IsLocked" type="xs:boolean" minOccurs="0" />
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_UserColumnName="State" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactPhone" msprop:Generator_ColumnVarNameInTable="columnContactPhone" msprop:Generator_ColumnPropNameInRow="ContactPhone" msprop:Generator_ColumnPropNameInTable="ContactPhoneColumn" msprop:Generator_UserColumnName="ContactPhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhysPhone" msprop:Generator_ColumnVarNameInTable="columnPhysPhone" msprop:Generator_ColumnPropNameInRow="PhysPhone" msprop:Generator_ColumnPropNameInTable="PhysPhoneColumn" msprop:Generator_UserColumnName="PhysPhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZipCode" msprop:Generator_ColumnVarNameInTable="columnZipCode" msprop:Generator_ColumnPropNameInRow="ZipCode" msprop:Generator_ColumnPropNameInTable="ZipCodeColumn" msprop:Generator_UserColumnName="ZipCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sex" msprop:Generator_ColumnVarNameInTable="columnSex" msprop:Generator_ColumnPropNameInRow="Sex" msprop:Generator_ColumnPropNameInTable="SexColumn" msprop:Generator_UserColumnName="Sex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaffNPI" msprop:Generator_ColumnVarNameInTable="columnStaffNPI" msprop:Generator_ColumnPropNameInRow="StaffNPI" msprop:Generator_ColumnPropNameInTable="StaffNPIColumn" msprop:Generator_UserColumnName="StaffNPI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaffDEANumber" msprop:Generator_ColumnVarNameInTable="columnStaffDEANumber" msprop:Generator_ColumnPropNameInRow="StaffDEANumber" msprop:Generator_ColumnPropNameInTable="StaffDEANumberColumn" msprop:Generator_UserColumnName="StaffDEANumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaffMedicalLicenseNumber" msprop:Generator_ColumnVarNameInTable="columnStaffMedicalLicenseNumber" msprop:Generator_ColumnPropNameInRow="StaffMedicalLicenseNumber" msprop:Generator_ColumnPropNameInTable="StaffMedicalLicenseNumberColumn" msprop:Generator_UserColumnName="StaffMedicalLicenseNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaffCredentials" msprop:Generator_ColumnVarNameInTable="columnStaffCredentials" msprop:Generator_ColumnPropNameInRow="StaffCredentials" msprop:Generator_ColumnPropNameInTable="StaffCredentialsColumn" msprop:Generator_UserColumnName="StaffCredentials" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PagerNumber" msprop:Generator_ColumnVarNameInTable="columnPagerNumber" msprop:Generator_ColumnPropNameInRow="PagerNumber" msprop:Generator_ColumnPropNameInTable="PagerNumberColumn" msprop:Generator_UserColumnName="PagerNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FaxNumber" msprop:Generator_ColumnVarNameInTable="columnFaxNumber" msprop:Generator_ColumnPropNameInRow="FaxNumber" msprop:Generator_ColumnPropNameInTable="FaxNumberColumn" msprop:Generator_UserColumnName="FaxNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_UserColumnName="Address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address2" msprop:Generator_ColumnVarNameInTable="columnAddress2" msprop:Generator_ColumnPropNameInRow="Address2" msprop:Generator_ColumnPropNameInTable="Address2Column" msprop:Generator_UserColumnName="Address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhysName" msprop:Generator_ColumnVarNameInTable="columnPhysName" msprop:Generator_ColumnPropNameInRow="PhysName" msprop:Generator_ColumnPropNameInTable="PhysNameColumn" msprop:Generator_UserColumnName="PhysName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhysAddress" msprop:Generator_ColumnVarNameInTable="columnPhysAddress" msprop:Generator_ColumnPropNameInRow="PhysAddress" msprop:Generator_ColumnPropNameInTable="PhysAddressColumn" msprop:Generator_UserColumnName="PhysAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="onepassuserid" msprop:Generator_ColumnVarNameInTable="columnonepassuserid" msprop:Generator_ColumnPropNameInRow="onepassuserid" msprop:Generator_ColumnPropNameInTable="onepassuseridColumn" msprop:Generator_UserColumnName="onepassuserid" type="xs:int" minOccurs="0" />
+              <xs:element name="TelepresenceNumber" msprop:Generator_ColumnVarNameInTable="columnTelepresenceNumber" msprop:Generator_ColumnPropNameInRow="TelepresenceNumber" msprop:Generator_ColumnPropNameInTable="TelepresenceNumberColumn" msprop:Generator_UserColumnName="TelepresenceNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ImportedUserID" msprop:Generator_ColumnVarNameInTable="columnImportedUserID" msprop:Generator_ColumnPropNameInRow="ImportedUserID" msprop:Generator_ColumnPropNameInTable="ImportedUserIDColumn" msprop:Generator_UserColumnName="ImportedUserID" type="xs:int" minOccurs="0" />
+              <xs:element name="MRN" msprop:Generator_ColumnVarNameInTable="columnMRN" msprop:Generator_ColumnPropNameInRow="MRN" msprop:Generator_ColumnPropNameInTable="MRNColumn" msprop:Generator_UserColumnName="MRN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CellPhoneVerified" msprop:Generator_ColumnVarNameInTable="columnCellPhoneVerified" msprop:Generator_ColumnPropNameInRow="CellPhoneVerified" msprop:Generator_ColumnPropNameInTable="CellPhoneVerifiedColumn" msprop:Generator_UserColumnName="CellPhoneVerified" type="xs:boolean" />
+              <xs:element name="Ethnicity" msprop:Generator_ColumnVarNameInTable="columnEthnicity" msprop:Generator_ColumnPropNameInRow="Ethnicity" msprop:Generator_ColumnPropNameInTable="EthnicityColumn" msprop:Generator_UserColumnName="Ethnicity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Race" msprop:Generator_ColumnVarNameInTable="columnRace" msprop:Generator_ColumnPropNameInRow="Race" msprop:Generator_ColumnPropNameInTable="RaceColumn" msprop:Generator_UserColumnName="Race" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExternalID" msprop:Generator_ColumnVarNameInTable="columnExternalID" msprop:Generator_ColumnPropNameInRow="ExternalID" msprop:Generator_ColumnPropNameInTable="ExternalIDColumn" msprop:Generator_UserColumnName="ExternalID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExternalUserID" msprop:Generator_ColumnVarNameInTable="columnExternalUserID" msprop:Generator_ColumnPropNameInRow="ExternalUserID" msprop:Generator_ColumnPropNameInTable="ExternalUserIDColumn" msprop:Generator_UserColumnName="ExternalUserID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Patient" msprop:Generator_ColumnVarNameInTable="columnPatient" msprop:Generator_ColumnPropNameInRow="Patient" msprop:Generator_ColumnPropNameInTable="PatientColumn" msprop:Generator_UserColumnName="Patient" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SourceFacility" msprop:Generator_ColumnVarNameInTable="columnSourceFacility" msprop:Generator_ColumnPropNameInRow="SourceFacility" msprop:Generator_ColumnPropNameInTable="SourceFacilityColumn" msprop:Generator_UserColumnName="SourceFacility" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SourceFacility_FacilityID" msprop:Generator_ColumnVarNameInTable="columnSourceFacility_FacilityID" msprop:Generator_ColumnPropNameInRow="SourceFacility_FacilityID" msprop:Generator_ColumnPropNameInTable="SourceFacility_FacilityIDColumn" msprop:Generator_UserColumnName="SourceFacility_FacilityID" type="xs:int" minOccurs="0" />
+              <xs:element name="onepass_agreed_terms" msprop:Generator_ColumnVarNameInTable="columnonepass_agreed_terms" msprop:Generator_ColumnPropNameInRow="onepass_agreed_terms" msprop:Generator_ColumnPropNameInTable="onepass_agreed_termsColumn" msprop:Generator_UserColumnName="onepass_agreed_terms" type="xs:boolean" />
+              <xs:element name="PatientNotes" msprop:Generator_ColumnVarNameInTable="columnPatientNotes" msprop:Generator_ColumnPropNameInRow="PatientNotes" msprop:Generator_ColumnPropNameInTable="PatientNotesColumn" msprop:Generator_UserColumnName="PatientNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XmppUserName" msprop:Generator_ColumnVarNameInTable="columnXmppUserName" msprop:Generator_ColumnPropNameInRow="XmppUserName" msprop:Generator_ColumnPropNameInTable="XmppUserNameColumn" msprop:Generator_UserColumnName="XmppUserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XmppPassword" msprop:Generator_ColumnVarNameInTable="columnXmppPassword" msprop:Generator_ColumnPropNameInRow="XmppPassword" msprop:Generator_ColumnPropNameInTable="XmppPasswordColumn" msprop:Generator_UserColumnName="XmppPassword" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GroupPager" msprop:Generator_ColumnVarNameInTable="columnGroupPager" msprop:Generator_ColumnPropNameInRow="GroupPager" msprop:Generator_ColumnPropNameInTable="GroupPagerColumn" msprop:Generator_UserColumnName="GroupPager" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AnsweringServicePhone" msprop:Generator_ColumnVarNameInTable="columnAnsweringServicePhone" msprop:Generator_ColumnPropNameInRow="AnsweringServicePhone" msprop:Generator_ColumnPropNameInTable="AnsweringServicePhoneColumn" msprop:Generator_UserColumnName="AnsweringServicePhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdditionalLocationPhone" msprop:Generator_ColumnVarNameInTable="columnAdditionalLocationPhone" msprop:Generator_ColumnPropNameInRow="AdditionalLocationPhone" msprop:Generator_ColumnPropNameInTable="AdditionalLocationPhoneColumn" msprop:Generator_UserColumnName="AdditionalLocationPhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactPrefVoiceOnCall" msprop:Generator_ColumnVarNameInTable="columnContactPrefVoiceOnCall" msprop:Generator_ColumnPropNameInRow="ContactPrefVoiceOnCall" msprop:Generator_ColumnPropNameInTable="ContactPrefVoiceOnCallColumn" msprop:Generator_UserColumnName="ContactPrefVoiceOnCall" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactPrefVoiceOffCall" msprop:Generator_ColumnVarNameInTable="columnContactPrefVoiceOffCall" msprop:Generator_ColumnPropNameInRow="ContactPrefVoiceOffCall" msprop:Generator_ColumnPropNameInTable="ContactPrefVoiceOffCallColumn" msprop:Generator_UserColumnName="ContactPrefVoiceOffCall" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactPrefNotificationOnCall" msprop:Generator_ColumnVarNameInTable="columnContactPrefNotificationOnCall" msprop:Generator_ColumnPropNameInRow="ContactPrefNotificationOnCall" msprop:Generator_ColumnPropNameInTable="ContactPrefNotificationOnCallColumn" msprop:Generator_UserColumnName="ContactPrefNotificationOnCall" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactPrefNotificationOffCall" msprop:Generator_ColumnVarNameInTable="columnContactPrefNotificationOffCall" msprop:Generator_ColumnPropNameInRow="ContactPrefNotificationOffCall" msprop:Generator_ColumnPropNameInTable="ContactPrefNotificationOffCallColumn" msprop:Generator_UserColumnName="ContactPrefNotificationOffCall" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniquePatientGUID" msprop:Generator_ColumnVarNameInTable="columnUniquePatientGUID" msprop:Generator_ColumnPropNameInRow="UniquePatientGUID" msprop:Generator_ColumnPropNameInTable="UniquePatientGUIDColumn" msprop:Generator_UserColumnName="UniquePatientGUID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vCard" msprop:Generator_ColumnVarNameInTable="columnvCard" msprop:Generator_ColumnPropNameInRow="vCard" msprop:Generator_ColumnPropNameInTable="vCardColumn" msprop:Generator_UserColumnName="vCard" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PracticeAreas" msprop:Generator_ColumnVarNameInTable="columnPracticeAreas" msprop:Generator_ColumnPropNameInRow="PracticeAreas" msprop:Generator_ColumnPropNameInTable="PracticeAreasColumn" msprop:Generator_UserColumnName="PracticeAreas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PracticeFacilities" msprop:Generator_ColumnVarNameInTable="columnPracticeFacilities" msprop:Generator_ColumnPropNameInRow="PracticeFacilities" msprop:Generator_ColumnPropNameInTable="PracticeFacilitiesColumn" msprop:Generator_UserColumnName="PracticeFacilities" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PracticeZipCodes" msprop:Generator_ColumnVarNameInTable="columnPracticeZipCodes" msprop:Generator_ColumnPropNameInRow="PracticeZipCodes" msprop:Generator_ColumnPropNameInTable="PracticeZipCodesColumn" msprop:Generator_UserColumnName="PracticeZipCodes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParentUserID" msprop:Generator_ColumnVarNameInTable="columnParentUserID" msprop:Generator_ColumnPropNameInRow="ParentUserID" msprop:Generator_ColumnPropNameInTable="ParentUserIDColumn" msprop:Generator_UserColumnName="ParentUserID" type="xs:int" minOccurs="0" />
+              <xs:element name="SSN" msprop:Generator_ColumnVarNameInTable="columnSSN" msprop:Generator_ColumnPropNameInRow="SSN" msprop:Generator_ColumnPropNameInTable="SSNColumn" msprop:Generator_UserColumnName="SSN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SearchValues" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSearchValues" msprop:Generator_ColumnPropNameInRow="SearchValues" msprop:Generator_ColumnPropNameInTable="SearchValuesColumn" msprop:Generator_UserColumnName="SearchValues" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="727" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VideoAddress" msprop:Generator_ColumnVarNameInTable="columnVideoAddress" msprop:Generator_ColumnPropNameInRow="VideoAddress" msprop:Generator_ColumnPropNameInTable="VideoAddressColumn" msprop:Generator_UserColumnName="VideoAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniqueValue" msprop:Generator_ColumnVarNameInTable="columnUniqueValue" msprop:Generator_ColumnPropNameInRow="UniqueValue" msprop:Generator_ColumnPropNameInTable="UniqueValueColumn" msprop:Generator_UserColumnName="UniqueValue" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Photo" msprop:Generator_ColumnVarNameInTable="columnPhoto" msprop:Generator_ColumnPropNameInRow="Photo" msprop:Generator_ColumnPropNameInTable="PhotoColumn" msprop:Generator_UserColumnName="Photo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FileServiceKey" msprop:Generator_ColumnVarNameInTable="columnFileServiceKey" msprop:Generator_ColumnPropNameInRow="FileServiceKey" msprop:Generator_ColumnPropNameInTable="FileServiceKeyColumn" msprop:Generator_UserColumnName="FileServiceKey" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="zz_CopyGroup" msprop:Generator_TableClassName="zz_CopyGroupDataTable" msprop:Generator_TableVarName="tablezz_CopyGroup" msprop:Generator_TablePropName="zz_CopyGroup" msprop:Generator_RowDeletingName="zz_CopyGroupRowDeleting" msprop:Generator_RowChangingName="zz_CopyGroupRowChanging" msprop:Generator_RowEvHandlerName="zz_CopyGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="zz_CopyGroupRowDeleted" msprop:Generator_UserTableName="zz_CopyGroup" msprop:Generator_RowChangedName="zz_CopyGroupRowChanged" msprop:Generator_RowEvArgName="zz_CopyGroupRowChangeEvent" msprop:Generator_RowClassName="zz_CopyGroupRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:rz_Group" />
+      <xs:field xpath="mstns:GroupID" />
+    </xs:unique>
+    <xs:unique name="StaffUsersList_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:StaffUsersList" />
+      <xs:field xpath="mstns:UserID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

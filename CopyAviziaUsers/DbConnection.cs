@@ -17,7 +17,7 @@ namespace CopyAviziaUsers
             {
                 if (_con1 == null)
                 {
-                    _con1 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConStr1"].ConnectionString);
+                    _con1 = new SqlConnection(ConfigurationManager.ConnectionStrings["CopyAviziaUsers.Properties.Settings.conStrFrom"].ConnectionString);
                 }
                 return _con1;
             }
@@ -29,7 +29,7 @@ namespace CopyAviziaUsers
             {
                 if (_con2 == null)
                 {
-                    _con2 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConStr2"].ConnectionString);
+                    _con2 = new SqlConnection(ConfigurationManager.ConnectionStrings["CopyAviziaUsers.Properties.Settings.ConStrTo"].ConnectionString);
                 }
                 return _con2;
             }
