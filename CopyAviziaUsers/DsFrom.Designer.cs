@@ -7588,59 +7588,52 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [rz_Group] WHERE (([GroupID] = @Original_GroupID) AND ((@IsNull_Group" +
-                "Name = 1 AND [GroupName] IS NULL) OR ([GroupName] = @Original_GroupName)) AND ((" +
-                "@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original" +
-                "_Description)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([Dat" +
-                "eCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] " +
-                "IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_IsPublic = 1 AND " +
-                "[IsPublic] IS NULL) OR ([IsPublic] = @Original_IsPublic)) AND ((@IsNull_Membersh" +
-                "ipTermInDays = 1 AND [MembershipTermInDays] IS NULL) OR ([MembershipTermInDays] " +
-                "= @Original_MembershipTermInDays)) AND ((@IsNull_IsDomain = 1 AND [IsDomain] IS " +
-                "NULL) OR ([IsDomain] = @Original_IsDomain)) AND ((@IsNull_DefaultRole = 1 AND [D" +
-                "efaultRole] IS NULL) OR ([DefaultRole] = @Original_DefaultRole)) AND ((@IsNull_I" +
-                "sRegistrationDefault = 1 AND [IsRegistrationDefault] IS NULL) OR ([IsRegistratio" +
-                "nDefault] = @Original_IsRegistrationDefault)) AND ((@IsNull_IconUrl = 1 AND [Ico" +
-                "nUrl] IS NULL) OR ([IconUrl] = @Original_IconUrl)) AND ((@IsNull_IsEndUserRegist" +
-                "rationDefault = 1 AND [IsEndUserRegistrationDefault] IS NULL) OR ([IsEndUserRegi" +
-                "strationDefault] = @Original_IsEndUserRegistrationDefault)) AND ((@IsNull_IsStaf" +
-                "fRegistrationDefault = 1 AND [IsStaffRegistrationDefault] IS NULL) OR ([IsStaffR" +
-                "egistrationDefault] = @Original_IsStaffRegistrationDefault)) AND ((@IsNull_IsOpe" +
-                "n = 1 AND [IsOpen] IS NULL) OR ([IsOpen] = @Original_IsOpen)) AND ([IsPatientCar" +
-                "eTeam] = @Original_IsPatientCareTeam) AND ((@IsNull_ImageUrl = 1 AND [ImageUrl] " +
-                "IS NULL) OR ([ImageUrl] = @Original_ImageUrl)) AND ((@IsNull_IsOpenStaff = 1 AND" +
-                " [IsOpenStaff] IS NULL) OR ([IsOpenStaff] = @Original_IsOpenStaff)) AND ([IsServ" +
-                "iceLine] = @Original_IsServiceLine) AND ([IsCommunity] = @Original_IsCommunity) " +
-                "AND ([IsCoreGroup] = @Original_IsCoreGroup) AND ((@IsNull_FaxNumber = 1 AND [Fax" +
-                "Number] IS NULL) OR ([FaxNumber] = @Original_FaxNumber)) AND ((@IsNull_FacilityI" +
-                "D = 1 AND [FacilityID] IS NULL) OR ([FacilityID] = @Original_FacilityID)) AND ((" +
-                "@IsNull_DisplayOrder = 1 AND [DisplayOrder] IS NULL) OR ([DisplayOrder] = @Origi" +
-                "nal_DisplayOrder)) AND ((@IsNull_CopayDiscount = 1 AND [CopayDiscount] IS NULL) " +
-                "OR ([CopayDiscount] = @Original_CopayDiscount)) AND ((@IsNull_ServiceLineCopayAm" +
-                "ount = 1 AND [ServiceLineCopayAmount] IS NULL) OR ([ServiceLineCopayAmount] = @O" +
-                "riginal_ServiceLineCopayAmount)) AND ((@IsNull_MinutesBeforeEscalating = 1 AND [" +
-                "MinutesBeforeEscalating] IS NULL) OR ([MinutesBeforeEscalating] = @Original_Minu" +
-                "tesBeforeEscalating)) AND ((@IsNull_MinutesBeforeAdminEscalating = 1 AND [Minute" +
-                "sBeforeAdminEscalating] IS NULL) OR ([MinutesBeforeAdminEscalating] = @Original_" +
-                "MinutesBeforeAdminEscalating)) AND ([CheckForOnCallDoctor] = @Original_CheckForO" +
-                "nCallDoctor) AND ((@IsNull_ApptReminderNoticeTextPatient = 1 AND [ApptReminderNo" +
-                "ticeTextPatient] IS NULL) OR ([ApptReminderNoticeTextPatient] = @Original_ApptRe" +
-                "minderNoticeTextPatient)) AND ((@IsNull_ApptReminderNoticePeriodPatient = 1 AND " +
-                "[ApptReminderNoticePeriodPatient] IS NULL) OR ([ApptReminderNoticePeriodPatient]" +
-                " = @Original_ApptReminderNoticePeriodPatient)) AND ((@IsNull_ApptReminderNoticeT" +
-                "extStaff = 1 AND [ApptReminderNoticeTextStaff] IS NULL) OR ([ApptReminderNoticeT" +
-                "extStaff] = @Original_ApptReminderNoticeTextStaff)) AND ((@IsNull_ApptReminderNo" +
-                "ticePeriodStaff = 1 AND [ApptReminderNoticePeriodStaff] IS NULL) OR ([ApptRemind" +
-                "erNoticePeriodStaff] = @Original_ApptReminderNoticePeriodStaff)) AND ([IsPageReq" +
-                "uired] = @Original_IsPageRequired) AND ([IsEnableForCart] = @Original_IsEnableFo" +
-                "rCart) AND ((@IsNull_AtomIconUrl = 1 AND [AtomIconUrl] IS NULL) OR ([AtomIconUrl" +
-                "] = @Original_AtomIconUrl)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [rz_Group] WHERE (([GroupID] = @Original_GroupID) AND ((@IsNull_DateC" +
+                "reated = 1 AND [DateCreated] IS NULL) OR ([DateCreated] = @Original_DateCreated)" +
+                ") AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Origin" +
+                "al_CreatedBy)) AND ((@IsNull_IsPublic = 1 AND [IsPublic] IS NULL) OR ([IsPublic]" +
+                " = @Original_IsPublic)) AND ((@IsNull_MembershipTermInDays = 1 AND [MembershipTe" +
+                "rmInDays] IS NULL) OR ([MembershipTermInDays] = @Original_MembershipTermInDays))" +
+                " AND ((@IsNull_IsDomain = 1 AND [IsDomain] IS NULL) OR ([IsDomain] = @Original_I" +
+                "sDomain)) AND ((@IsNull_DefaultRole = 1 AND [DefaultRole] IS NULL) OR ([DefaultR" +
+                "ole] = @Original_DefaultRole)) AND ((@IsNull_IsRegistrationDefault = 1 AND [IsRe" +
+                "gistrationDefault] IS NULL) OR ([IsRegistrationDefault] = @Original_IsRegistrati" +
+                "onDefault)) AND ((@IsNull_IconUrl = 1 AND [IconUrl] IS NULL) OR ([IconUrl] = @Or" +
+                "iginal_IconUrl)) AND ((@IsNull_IsEndUserRegistrationDefault = 1 AND [IsEndUserRe" +
+                "gistrationDefault] IS NULL) OR ([IsEndUserRegistrationDefault] = @Original_IsEnd" +
+                "UserRegistrationDefault)) AND ((@IsNull_IsStaffRegistrationDefault = 1 AND [IsSt" +
+                "affRegistrationDefault] IS NULL) OR ([IsStaffRegistrationDefault] = @Original_Is" +
+                "StaffRegistrationDefault)) AND ((@IsNull_IsOpen = 1 AND [IsOpen] IS NULL) OR ([I" +
+                "sOpen] = @Original_IsOpen)) AND ([IsPatientCareTeam] = @Original_IsPatientCareTe" +
+                "am) AND ((@IsNull_ImageUrl = 1 AND [ImageUrl] IS NULL) OR ([ImageUrl] = @Origina" +
+                "l_ImageUrl)) AND ((@IsNull_IsOpenStaff = 1 AND [IsOpenStaff] IS NULL) OR ([IsOpe" +
+                "nStaff] = @Original_IsOpenStaff)) AND ([IsServiceLine] = @Original_IsServiceLine" +
+                ") AND ([IsCommunity] = @Original_IsCommunity) AND ([IsCoreGroup] = @Original_IsC" +
+                "oreGroup) AND ((@IsNull_FaxNumber = 1 AND [FaxNumber] IS NULL) OR ([FaxNumber] =" +
+                " @Original_FaxNumber)) AND ((@IsNull_FacilityID = 1 AND [FacilityID] IS NULL) OR" +
+                " ([FacilityID] = @Original_FacilityID)) AND ((@IsNull_DisplayOrder = 1 AND [Disp" +
+                "layOrder] IS NULL) OR ([DisplayOrder] = @Original_DisplayOrder)) AND ((@IsNull_C" +
+                "opayDiscount = 1 AND [CopayDiscount] IS NULL) OR ([CopayDiscount] = @Original_Co" +
+                "payDiscount)) AND ((@IsNull_ServiceLineCopayAmount = 1 AND [ServiceLineCopayAmou" +
+                "nt] IS NULL) OR ([ServiceLineCopayAmount] = @Original_ServiceLineCopayAmount)) A" +
+                "ND ((@IsNull_MinutesBeforeEscalating = 1 AND [MinutesBeforeEscalating] IS NULL) " +
+                "OR ([MinutesBeforeEscalating] = @Original_MinutesBeforeEscalating)) AND ((@IsNul" +
+                "l_MinutesBeforeAdminEscalating = 1 AND [MinutesBeforeAdminEscalating] IS NULL) O" +
+                "R ([MinutesBeforeAdminEscalating] = @Original_MinutesBeforeAdminEscalating)) AND" +
+                " ([CheckForOnCallDoctor] = @Original_CheckForOnCallDoctor) AND ((@IsNull_ApptRem" +
+                "inderNoticeTextPatient = 1 AND [ApptReminderNoticeTextPatient] IS NULL) OR ([App" +
+                "tReminderNoticeTextPatient] = @Original_ApptReminderNoticeTextPatient)) AND ((@I" +
+                "sNull_ApptReminderNoticePeriodPatient = 1 AND [ApptReminderNoticePeriodPatient] " +
+                "IS NULL) OR ([ApptReminderNoticePeriodPatient] = @Original_ApptReminderNoticePer" +
+                "iodPatient)) AND ((@IsNull_ApptReminderNoticeTextStaff = 1 AND [ApptReminderNoti" +
+                "ceTextStaff] IS NULL) OR ([ApptReminderNoticeTextStaff] = @Original_ApptReminder" +
+                "NoticeTextStaff)) AND ((@IsNull_ApptReminderNoticePeriodStaff = 1 AND [ApptRemin" +
+                "derNoticePeriodStaff] IS NULL) OR ([ApptReminderNoticePeriodStaff] = @Original_A" +
+                "pptReminderNoticePeriodStaff)) AND ([IsPageRequired] = @Original_IsPageRequired)" +
+                " AND ([IsEnableForCart] = @Original_IsEnableForCart) AND ((@IsNull_AtomIconUrl =" +
+                " 1 AND [AtomIconUrl] IS NULL) OR ([AtomIconUrl] = @Original_AtomIconUrl)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GroupName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateCreated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateCreated", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CreatedBy", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedBy", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -7700,41 +7693,39 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AtomIconUrl", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AtomIconUrl", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [rz_Group] ([GroupName], [Description], [DateCreated], [CreatedBy], [" +
-                "IsPublic], [MembershipTermInDays], [IsDomain], [DefaultRole], [IsRegistrationDef" +
-                "ault], [CustomAttributes], [InviteEmailText], [TermsOfUse], [IconUrl], [IsEndUse" +
-                "rRegistrationDefault], [IsStaffRegistrationDefault], [IsOpen], [IsPatientCareTea" +
-                "m], [ImageUrl], [IsOpenStaff], [IsServiceLine], [IsCommunity], [IsCoreGroup], [F" +
-                "axNumber], [FacilityID], [DisplayOrder], [CopayDiscount], [ServiceLineCopayAmoun" +
-                "t], [BinaryImageValue], [ProviderNoteTemplate], [MinutesBeforeEscalating], [Cust" +
-                "omCSS], [MinutesBeforeAdminEscalating], [CheckForOnCallDoctor], [OffDutyWarningM" +
-                "essage], [NoFutureSchedulesWarningMessage], [ApptReminderNoticeTextPatient], [Ap" +
-                "ptReminderNoticePeriodPatient], [ApptReminderNoticeTextStaff], [ApptReminderNoti" +
-                "cePeriodStaff], [IsPageRequired], [IsEnableForCart], [AtomIconUrl]) VALUES (@Gro" +
-                "upName, @Description, @DateCreated, @CreatedBy, @IsPublic, @MembershipTermInDays" +
-                ", @IsDomain, @DefaultRole, @IsRegistrationDefault, @CustomAttributes, @InviteEma" +
-                "ilText, @TermsOfUse, @IconUrl, @IsEndUserRegistrationDefault, @IsStaffRegistrati" +
-                "onDefault, @IsOpen, @IsPatientCareTeam, @ImageUrl, @IsOpenStaff, @IsServiceLine," +
-                " @IsCommunity, @IsCoreGroup, @FaxNumber, @FacilityID, @DisplayOrder, @CopayDisco" +
-                "unt, @ServiceLineCopayAmount, @BinaryImageValue, @ProviderNoteTemplate, @Minutes" +
-                "BeforeEscalating, @CustomCSS, @MinutesBeforeAdminEscalating, @CheckForOnCallDoct" +
-                "or, @OffDutyWarningMessage, @NoFutureSchedulesWarningMessage, @ApptReminderNotic" +
-                "eTextPatient, @ApptReminderNoticePeriodPatient, @ApptReminderNoticeTextStaff, @A" +
-                "pptReminderNoticePeriodStaff, @IsPageRequired, @IsEnableForCart, @AtomIconUrl);\r" +
-                "\nSELECT GroupID, GroupName, Description, DateCreated, CreatedBy, IsPublic, Membe" +
-                "rshipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault, CustomAttributes," +
-                " InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDefault, IsStaffRegi" +
-                "strationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenStaff, IsServiceLine" +
-                ", IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrder, CopayDiscount, " +
-                "ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate, MinutesBeforeEsc" +
-                "alating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCallDoctor, OffDutyW" +
-                "arningMessage, NoFutureSchedulesWarningMessage, ApptReminderNoticeTextPatient, A" +
-                "pptReminderNoticePeriodPatient, ApptReminderNoticeTextStaff, ApptReminderNoticeP" +
-                "eriodStaff, IsPageRequired, IsEnableForCart, AtomIconUrl FROM rz_Group WHERE (Gr" +
-                "oupID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [rz_Group] ([DateCreated], [CreatedBy], [IsPublic], [MembershipTermIn" +
+                "Days], [IsDomain], [DefaultRole], [IsRegistrationDefault], [CustomAttributes], [" +
+                "InviteEmailText], [TermsOfUse], [IconUrl], [IsEndUserRegistrationDefault], [IsSt" +
+                "affRegistrationDefault], [IsOpen], [IsPatientCareTeam], [ImageUrl], [IsOpenStaff" +
+                "], [IsServiceLine], [IsCommunity], [IsCoreGroup], [FaxNumber], [FacilityID], [Di" +
+                "splayOrder], [CopayDiscount], [ServiceLineCopayAmount], [BinaryImageValue], [Pro" +
+                "viderNoteTemplate], [MinutesBeforeEscalating], [CustomCSS], [MinutesBeforeAdminE" +
+                "scalating], [CheckForOnCallDoctor], [OffDutyWarningMessage], [NoFutureSchedulesW" +
+                "arningMessage], [ApptReminderNoticeTextPatient], [ApptReminderNoticePeriodPatien" +
+                "t], [ApptReminderNoticeTextStaff], [ApptReminderNoticePeriodStaff], [IsPageRequi" +
+                "red], [IsEnableForCart], [AtomIconUrl]) VALUES (@DateCreated, @CreatedBy, @IsPub" +
+                "lic, @MembershipTermInDays, @IsDomain, @DefaultRole, @IsRegistrationDefault, @Cu" +
+                "stomAttributes, @InviteEmailText, @TermsOfUse, @IconUrl, @IsEndUserRegistrationD" +
+                "efault, @IsStaffRegistrationDefault, @IsOpen, @IsPatientCareTeam, @ImageUrl, @Is" +
+                "OpenStaff, @IsServiceLine, @IsCommunity, @IsCoreGroup, @FaxNumber, @FacilityID, " +
+                "@DisplayOrder, @CopayDiscount, @ServiceLineCopayAmount, @BinaryImageValue, @Prov" +
+                "iderNoteTemplate, @MinutesBeforeEscalating, @CustomCSS, @MinutesBeforeAdminEscal" +
+                "ating, @CheckForOnCallDoctor, @OffDutyWarningMessage, @NoFutureSchedulesWarningM" +
+                "essage, @ApptReminderNoticeTextPatient, @ApptReminderNoticePeriodPatient, @ApptR" +
+                "eminderNoticeTextStaff, @ApptReminderNoticePeriodStaff, @IsPageRequired, @IsEnab" +
+                "leForCart, @AtomIconUrl);\r\nSELECT GroupID, REPLACE(GroupName, \'\'\'\', \'@@\') AS Gro" +
+                "upName, REPLACE(Description, \'\'\'\', \'@@\') AS Description, DateCreated, CreatedBy," +
+                " IsPublic, MembershipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault, C" +
+                "ustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDefa" +
+                "ult, IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenStaf" +
+                "f, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrder," +
+                " CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate, " +
+                "MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCall" +
+                "Doctor, OffDutyWarningMessage, NoFutureSchedulesWarningMessage, ApptReminderNoti" +
+                "ceTextPatient, ApptReminderNoticePeriodPatient, ApptReminderNoticeTextStaff, App" +
+                "tReminderNoticePeriodStaff, IsPageRequired, IsEnableForCart, AtomIconUrl FROM rz" +
+                "_Group WHERE (GroupID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateCreated", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreatedBy", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsPublic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7777,87 +7768,83 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AtomIconUrl", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AtomIconUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [rz_Group] SET [GroupName] = @GroupName, [Description] = @Description, [Da" +
-                "teCreated] = @DateCreated, [CreatedBy] = @CreatedBy, [IsPublic] = @IsPublic, [Me" +
-                "mbershipTermInDays] = @MembershipTermInDays, [IsDomain] = @IsDomain, [DefaultRol" +
-                "e] = @DefaultRole, [IsRegistrationDefault] = @IsRegistrationDefault, [CustomAttr" +
-                "ibutes] = @CustomAttributes, [InviteEmailText] = @InviteEmailText, [TermsOfUse] " +
-                "= @TermsOfUse, [IconUrl] = @IconUrl, [IsEndUserRegistrationDefault] = @IsEndUser" +
-                "RegistrationDefault, [IsStaffRegistrationDefault] = @IsStaffRegistrationDefault," +
-                " [IsOpen] = @IsOpen, [IsPatientCareTeam] = @IsPatientCareTeam, [ImageUrl] = @Ima" +
-                "geUrl, [IsOpenStaff] = @IsOpenStaff, [IsServiceLine] = @IsServiceLine, [IsCommun" +
-                "ity] = @IsCommunity, [IsCoreGroup] = @IsCoreGroup, [FaxNumber] = @FaxNumber, [Fa" +
-                "cilityID] = @FacilityID, [DisplayOrder] = @DisplayOrder, [CopayDiscount] = @Copa" +
-                "yDiscount, [ServiceLineCopayAmount] = @ServiceLineCopayAmount, [BinaryImageValue" +
-                "] = @BinaryImageValue, [ProviderNoteTemplate] = @ProviderNoteTemplate, [MinutesB" +
-                "eforeEscalating] = @MinutesBeforeEscalating, [CustomCSS] = @CustomCSS, [MinutesB" +
-                "eforeAdminEscalating] = @MinutesBeforeAdminEscalating, [CheckForOnCallDoctor] = " +
-                "@CheckForOnCallDoctor, [OffDutyWarningMessage] = @OffDutyWarningMessage, [NoFutu" +
-                "reSchedulesWarningMessage] = @NoFutureSchedulesWarningMessage, [ApptReminderNoti" +
-                "ceTextPatient] = @ApptReminderNoticeTextPatient, [ApptReminderNoticePeriodPatien" +
-                "t] = @ApptReminderNoticePeriodPatient, [ApptReminderNoticeTextStaff] = @ApptRemi" +
-                "nderNoticeTextStaff, [ApptReminderNoticePeriodStaff] = @ApptReminderNoticePeriod" +
-                "Staff, [IsPageRequired] = @IsPageRequired, [IsEnableForCart] = @IsEnableForCart," +
-                " [AtomIconUrl] = @AtomIconUrl WHERE (([GroupID] = @Original_GroupID) AND ((@IsNu" +
-                "ll_GroupName = 1 AND [GroupName] IS NULL) OR ([GroupName] = @Original_GroupName)" +
-                ") AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @" +
-                "Original_Description)) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) " +
-                "OR ([DateCreated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [Cre" +
-                "atedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_IsPublic " +
-                "= 1 AND [IsPublic] IS NULL) OR ([IsPublic] = @Original_IsPublic)) AND ((@IsNull_" +
-                "MembershipTermInDays = 1 AND [MembershipTermInDays] IS NULL) OR ([MembershipTerm" +
-                "InDays] = @Original_MembershipTermInDays)) AND ((@IsNull_IsDomain = 1 AND [IsDom" +
-                "ain] IS NULL) OR ([IsDomain] = @Original_IsDomain)) AND ((@IsNull_DefaultRole = " +
-                "1 AND [DefaultRole] IS NULL) OR ([DefaultRole] = @Original_DefaultRole)) AND ((@" +
-                "IsNull_IsRegistrationDefault = 1 AND [IsRegistrationDefault] IS NULL) OR ([IsReg" +
-                "istrationDefault] = @Original_IsRegistrationDefault)) AND ((@IsNull_IconUrl = 1 " +
-                "AND [IconUrl] IS NULL) OR ([IconUrl] = @Original_IconUrl)) AND ((@IsNull_IsEndUs" +
-                "erRegistrationDefault = 1 AND [IsEndUserRegistrationDefault] IS NULL) OR ([IsEnd" +
-                "UserRegistrationDefault] = @Original_IsEndUserRegistrationDefault)) AND ((@IsNul" +
-                "l_IsStaffRegistrationDefault = 1 AND [IsStaffRegistrationDefault] IS NULL) OR ([" +
-                "IsStaffRegistrationDefault] = @Original_IsStaffRegistrationDefault)) AND ((@IsNu" +
-                "ll_IsOpen = 1 AND [IsOpen] IS NULL) OR ([IsOpen] = @Original_IsOpen)) AND ([IsPa" +
-                "tientCareTeam] = @Original_IsPatientCareTeam) AND ((@IsNull_ImageUrl = 1 AND [Im" +
-                "ageUrl] IS NULL) OR ([ImageUrl] = @Original_ImageUrl)) AND ((@IsNull_IsOpenStaff" +
-                " = 1 AND [IsOpenStaff] IS NULL) OR ([IsOpenStaff] = @Original_IsOpenStaff)) AND " +
-                "([IsServiceLine] = @Original_IsServiceLine) AND ([IsCommunity] = @Original_IsCom" +
-                "munity) AND ([IsCoreGroup] = @Original_IsCoreGroup) AND ((@IsNull_FaxNumber = 1 " +
-                "AND [FaxNumber] IS NULL) OR ([FaxNumber] = @Original_FaxNumber)) AND ((@IsNull_F" +
-                "acilityID = 1 AND [FacilityID] IS NULL) OR ([FacilityID] = @Original_FacilityID)" +
-                ") AND ((@IsNull_DisplayOrder = 1 AND [DisplayOrder] IS NULL) OR ([DisplayOrder] " +
-                "= @Original_DisplayOrder)) AND ((@IsNull_CopayDiscount = 1 AND [CopayDiscount] I" +
-                "S NULL) OR ([CopayDiscount] = @Original_CopayDiscount)) AND ((@IsNull_ServiceLin" +
-                "eCopayAmount = 1 AND [ServiceLineCopayAmount] IS NULL) OR ([ServiceLineCopayAmou" +
-                "nt] = @Original_ServiceLineCopayAmount)) AND ((@IsNull_MinutesBeforeEscalating =" +
-                " 1 AND [MinutesBeforeEscalating] IS NULL) OR ([MinutesBeforeEscalating] = @Origi" +
-                "nal_MinutesBeforeEscalating)) AND ((@IsNull_MinutesBeforeAdminEscalating = 1 AND" +
-                " [MinutesBeforeAdminEscalating] IS NULL) OR ([MinutesBeforeAdminEscalating] = @O" +
-                "riginal_MinutesBeforeAdminEscalating)) AND ([CheckForOnCallDoctor] = @Original_C" +
-                "heckForOnCallDoctor) AND ((@IsNull_ApptReminderNoticeTextPatient = 1 AND [ApptRe" +
-                "minderNoticeTextPatient] IS NULL) OR ([ApptReminderNoticeTextPatient] = @Origina" +
-                "l_ApptReminderNoticeTextPatient)) AND ((@IsNull_ApptReminderNoticePeriodPatient " +
-                "= 1 AND [ApptReminderNoticePeriodPatient] IS NULL) OR ([ApptReminderNoticePeriod" +
-                "Patient] = @Original_ApptReminderNoticePeriodPatient)) AND ((@IsNull_ApptReminde" +
-                "rNoticeTextStaff = 1 AND [ApptReminderNoticeTextStaff] IS NULL) OR ([ApptReminde" +
-                "rNoticeTextStaff] = @Original_ApptReminderNoticeTextStaff)) AND ((@IsNull_ApptRe" +
-                "minderNoticePeriodStaff = 1 AND [ApptReminderNoticePeriodStaff] IS NULL) OR ([Ap" +
-                "ptReminderNoticePeriodStaff] = @Original_ApptReminderNoticePeriodStaff)) AND ([I" +
-                "sPageRequired] = @Original_IsPageRequired) AND ([IsEnableForCart] = @Original_Is" +
-                "EnableForCart) AND ((@IsNull_AtomIconUrl = 1 AND [AtomIconUrl] IS NULL) OR ([Ato" +
-                "mIconUrl] = @Original_AtomIconUrl)));\r\nSELECT GroupID, GroupName, Description, D" +
-                "ateCreated, CreatedBy, IsPublic, MembershipTermInDays, IsDomain, DefaultRole, Is" +
-                "RegistrationDefault, CustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsE" +
-                "ndUserRegistrationDefault, IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam" +
-                ", ImageUrl, IsOpenStaff, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, Fac" +
-                "ilityID, DisplayOrder, CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, " +
-                "ProviderNoteTemplate, MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEsca" +
-                "lating, CheckForOnCallDoctor, OffDutyWarningMessage, NoFutureSchedulesWarningMes" +
-                "sage, ApptReminderNoticeTextPatient, ApptReminderNoticePeriodPatient, ApptRemind" +
-                "erNoticeTextStaff, ApptReminderNoticePeriodStaff, IsPageRequired, IsEnableForCar" +
-                "t, AtomIconUrl FROM rz_Group WHERE (GroupID = @GroupID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [rz_Group] SET [DateCreated] = @DateCreated, [CreatedBy] = @CreatedBy, [Is" +
+                "Public] = @IsPublic, [MembershipTermInDays] = @MembershipTermInDays, [IsDomain] " +
+                "= @IsDomain, [DefaultRole] = @DefaultRole, [IsRegistrationDefault] = @IsRegistra" +
+                "tionDefault, [CustomAttributes] = @CustomAttributes, [InviteEmailText] = @Invite" +
+                "EmailText, [TermsOfUse] = @TermsOfUse, [IconUrl] = @IconUrl, [IsEndUserRegistrat" +
+                "ionDefault] = @IsEndUserRegistrationDefault, [IsStaffRegistrationDefault] = @IsS" +
+                "taffRegistrationDefault, [IsOpen] = @IsOpen, [IsPatientCareTeam] = @IsPatientCar" +
+                "eTeam, [ImageUrl] = @ImageUrl, [IsOpenStaff] = @IsOpenStaff, [IsServiceLine] = @" +
+                "IsServiceLine, [IsCommunity] = @IsCommunity, [IsCoreGroup] = @IsCoreGroup, [FaxN" +
+                "umber] = @FaxNumber, [FacilityID] = @FacilityID, [DisplayOrder] = @DisplayOrder," +
+                " [CopayDiscount] = @CopayDiscount, [ServiceLineCopayAmount] = @ServiceLineCopayA" +
+                "mount, [BinaryImageValue] = @BinaryImageValue, [ProviderNoteTemplate] = @Provide" +
+                "rNoteTemplate, [MinutesBeforeEscalating] = @MinutesBeforeEscalating, [CustomCSS]" +
+                " = @CustomCSS, [MinutesBeforeAdminEscalating] = @MinutesBeforeAdminEscalating, [" +
+                "CheckForOnCallDoctor] = @CheckForOnCallDoctor, [OffDutyWarningMessage] = @OffDut" +
+                "yWarningMessage, [NoFutureSchedulesWarningMessage] = @NoFutureSchedulesWarningMe" +
+                "ssage, [ApptReminderNoticeTextPatient] = @ApptReminderNoticeTextPatient, [ApptRe" +
+                "minderNoticePeriodPatient] = @ApptReminderNoticePeriodPatient, [ApptReminderNoti" +
+                "ceTextStaff] = @ApptReminderNoticeTextStaff, [ApptReminderNoticePeriodStaff] = @" +
+                "ApptReminderNoticePeriodStaff, [IsPageRequired] = @IsPageRequired, [IsEnableForC" +
+                "art] = @IsEnableForCart, [AtomIconUrl] = @AtomIconUrl WHERE (([GroupID] = @Origi" +
+                "nal_GroupID) AND ((@IsNull_DateCreated = 1 AND [DateCreated] IS NULL) OR ([DateC" +
+                "reated] = @Original_DateCreated)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS" +
+                " NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_IsPublic = 1 AND [I" +
+                "sPublic] IS NULL) OR ([IsPublic] = @Original_IsPublic)) AND ((@IsNull_Membership" +
+                "TermInDays = 1 AND [MembershipTermInDays] IS NULL) OR ([MembershipTermInDays] = " +
+                "@Original_MembershipTermInDays)) AND ((@IsNull_IsDomain = 1 AND [IsDomain] IS NU" +
+                "LL) OR ([IsDomain] = @Original_IsDomain)) AND ((@IsNull_DefaultRole = 1 AND [Def" +
+                "aultRole] IS NULL) OR ([DefaultRole] = @Original_DefaultRole)) AND ((@IsNull_IsR" +
+                "egistrationDefault = 1 AND [IsRegistrationDefault] IS NULL) OR ([IsRegistrationD" +
+                "efault] = @Original_IsRegistrationDefault)) AND ((@IsNull_IconUrl = 1 AND [IconU" +
+                "rl] IS NULL) OR ([IconUrl] = @Original_IconUrl)) AND ((@IsNull_IsEndUserRegistra" +
+                "tionDefault = 1 AND [IsEndUserRegistrationDefault] IS NULL) OR ([IsEndUserRegist" +
+                "rationDefault] = @Original_IsEndUserRegistrationDefault)) AND ((@IsNull_IsStaffR" +
+                "egistrationDefault = 1 AND [IsStaffRegistrationDefault] IS NULL) OR ([IsStaffReg" +
+                "istrationDefault] = @Original_IsStaffRegistrationDefault)) AND ((@IsNull_IsOpen " +
+                "= 1 AND [IsOpen] IS NULL) OR ([IsOpen] = @Original_IsOpen)) AND ([IsPatientCareT" +
+                "eam] = @Original_IsPatientCareTeam) AND ((@IsNull_ImageUrl = 1 AND [ImageUrl] IS" +
+                " NULL) OR ([ImageUrl] = @Original_ImageUrl)) AND ((@IsNull_IsOpenStaff = 1 AND [" +
+                "IsOpenStaff] IS NULL) OR ([IsOpenStaff] = @Original_IsOpenStaff)) AND ([IsServic" +
+                "eLine] = @Original_IsServiceLine) AND ([IsCommunity] = @Original_IsCommunity) AN" +
+                "D ([IsCoreGroup] = @Original_IsCoreGroup) AND ((@IsNull_FaxNumber = 1 AND [FaxNu" +
+                "mber] IS NULL) OR ([FaxNumber] = @Original_FaxNumber)) AND ((@IsNull_FacilityID " +
+                "= 1 AND [FacilityID] IS NULL) OR ([FacilityID] = @Original_FacilityID)) AND ((@I" +
+                "sNull_DisplayOrder = 1 AND [DisplayOrder] IS NULL) OR ([DisplayOrder] = @Origina" +
+                "l_DisplayOrder)) AND ((@IsNull_CopayDiscount = 1 AND [CopayDiscount] IS NULL) OR" +
+                " ([CopayDiscount] = @Original_CopayDiscount)) AND ((@IsNull_ServiceLineCopayAmou" +
+                "nt = 1 AND [ServiceLineCopayAmount] IS NULL) OR ([ServiceLineCopayAmount] = @Ori" +
+                "ginal_ServiceLineCopayAmount)) AND ((@IsNull_MinutesBeforeEscalating = 1 AND [Mi" +
+                "nutesBeforeEscalating] IS NULL) OR ([MinutesBeforeEscalating] = @Original_Minute" +
+                "sBeforeEscalating)) AND ((@IsNull_MinutesBeforeAdminEscalating = 1 AND [MinutesB" +
+                "eforeAdminEscalating] IS NULL) OR ([MinutesBeforeAdminEscalating] = @Original_Mi" +
+                "nutesBeforeAdminEscalating)) AND ([CheckForOnCallDoctor] = @Original_CheckForOnC" +
+                "allDoctor) AND ((@IsNull_ApptReminderNoticeTextPatient = 1 AND [ApptReminderNoti" +
+                "ceTextPatient] IS NULL) OR ([ApptReminderNoticeTextPatient] = @Original_ApptRemi" +
+                "nderNoticeTextPatient)) AND ((@IsNull_ApptReminderNoticePeriodPatient = 1 AND [A" +
+                "pptReminderNoticePeriodPatient] IS NULL) OR ([ApptReminderNoticePeriodPatient] =" +
+                " @Original_ApptReminderNoticePeriodPatient)) AND ((@IsNull_ApptReminderNoticeTex" +
+                "tStaff = 1 AND [ApptReminderNoticeTextStaff] IS NULL) OR ([ApptReminderNoticeTex" +
+                "tStaff] = @Original_ApptReminderNoticeTextStaff)) AND ((@IsNull_ApptReminderNoti" +
+                "cePeriodStaff = 1 AND [ApptReminderNoticePeriodStaff] IS NULL) OR ([ApptReminder" +
+                "NoticePeriodStaff] = @Original_ApptReminderNoticePeriodStaff)) AND ([IsPageRequi" +
+                "red] = @Original_IsPageRequired) AND ([IsEnableForCart] = @Original_IsEnableForC" +
+                "art) AND ((@IsNull_AtomIconUrl = 1 AND [AtomIconUrl] IS NULL) OR ([AtomIconUrl] " +
+                "= @Original_AtomIconUrl)));\r\nSELECT GroupID, REPLACE(GroupName, \'\'\'\', \'@@\') AS G" +
+                "roupName, REPLACE(Description, \'\'\'\', \'@@\') AS Description, DateCreated, CreatedB" +
+                "y, IsPublic, MembershipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault," +
+                " CustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDe" +
+                "fault, IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenSt" +
+                "aff, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrde" +
+                "r, CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate" +
+                ", MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCa" +
+                "llDoctor, OffDutyWarningMessage, NoFutureSchedulesWarningMessage, ApptReminderNo" +
+                "ticeTextPatient, ApptReminderNoticePeriodPatient, ApptReminderNoticeTextStaff, A" +
+                "pptReminderNoticePeriodStaff, IsPageRequired, IsEnableForCart, AtomIconUrl FROM " +
+                "rz_Group WHERE (GroupID = @GroupID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateCreated", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreatedBy", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsPublic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7899,10 +7886,6 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsEnableForCart", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsEnableForCart", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AtomIconUrl", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AtomIconUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GroupName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateCreated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateCreated", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CreatedBy", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedBy", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -7976,7 +7959,13 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from rz_Group";
+            this._commandCollection[0].CommandText = @"SELECT        GroupID,REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description, '''', '@@') AS Description,  DateCreated, CreatedBy, IsPublic, 
+                         MembershipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault, CustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDefault, 
+                         IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenStaff, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrder, 
+                         CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate, MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, 
+                         CheckForOnCallDoctor, OffDutyWarningMessage, NoFutureSchedulesWarningMessage, ApptReminderNoticeTextPatient, ApptReminderNoticePeriodPatient, 
+                         ApptReminderNoticeTextStaff, ApptReminderNoticePeriodStaff, IsPageRequired, IsEnableForCart, AtomIconUrl
+FROM            rz_Group";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8039,8 +8028,6 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
         public virtual int Delete(
                     int Original_GroupID, 
-                    string Original_GroupName, 
-                    string Original_Description, 
                     global::System.Nullable<global::System.DateTime> Original_DateCreated, 
                     global::System.Nullable<int> Original_CreatedBy, 
                     global::System.Nullable<bool> Original_IsPublic, 
@@ -8074,228 +8061,212 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
                     bool Original_IsEnableForCart, 
                     string Original_AtomIconUrl) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GroupID));
-            if ((Original_GroupName == null)) {
+            if ((Original_DateCreated.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DateCreated.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_GroupName));
+            if ((Original_CreatedBy.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_CreatedBy.Value));
             }
-            if ((Original_Description == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Description));
-            }
-            if ((Original_DateCreated.HasValue == true)) {
+            if ((Original_IsPublic.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_DateCreated.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_IsPublic.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_CreatedBy.HasValue == true)) {
+            if ((Original_MembershipTermInDays.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_CreatedBy.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_MembershipTermInDays.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_IsPublic.HasValue == true)) {
+            if ((Original_IsDomain.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_IsPublic.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_IsDomain.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_MembershipTermInDays.HasValue == true)) {
+            if ((Original_DefaultRole.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_MembershipTermInDays.Value));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_DefaultRole.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_IsDomain.HasValue == true)) {
+            if ((Original_IsRegistrationDefault.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_IsDomain.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_IsRegistrationDefault.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_DefaultRole.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_DefaultRole.Value));
-            }
-            else {
+            if ((Original_IconUrl == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_IsRegistrationDefault.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_IconUrl));
+            }
+            if ((Original_IsEndUserRegistrationDefault.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_IsRegistrationDefault.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_IsEndUserRegistrationDefault.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_IconUrl == null)) {
+            if ((Original_IsStaffRegistrationDefault.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_IsStaffRegistrationDefault.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_IconUrl));
-            }
-            if ((Original_IsEndUserRegistrationDefault.HasValue == true)) {
+            if ((Original_IsOpen.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_IsEndUserRegistrationDefault.Value));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_IsOpen.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_IsStaffRegistrationDefault.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_IsStaffRegistrationDefault.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsOpen.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((bool)(Original_IsOpen.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[27].Value = ((bool)(Original_IsPatientCareTeam));
+            this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_IsPatientCareTeam));
             if ((Original_ImageUrl == null)) {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_ImageUrl));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((string)(Original_ImageUrl));
             }
             if ((Original_IsOpenStaff.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((bool)(Original_IsOpenStaff.Value));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((bool)(Original_IsOpenStaff.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[32].Value = ((bool)(Original_IsServiceLine));
-            this.Adapter.DeleteCommand.Parameters[33].Value = ((bool)(Original_IsCommunity));
-            this.Adapter.DeleteCommand.Parameters[34].Value = ((bool)(Original_IsCoreGroup));
+            this.Adapter.DeleteCommand.Parameters[28].Value = ((bool)(Original_IsServiceLine));
+            this.Adapter.DeleteCommand.Parameters[29].Value = ((bool)(Original_IsCommunity));
+            this.Adapter.DeleteCommand.Parameters[30].Value = ((bool)(Original_IsCoreGroup));
             if ((Original_FaxNumber == null)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_FaxNumber));
+            }
+            if ((Original_FacilityID == null)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_FacilityID));
+            }
+            if ((Original_DisplayOrder.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((int)(Original_DisplayOrder.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_FaxNumber));
-            }
-            if ((Original_FacilityID == null)) {
+            if ((Original_CopayDiscount == null)) {
                 this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_FacilityID));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_CopayDiscount));
             }
-            if ((Original_DisplayOrder.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[40].Value = ((int)(Original_DisplayOrder.Value));
-            }
-            else {
+            if ((Original_ServiceLineCopayAmount == null)) {
                 this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
-            if ((Original_CopayDiscount == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((string)(Original_ServiceLineCopayAmount));
+            }
+            if ((Original_MinutesBeforeEscalating.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((int)(Original_MinutesBeforeEscalating.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[42].Value = ((string)(Original_CopayDiscount));
+            if ((Original_MinutesBeforeAdminEscalating.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((int)(Original_MinutesBeforeAdminEscalating.Value));
             }
-            if ((Original_ServiceLineCopayAmount == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[44].Value = ((string)(Original_ServiceLineCopayAmount));
-            }
-            if ((Original_MinutesBeforeEscalating.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[46].Value = ((int)(Original_MinutesBeforeEscalating.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MinutesBeforeAdminEscalating.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[48].Value = ((int)(Original_MinutesBeforeAdminEscalating.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[49].Value = ((bool)(Original_CheckForOnCallDoctor));
+            this.Adapter.DeleteCommand.Parameters[45].Value = ((bool)(Original_CheckForOnCallDoctor));
             if ((Original_ApptReminderNoticeTextPatient == null)) {
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((string)(Original_ApptReminderNoticeTextPatient));
+            }
+            if ((Original_ApptReminderNoticePeriodPatient == null)) {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((string)(Original_ApptReminderNoticePeriodPatient));
+            }
+            if ((Original_ApptReminderNoticeTextStaff == null)) {
                 this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[51].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[51].Value = ((string)(Original_ApptReminderNoticeTextPatient));
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((string)(Original_ApptReminderNoticeTextStaff));
             }
-            if ((Original_ApptReminderNoticePeriodPatient == null)) {
+            if ((Original_ApptReminderNoticePeriodStaff == null)) {
                 this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[53].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_ApptReminderNoticePeriodPatient));
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_ApptReminderNoticePeriodStaff));
             }
-            if ((Original_ApptReminderNoticeTextStaff == null)) {
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[55].Value = ((string)(Original_ApptReminderNoticeTextStaff));
-            }
-            if ((Original_ApptReminderNoticePeriodStaff == null)) {
+            this.Adapter.DeleteCommand.Parameters[54].Value = ((bool)(Original_IsPageRequired));
+            this.Adapter.DeleteCommand.Parameters[55].Value = ((bool)(Original_IsEnableForCart));
+            if ((Original_AtomIconUrl == null)) {
                 this.Adapter.DeleteCommand.Parameters[56].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[57].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[57].Value = ((string)(Original_ApptReminderNoticePeriodStaff));
-            }
-            this.Adapter.DeleteCommand.Parameters[58].Value = ((bool)(Original_IsPageRequired));
-            this.Adapter.DeleteCommand.Parameters[59].Value = ((bool)(Original_IsEnableForCart));
-            if ((Original_AtomIconUrl == null)) {
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[61].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[61].Value = ((string)(Original_AtomIconUrl));
+                this.Adapter.DeleteCommand.Parameters[57].Value = ((string)(Original_AtomIconUrl));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8318,8 +8289,6 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
-                    string GroupName, 
-                    string Description, 
                     global::System.Nullable<global::System.DateTime> DateCreated, 
                     global::System.Nullable<int> CreatedBy, 
                     global::System.Nullable<bool> IsPublic, 
@@ -8360,222 +8329,210 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
                     bool IsPageRequired, 
                     bool IsEnableForCart, 
                     string AtomIconUrl) {
-            if ((GroupName == null)) {
+            if ((DateCreated.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(DateCreated.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(GroupName));
+            if ((CreatedBy.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(CreatedBy.Value));
             }
-            if ((Description == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Description));
-            }
-            if ((DateCreated.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DateCreated.Value));
+            if ((IsPublic.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(IsPublic.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((CreatedBy.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(CreatedBy.Value));
+            if ((MembershipTermInDays.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(MembershipTermInDays.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((IsPublic.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(IsPublic.Value));
+            if ((IsDomain.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(IsDomain.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((MembershipTermInDays.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(MembershipTermInDays.Value));
+            if ((DefaultRole.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(DefaultRole.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((IsDomain.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(IsDomain.Value));
+            if ((IsRegistrationDefault.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(IsRegistrationDefault.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((DefaultRole.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(DefaultRole.Value));
-            }
-            else {
+            if ((CustomAttributes == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((IsRegistrationDefault.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(IsRegistrationDefault.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((object)(CustomAttributes));
+            }
+            if ((InviteEmailText == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((CustomAttributes == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(InviteEmailText));
+            }
+            if ((TermsOfUse == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((object)(CustomAttributes));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(TermsOfUse));
             }
-            if ((InviteEmailText == null)) {
+            if ((IconUrl == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(InviteEmailText));
-            }
-            if ((TermsOfUse == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(TermsOfUse));
-            }
-            if ((IconUrl == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(IconUrl));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(IconUrl));
             }
             if ((IsEndUserRegistrationDefault.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(IsEndUserRegistrationDefault.Value));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(IsEndUserRegistrationDefault.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((IsStaffRegistrationDefault.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(IsStaffRegistrationDefault.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((IsOpen.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(IsOpen.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((IsStaffRegistrationDefault.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(IsStaffRegistrationDefault.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((IsOpen.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(IsOpen.Value));
-            }
-            else {
+            this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(IsPatientCareTeam));
+            if ((ImageUrl == null)) {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[16].Value = ((bool)(IsPatientCareTeam));
-            if ((ImageUrl == null)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(ImageUrl));
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(ImageUrl));
             }
             if ((IsOpenStaff.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(IsOpenStaff.Value));
+                this.Adapter.InsertCommand.Parameters[16].Value = ((bool)(IsOpenStaff.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[19].Value = ((bool)(IsServiceLine));
-            this.Adapter.InsertCommand.Parameters[20].Value = ((bool)(IsCommunity));
-            this.Adapter.InsertCommand.Parameters[21].Value = ((bool)(IsCoreGroup));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(IsServiceLine));
+            this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(IsCommunity));
+            this.Adapter.InsertCommand.Parameters[19].Value = ((bool)(IsCoreGroup));
             if ((FaxNumber == null)) {
-                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(FaxNumber));
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(FaxNumber));
             }
             if ((FacilityID == null)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(FacilityID));
+            }
+            if ((DisplayOrder.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((int)(DisplayOrder.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((CopayDiscount == null)) {
                 this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(FacilityID));
+                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(CopayDiscount));
             }
-            if ((DisplayOrder.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((int)(DisplayOrder.Value));
-            }
-            else {
+            if ((ServiceLineCopayAmount == null)) {
                 this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((CopayDiscount == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(ServiceLineCopayAmount));
+            }
+            if ((BinaryImageValue == null)) {
                 this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((string)(CopayDiscount));
+                this.Adapter.InsertCommand.Parameters[25].Value = ((byte[])(BinaryImageValue));
             }
-            if ((ServiceLineCopayAmount == null)) {
+            if ((ProviderNoteTemplate == null)) {
                 this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(ServiceLineCopayAmount));
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(ProviderNoteTemplate));
             }
-            if ((BinaryImageValue == null)) {
-                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            if ((MinutesBeforeEscalating.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(MinutesBeforeEscalating.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[27].Value = ((byte[])(BinaryImageValue));
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((ProviderNoteTemplate == null)) {
+            if ((CustomCSS == null)) {
                 this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(ProviderNoteTemplate));
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(CustomCSS));
             }
-            if ((MinutesBeforeEscalating.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[29].Value = ((int)(MinutesBeforeEscalating.Value));
+            if ((MinutesBeforeAdminEscalating.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[29].Value = ((int)(MinutesBeforeAdminEscalating.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((CustomCSS == null)) {
-                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(CustomCSS));
-            }
-            if ((MinutesBeforeAdminEscalating.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[31].Value = ((int)(MinutesBeforeAdminEscalating.Value));
-            }
-            else {
+            this.Adapter.InsertCommand.Parameters[30].Value = ((bool)(CheckForOnCallDoctor));
+            if ((OffDutyWarningMessage == null)) {
                 this.Adapter.InsertCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[32].Value = ((bool)(CheckForOnCallDoctor));
-            if ((OffDutyWarningMessage == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[31].Value = ((string)(OffDutyWarningMessage));
+            }
+            if ((NoFutureSchedulesWarningMessage == null)) {
+                this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[32].Value = ((string)(NoFutureSchedulesWarningMessage));
+            }
+            if ((ApptReminderNoticeTextPatient == null)) {
                 this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[33].Value = ((string)(OffDutyWarningMessage));
+                this.Adapter.InsertCommand.Parameters[33].Value = ((string)(ApptReminderNoticeTextPatient));
             }
-            if ((NoFutureSchedulesWarningMessage == null)) {
+            if ((ApptReminderNoticePeriodPatient == null)) {
                 this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(NoFutureSchedulesWarningMessage));
+                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(ApptReminderNoticePeriodPatient));
             }
-            if ((ApptReminderNoticeTextPatient == null)) {
+            if ((ApptReminderNoticeTextStaff == null)) {
                 this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(ApptReminderNoticeTextPatient));
+                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(ApptReminderNoticeTextStaff));
             }
-            if ((ApptReminderNoticePeriodPatient == null)) {
+            if ((ApptReminderNoticePeriodStaff == null)) {
                 this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(ApptReminderNoticePeriodPatient));
+                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(ApptReminderNoticePeriodStaff));
             }
-            if ((ApptReminderNoticeTextStaff == null)) {
-                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(ApptReminderNoticeTextStaff));
-            }
-            if ((ApptReminderNoticePeriodStaff == null)) {
-                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[38].Value = ((string)(ApptReminderNoticePeriodStaff));
-            }
-            this.Adapter.InsertCommand.Parameters[39].Value = ((bool)(IsPageRequired));
-            this.Adapter.InsertCommand.Parameters[40].Value = ((bool)(IsEnableForCart));
+            this.Adapter.InsertCommand.Parameters[37].Value = ((bool)(IsPageRequired));
+            this.Adapter.InsertCommand.Parameters[38].Value = ((bool)(IsEnableForCart));
             if ((AtomIconUrl == null)) {
-                this.Adapter.InsertCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[41].Value = ((string)(AtomIconUrl));
+                this.Adapter.InsertCommand.Parameters[39].Value = ((string)(AtomIconUrl));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8598,8 +8555,6 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string GroupName, 
-                    string Description, 
                     global::System.Nullable<global::System.DateTime> DateCreated, 
                     global::System.Nullable<int> CreatedBy, 
                     global::System.Nullable<bool> IsPublic, 
@@ -8641,8 +8596,6 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
                     bool IsEnableForCart, 
                     string AtomIconUrl, 
                     int Original_GroupID, 
-                    string Original_GroupName, 
-                    string Original_Description, 
                     global::System.Nullable<global::System.DateTime> Original_DateCreated, 
                     global::System.Nullable<int> Original_CreatedBy, 
                     global::System.Nullable<bool> Original_IsPublic, 
@@ -8676,448 +8629,420 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
                     bool Original_IsEnableForCart, 
                     string Original_AtomIconUrl, 
                     int GroupID) {
-            if ((GroupName == null)) {
+            if ((DateCreated.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(DateCreated.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(GroupName));
+            if ((CreatedBy.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(CreatedBy.Value));
             }
-            if ((Description == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Description));
-            }
-            if ((DateCreated.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DateCreated.Value));
+            if ((IsPublic.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(IsPublic.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((CreatedBy.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(CreatedBy.Value));
+            if ((MembershipTermInDays.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(MembershipTermInDays.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((IsPublic.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(IsPublic.Value));
+            if ((IsDomain.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(IsDomain.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((MembershipTermInDays.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(MembershipTermInDays.Value));
+            if ((DefaultRole.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(DefaultRole.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((IsDomain.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(IsDomain.Value));
+            if ((IsRegistrationDefault.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(IsRegistrationDefault.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((DefaultRole.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(DefaultRole.Value));
-            }
-            else {
+            if ((CustomAttributes == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((IsRegistrationDefault.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(IsRegistrationDefault.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(CustomAttributes));
+            }
+            if ((InviteEmailText == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((CustomAttributes == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(InviteEmailText));
+            }
+            if ((TermsOfUse == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(CustomAttributes));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(TermsOfUse));
             }
-            if ((InviteEmailText == null)) {
+            if ((IconUrl == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(InviteEmailText));
-            }
-            if ((TermsOfUse == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(TermsOfUse));
-            }
-            if ((IconUrl == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(IconUrl));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(IconUrl));
             }
             if ((IsEndUserRegistrationDefault.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(IsEndUserRegistrationDefault.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(IsEndUserRegistrationDefault.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((IsStaffRegistrationDefault.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(IsStaffRegistrationDefault.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((IsOpen.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(IsOpen.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((IsStaffRegistrationDefault.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(IsStaffRegistrationDefault.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((IsOpen.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(IsOpen.Value));
-            }
-            else {
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(IsPatientCareTeam));
+            if ((ImageUrl == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(IsPatientCareTeam));
-            if ((ImageUrl == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(ImageUrl));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(ImageUrl));
             }
             if ((IsOpenStaff.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(IsOpenStaff.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(IsOpenStaff.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(IsServiceLine));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((bool)(IsCommunity));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(IsCoreGroup));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(IsServiceLine));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(IsCommunity));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(IsCoreGroup));
             if ((FaxNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(FaxNumber));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(FaxNumber));
             }
             if ((FacilityID == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(FacilityID));
+            }
+            if ((DisplayOrder.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(DisplayOrder.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((CopayDiscount == null)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(FacilityID));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(CopayDiscount));
             }
-            if ((DisplayOrder.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(DisplayOrder.Value));
-            }
-            else {
+            if ((ServiceLineCopayAmount == null)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((CopayDiscount == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(ServiceLineCopayAmount));
+            }
+            if ((BinaryImageValue == null)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(CopayDiscount));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((byte[])(BinaryImageValue));
             }
-            if ((ServiceLineCopayAmount == null)) {
+            if ((ProviderNoteTemplate == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(ServiceLineCopayAmount));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(ProviderNoteTemplate));
             }
-            if ((BinaryImageValue == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            if ((MinutesBeforeEscalating.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(MinutesBeforeEscalating.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((byte[])(BinaryImageValue));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((ProviderNoteTemplate == null)) {
+            if ((CustomCSS == null)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(ProviderNoteTemplate));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(CustomCSS));
             }
-            if ((MinutesBeforeEscalating.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(MinutesBeforeEscalating.Value));
+            if ((MinutesBeforeAdminEscalating.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(MinutesBeforeAdminEscalating.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((CustomCSS == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(CustomCSS));
-            }
-            if ((MinutesBeforeAdminEscalating.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(MinutesBeforeAdminEscalating.Value));
-            }
-            else {
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((bool)(CheckForOnCallDoctor));
+            if ((OffDutyWarningMessage == null)) {
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((bool)(CheckForOnCallDoctor));
-            if ((OffDutyWarningMessage == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(OffDutyWarningMessage));
+            }
+            if ((NoFutureSchedulesWarningMessage == null)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(NoFutureSchedulesWarningMessage));
+            }
+            if ((ApptReminderNoticeTextPatient == null)) {
                 this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(OffDutyWarningMessage));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(ApptReminderNoticeTextPatient));
             }
-            if ((NoFutureSchedulesWarningMessage == null)) {
+            if ((ApptReminderNoticePeriodPatient == null)) {
                 this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(NoFutureSchedulesWarningMessage));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(ApptReminderNoticePeriodPatient));
             }
-            if ((ApptReminderNoticeTextPatient == null)) {
+            if ((ApptReminderNoticeTextStaff == null)) {
                 this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(ApptReminderNoticeTextPatient));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(ApptReminderNoticeTextStaff));
             }
-            if ((ApptReminderNoticePeriodPatient == null)) {
+            if ((ApptReminderNoticePeriodStaff == null)) {
                 this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(ApptReminderNoticePeriodPatient));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(ApptReminderNoticePeriodStaff));
             }
-            if ((ApptReminderNoticeTextStaff == null)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(ApptReminderNoticeTextStaff));
-            }
-            if ((ApptReminderNoticePeriodStaff == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(ApptReminderNoticePeriodStaff));
-            }
-            this.Adapter.UpdateCommand.Parameters[39].Value = ((bool)(IsPageRequired));
-            this.Adapter.UpdateCommand.Parameters[40].Value = ((bool)(IsEnableForCart));
+            this.Adapter.UpdateCommand.Parameters[37].Value = ((bool)(IsPageRequired));
+            this.Adapter.UpdateCommand.Parameters[38].Value = ((bool)(IsEnableForCart));
             if ((AtomIconUrl == null)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(AtomIconUrl));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(AtomIconUrl));
             }
-            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_GroupID));
-            if ((Original_GroupName == null)) {
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_GroupID));
+            if ((Original_DateCreated.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((System.DateTime)(Original_DateCreated.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_CreatedBy.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_CreatedBy.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_GroupName));
+            if ((Original_IsPublic.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((bool)(Original_IsPublic.Value));
             }
-            if ((Original_Description == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_Description));
-            }
-            if ((Original_DateCreated.HasValue == true)) {
+            if ((Original_MembershipTermInDays.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((System.DateTime)(Original_DateCreated.Value));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_MembershipTermInDays.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
-            if ((Original_CreatedBy.HasValue == true)) {
+            if ((Original_IsDomain.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_CreatedBy.Value));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((bool)(Original_IsDomain.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
-            if ((Original_IsPublic.HasValue == true)) {
+            if ((Original_DefaultRole.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((bool)(Original_IsPublic.Value));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(Original_DefaultRole.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
-            if ((Original_MembershipTermInDays.HasValue == true)) {
+            if ((Original_IsRegistrationDefault.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(Original_MembershipTermInDays.Value));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(Original_IsRegistrationDefault.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
-            if ((Original_IsDomain.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((bool)(Original_IsDomain.Value));
-            }
-            else {
+            if ((Original_IconUrl == null)) {
                 this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
-            if ((Original_DefaultRole.HasValue == true)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_IconUrl));
+            }
+            if ((Original_IsEndUserRegistrationDefault.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(Original_DefaultRole.Value));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(Original_IsEndUserRegistrationDefault.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
-            if ((Original_IsRegistrationDefault.HasValue == true)) {
+            if ((Original_IsStaffRegistrationDefault.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((int)(Original_IsRegistrationDefault.Value));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((int)(Original_IsStaffRegistrationDefault.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
-            if ((Original_IconUrl == null)) {
+            if ((Original_IsOpen.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((bool)(Original_IsOpen.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_IconUrl));
-            }
-            if ((Original_IsEndUserRegistrationDefault.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((int)(Original_IsEndUserRegistrationDefault.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsStaffRegistrationDefault.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((int)(Original_IsStaffRegistrationDefault.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsOpen.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((bool)(Original_IsOpen.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[69].Value = ((bool)(Original_IsPatientCareTeam));
+            this.Adapter.UpdateCommand.Parameters[63].Value = ((bool)(Original_IsPatientCareTeam));
             if ((Original_ImageUrl == null)) {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[71].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[65].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((string)(Original_ImageUrl));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((string)(Original_ImageUrl));
             }
             if ((Original_IsOpenStaff.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((bool)(Original_IsOpenStaff.Value));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((bool)(Original_IsOpenStaff.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[73].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[67].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[74].Value = ((bool)(Original_IsServiceLine));
-            this.Adapter.UpdateCommand.Parameters[75].Value = ((bool)(Original_IsCommunity));
-            this.Adapter.UpdateCommand.Parameters[76].Value = ((bool)(Original_IsCoreGroup));
+            this.Adapter.UpdateCommand.Parameters[68].Value = ((bool)(Original_IsServiceLine));
+            this.Adapter.UpdateCommand.Parameters[69].Value = ((bool)(Original_IsCommunity));
+            this.Adapter.UpdateCommand.Parameters[70].Value = ((bool)(Original_IsCoreGroup));
             if ((Original_FaxNumber == null)) {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_FaxNumber));
+            }
+            if ((Original_FacilityID == null)) {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_FacilityID));
+            }
+            if ((Original_DisplayOrder.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((int)(Original_DisplayOrder.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
+            }
+            if ((Original_CopayDiscount == null)) {
                 this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((string)(Original_FaxNumber));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((string)(Original_CopayDiscount));
             }
-            if ((Original_FacilityID == null)) {
+            if ((Original_ServiceLineCopayAmount == null)) {
                 this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_FacilityID));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_ServiceLineCopayAmount));
             }
-            if ((Original_DisplayOrder.HasValue == true)) {
+            if ((Original_MinutesBeforeEscalating.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((int)(Original_DisplayOrder.Value));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((int)(Original_MinutesBeforeEscalating.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
             }
-            if ((Original_CopayDiscount == null)) {
+            if ((Original_MinutesBeforeAdminEscalating.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((int)(Original_MinutesBeforeAdminEscalating.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[84].Value = ((string)(Original_CopayDiscount));
-            }
-            if ((Original_ServiceLineCopayAmount == null)) {
-                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[86].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[86].Value = ((string)(Original_ServiceLineCopayAmount));
-            }
-            if ((Original_MinutesBeforeEscalating.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_MinutesBeforeEscalating.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MinutesBeforeAdminEscalating.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[90].Value = ((int)(Original_MinutesBeforeAdminEscalating.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[91].Value = ((bool)(Original_CheckForOnCallDoctor));
+            this.Adapter.UpdateCommand.Parameters[85].Value = ((bool)(Original_CheckForOnCallDoctor));
             if ((Original_ApptReminderNoticeTextPatient == null)) {
+                this.Adapter.UpdateCommand.Parameters[86].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[87].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[86].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((string)(Original_ApptReminderNoticeTextPatient));
+            }
+            if ((Original_ApptReminderNoticePeriodPatient == null)) {
+                this.Adapter.UpdateCommand.Parameters[88].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[89].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[88].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((string)(Original_ApptReminderNoticePeriodPatient));
+            }
+            if ((Original_ApptReminderNoticeTextStaff == null)) {
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[91].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[91].Value = ((string)(Original_ApptReminderNoticeTextStaff));
+            }
+            if ((Original_ApptReminderNoticePeriodStaff == null)) {
                 this.Adapter.UpdateCommand.Parameters[92].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[93].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[92].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[93].Value = ((string)(Original_ApptReminderNoticeTextPatient));
+                this.Adapter.UpdateCommand.Parameters[93].Value = ((string)(Original_ApptReminderNoticePeriodStaff));
             }
-            if ((Original_ApptReminderNoticePeriodPatient == null)) {
-                this.Adapter.UpdateCommand.Parameters[94].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[95].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[94].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[95].Value = ((string)(Original_ApptReminderNoticePeriodPatient));
-            }
-            if ((Original_ApptReminderNoticeTextStaff == null)) {
+            this.Adapter.UpdateCommand.Parameters[94].Value = ((bool)(Original_IsPageRequired));
+            this.Adapter.UpdateCommand.Parameters[95].Value = ((bool)(Original_IsEnableForCart));
+            if ((Original_AtomIconUrl == null)) {
                 this.Adapter.UpdateCommand.Parameters[96].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[97].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[96].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[97].Value = ((string)(Original_ApptReminderNoticeTextStaff));
+                this.Adapter.UpdateCommand.Parameters[97].Value = ((string)(Original_AtomIconUrl));
             }
-            if ((Original_ApptReminderNoticePeriodStaff == null)) {
-                this.Adapter.UpdateCommand.Parameters[98].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[99].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[98].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[99].Value = ((string)(Original_ApptReminderNoticePeriodStaff));
-            }
-            this.Adapter.UpdateCommand.Parameters[100].Value = ((bool)(Original_IsPageRequired));
-            this.Adapter.UpdateCommand.Parameters[101].Value = ((bool)(Original_IsEnableForCart));
-            if ((Original_AtomIconUrl == null)) {
-                this.Adapter.UpdateCommand.Parameters[102].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[103].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[102].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[103].Value = ((string)(Original_AtomIconUrl));
-            }
-            this.Adapter.UpdateCommand.Parameters[104].Value = ((int)(GroupID));
+            this.Adapter.UpdateCommand.Parameters[98].Value = ((int)(GroupID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9139,8 +9064,6 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string GroupName, 
-                    string Description, 
                     global::System.Nullable<global::System.DateTime> DateCreated, 
                     global::System.Nullable<int> CreatedBy, 
                     global::System.Nullable<bool> IsPublic, 
@@ -9182,8 +9105,6 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
                     bool IsEnableForCart, 
                     string AtomIconUrl, 
                     int Original_GroupID, 
-                    string Original_GroupName, 
-                    string Original_Description, 
                     global::System.Nullable<global::System.DateTime> Original_DateCreated, 
                     global::System.Nullable<int> Original_CreatedBy, 
                     global::System.Nullable<bool> Original_IsPublic, 
@@ -9216,7 +9137,7 @@ namespace CopyAviziaUsers.DsFromTableAdapters {
                     bool Original_IsPageRequired, 
                     bool Original_IsEnableForCart, 
                     string Original_AtomIconUrl) {
-            return this.Update(GroupName, Description, DateCreated, CreatedBy, IsPublic, MembershipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault, CustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDefault, IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenStaff, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrder, CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate, MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCallDoctor, OffDutyWarningMessage, NoFutureSchedulesWarningMessage, ApptReminderNoticeTextPatient, ApptReminderNoticePeriodPatient, ApptReminderNoticeTextStaff, ApptReminderNoticePeriodStaff, IsPageRequired, IsEnableForCart, AtomIconUrl, Original_GroupID, Original_GroupName, Original_Description, Original_DateCreated, Original_CreatedBy, Original_IsPublic, Original_MembershipTermInDays, Original_IsDomain, Original_DefaultRole, Original_IsRegistrationDefault, Original_IconUrl, Original_IsEndUserRegistrationDefault, Original_IsStaffRegistrationDefault, Original_IsOpen, Original_IsPatientCareTeam, Original_ImageUrl, Original_IsOpenStaff, Original_IsServiceLine, Original_IsCommunity, Original_IsCoreGroup, Original_FaxNumber, Original_FacilityID, Original_DisplayOrder, Original_CopayDiscount, Original_ServiceLineCopayAmount, Original_MinutesBeforeEscalating, Original_MinutesBeforeAdminEscalating, Original_CheckForOnCallDoctor, Original_ApptReminderNoticeTextPatient, Original_ApptReminderNoticePeriodPatient, Original_ApptReminderNoticeTextStaff, Original_ApptReminderNoticePeriodStaff, Original_IsPageRequired, Original_IsEnableForCart, Original_AtomIconUrl, Original_GroupID);
+            return this.Update(DateCreated, CreatedBy, IsPublic, MembershipTermInDays, IsDomain, DefaultRole, IsRegistrationDefault, CustomAttributes, InviteEmailText, TermsOfUse, IconUrl, IsEndUserRegistrationDefault, IsStaffRegistrationDefault, IsOpen, IsPatientCareTeam, ImageUrl, IsOpenStaff, IsServiceLine, IsCommunity, IsCoreGroup, FaxNumber, FacilityID, DisplayOrder, CopayDiscount, ServiceLineCopayAmount, BinaryImageValue, ProviderNoteTemplate, MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCallDoctor, OffDutyWarningMessage, NoFutureSchedulesWarningMessage, ApptReminderNoticeTextPatient, ApptReminderNoticePeriodPatient, ApptReminderNoticeTextStaff, ApptReminderNoticePeriodStaff, IsPageRequired, IsEnableForCart, AtomIconUrl, Original_GroupID, Original_DateCreated, Original_CreatedBy, Original_IsPublic, Original_MembershipTermInDays, Original_IsDomain, Original_DefaultRole, Original_IsRegistrationDefault, Original_IconUrl, Original_IsEndUserRegistrationDefault, Original_IsStaffRegistrationDefault, Original_IsOpen, Original_IsPatientCareTeam, Original_ImageUrl, Original_IsOpenStaff, Original_IsServiceLine, Original_IsCommunity, Original_IsCoreGroup, Original_FaxNumber, Original_FacilityID, Original_DisplayOrder, Original_CopayDiscount, Original_ServiceLineCopayAmount, Original_MinutesBeforeEscalating, Original_MinutesBeforeAdminEscalating, Original_CheckForOnCallDoctor, Original_ApptReminderNoticeTextPatient, Original_ApptReminderNoticePeriodPatient, Original_ApptReminderNoticeTextStaff, Original_ApptReminderNoticePeriodStaff, Original_IsPageRequired, Original_IsEnableForCart, Original_AtomIconUrl, Original_GroupID);
         }
     }
     

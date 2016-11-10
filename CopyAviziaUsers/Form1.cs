@@ -50,10 +50,12 @@ namespace CopyAviziaUsers
                 DataTable dtMissingGroups = dtGroupFrom.Clone();
                 foreach (DataRow dr in dtGroupFrom.Rows)
                 {
-                    string vrGroupName = dr["GroupName"].ToString().Replace("'", "");
+                    string vrGroupName = dr["GroupName"].ToString();//.Replace("'", "");
                     DataRow[] dr2 = dtGroupTo.Select("GroupName = '" + vrGroupName + "'");
                     if (dr2.Count() == 0)
                     {
+                        dr["GroupName"] = dr["GroupName"].ToString().Replace("@@", "'");
+                        dr["Description"] = dr["Description"].ToString().Replace("@@", "'");
                         dtMissingGroups.ImportRow(dr);
                     }
                 }
@@ -106,8 +108,8 @@ namespace CopyAviziaUsers
                     Byte[] binaryimagevalue = null;
                     if (!string.IsNullOrEmpty(dr.Cells["binaryimagevalue"].Value.ToString()))
                         binaryimagevalue = (byte[])dr.Cells["binaryimagevalue"].Value;
-                    dbCommandsTo.CreateUser(dr.Cells["groupname"].Value.ToString().Replace("'",""),
-                                          dr.Cells["description"].Value.ToString().Replace("'",""),
+                    dbCommandsTo.CreateUser(dr.Cells["groupname"].Value.ToString().Replace("'","@@"),
+                                          dr.Cells["description"].Value.ToString().Replace("'","@@"),
                                           Convert.ToBoolean(dr.Cells["ispublic"].Value),
                                           Convert.ToInt32(dr.Cells["membershiptermindays"].Value),
                                           Convert.ToBoolean(dr.Cells["isdomain"].Value),
@@ -154,6 +156,11 @@ namespace CopyAviziaUsers
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿alter PROCEDURE [dbo].[zz_CopyGroup]
+﻿ALTER PROCEDURE [dbo].[zz_CopyGroup]
 (@GroupName varchar(255), 
 @Description varchar(255),
 @IsPublic bit, 
@@ -41,6 +41,8 @@
 @AtomIconUrl varchar(max))               
 AS 
 BEGIN   
+set @GroupName = REPLACE(@GroupName,'@@','''')
+set @Description = REPLACE(@Description,'@@','''')
 if NOT EXISTS (select GroupID from rz_Group where GroupName = @GroupName)
 	BEGIN
 		INSERT INTO rz_Group
@@ -51,7 +53,7 @@ if NOT EXISTS (select GroupID from rz_Group where GroupName = @GroupName)
 								 MinutesBeforeEscalating, CustomCSS, MinutesBeforeAdminEscalating, CheckForOnCallDoctor, OffDutyWarningMessage, 
 								 NoFutureSchedulesWarningMessage, ApptReminderNoticeTextPatient, ApptReminderNoticePeriodPatient, 
 								 ApptReminderNoticeTextStaff, ApptReminderNoticePeriodStaff, IsPageRequired, IsEnableForCart, AtomIconUrl)
-		VALUES         (@GroupName, @Description, GETDATE(), 1, @IsPublic, @MembershipTermInDays, @IsDomain, @DefaultRole, @IsRegistrationDefault, 
+		VALUES         (@GroupName,@Description, GETDATE(), 1, @IsPublic, @MembershipTermInDays, @IsDomain, @DefaultRole, @IsRegistrationDefault, 
 								 @CustomAttributes,@InviteEmailText, @TermsOfUse, @IconUrl, @IsEndUserRegistrationDefault, @IsStaffRegistrationDefault, 
 								 @IsOpen, @IsPatientCareTeam, @ImageUrl, @IsOpenStaff, @IsServiceLine, @IsCommunity, @IsCoreGroup, 
 								 @FaxNumber, @FacilityID, @DisplayOrder, @CopayDiscount, @ServiceLineCopayAmount, @BinaryImageValue, @ProviderNoteTemplate, 
