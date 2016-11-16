@@ -50,7 +50,7 @@ namespace CopyAviziaUsers
                 DataTable dtMissingGroups = dtGroupFrom.Clone();
                 foreach (DataRow dr in dtGroupFrom.Rows)
                 {
-                    string vrGroupName = dr["GroupName"].ToString();//.Replace("'", "");
+                    string vrGroupName = dr["GroupName"].ToString();
                     DataRow[] dr2 = dtGroupTo.Select("GroupName = '" + vrGroupName + "'");
                     if (dr2.Count() == 0)
                     {
@@ -72,6 +72,11 @@ namespace CopyAviziaUsers
 
         private void btnLoadMissingUsers_Click(object sender, EventArgs e)
         {
+            LoadMissingUsers();
+        }
+
+        private void LoadMissingUsers()
+        {
             try
             {
                 DataTable dtUsersFrom = dbCommandsFrom.GetStaffUsersList();
@@ -79,10 +84,13 @@ namespace CopyAviziaUsers
                 DataTable dtMissingUsers = dtUsersFrom.Clone();
                 foreach (DataRow dr in dtUsersFrom.Rows)
                 {
-                    string vrGroupName = dr["UserName"].ToString().Replace("'", "");
+                    string vrGroupName = dr["UserName"].ToString();
                     DataRow[] dr2 = dtUsersTo.Select("UserName = '" + vrGroupName + "'");
                     if (dr2.Count() == 0)
                     {
+                        dr["UserName"] = dr["UserName"].ToString().Replace("@@", "'");
+                        dr["FirstName"] = dr["FirstName"].ToString().Replace("@@", "'");
+                        dr["LastName"] = dr["LastName"].ToString().Replace("@@", "'");
                         dtMissingUsers.ImportRow(dr);
                     }
                 }
@@ -108,8 +116,8 @@ namespace CopyAviziaUsers
                     Byte[] binaryimagevalue = null;
                     if (!string.IsNullOrEmpty(dr.Cells["binaryimagevalue"].Value.ToString()))
                         binaryimagevalue = (byte[])dr.Cells["binaryimagevalue"].Value;
-                    dbCommandsTo.CreateUser(dr.Cells["groupname"].Value.ToString().Replace("'","@@"),
-                                          dr.Cells["description"].Value.ToString().Replace("'","@@"),
+                    dbCommandsTo.CreateGroup(dr.Cells["groupname"].Value.ToString().Replace("'", "@@"),
+                                          dr.Cells["description"].Value.ToString().Replace("'", "@@"),
                                           Convert.ToBoolean(dr.Cells["ispublic"].Value),
                                           Convert.ToInt32(dr.Cells["membershiptermindays"].Value),
                                           Convert.ToBoolean(dr.Cells["isdomain"].Value),
@@ -161,6 +169,114 @@ namespace CopyAviziaUsers
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.ExitThread();
+        }
+
+        private void gvMissingUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    DataGridViewRow dr = gvMissingUsers.Rows[e.RowIndex];
+
+                  int UserID =  dbCommandsTo.CreateUser(
+                        dr.Cells["UserName"].Value.ToString().Replace("'", "@@"),
+                        dr.Cells["Password"].Value.ToString(),
+                        dr.Cells["Email"].Value.ToString(),
+                        dr.Cells["FirstName"].Value.ToString().Replace("'", "@@"),
+                        dr.Cells["LastName"].Value.ToString().Replace("'", "@@"),
+                        dr.Cells["MiddleName"].Value.ToString(),
+                        dr.Cells["CellPhone"].Value.ToString(),
+                        dr.Cells["WorkPhone"].Value.ToString(),
+                        dr.Cells["HomePhone"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["DOB"].Value.ToString()))?null:(global::System.Nullable<global::System.DateTime>)dr.Cells["DOB"].Value,
+                        dr.Cells["GUID"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["DateCreated"].Value.ToString())) ? null : (global::System.Nullable<global::System.DateTime>)dr.Cells["DateCreated"].Value,
+                        (string.IsNullOrEmpty(dr.Cells["dateedited"].Value.ToString())) ? null : (global::System.Nullable<global::System.DateTime>)dr.Cells["dateedited"].Value,
+                        (string.IsNullOrEmpty(dr.Cells["DateDeleted"].Value.ToString())) ? null : (global::System.Nullable<global::System.DateTime>)dr.Cells["DateDeleted"].Value,
+                        1,
+                        (string.IsNullOrEmpty(dr.Cells["IsPublic"].Value.ToString())) ? null : (global::System.Nullable<int>)dr.Cells["IsPublic"].Value,
+                        (string.IsNullOrEmpty(dr.Cells["IsDomain"].Value.ToString())) ? null : (global::System.Nullable<bool>)dr.Cells["IsDomain"].Value,
+                        dr.Cells["Inactive"].Value.ToString(),
+                        dr.Cells["ReasonInactive"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["ChangePassword"].Value.ToString())) ? null : (global::System.Nullable<bool>)dr.Cells["ChangePassword"].Value,
+                        dr.Cells["Verified"].Value.ToString(),
+                        dr.Cells["Online"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["IsDeleted"].Value.ToString())) ? null : (global::System.Nullable<bool>)dr.Cells["IsDeleted"].Value,
+                        (string.IsNullOrEmpty(dr.Cells["agreed_terms"].Value.ToString())) ? null : (global::System.Nullable<bool>)dr.Cells["agreed_terms"].Value,
+                        1,
+                        dr.Cells["PreferredLanguage"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["FailedLoginAttempts"].Value.ToString())) ? null : (global::System.Nullable<int>)dr.Cells["FailedLoginAttempts"].Value,
+                        (string.IsNullOrEmpty(dr.Cells["LastLogin"].Value.ToString())) ? null : (global::System.Nullable<global::System.DateTime>)dr.Cells["LastLogin"].Value,
+                        (string.IsNullOrEmpty(dr.Cells["LastActive"].Value.ToString())) ? null : (global::System.Nullable<global::System.DateTime>)dr.Cells["LastActive"].Value,
+                        dr.Cells["GoogleUserName"].Value.ToString(),
+                        dr.Cells["GooglePassword"].Value.ToString(),
+                        dr.Cells["ConferencingUserName"].Value.ToString(),
+                        dr.Cells["ConferencingPassword"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["IsLocked"].Value.ToString())) ? null : (global::System.Nullable<bool>)dr.Cells["IsLocked"].Value,
+                        dr.Cells["City"].Value.ToString(),
+                        dr.Cells["State"].Value.ToString(),
+                        dr.Cells["ZipCode"].Value.ToString(),
+                        dr.Cells["Sex"].Value.ToString(),
+                        dr.Cells["StaffNPI"].Value.ToString(),
+                        dr.Cells["StaffDEANumber"].Value.ToString(),
+                        dr.Cells["StaffMedicalLicenseNumber"].Value.ToString(),
+                        dr.Cells["PagerNumber"].Value.ToString(),
+                        dr.Cells["FaxNumber"].Value.ToString(),
+                        dr.Cells["Address1"].Value.ToString(),
+                        dr.Cells["Address2"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["onepassuserid"].Value.ToString())) ? null : (global::System.Nullable<int>)dr.Cells["onepassuserid"].Value,
+                        dr.Cells["MRN"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["CellPhoneVerified"].Value.ToString())) ? null : (global::System.Nullable<bool>)dr.Cells["CellPhoneVerified"].Value,
+                        dr.Cells["ExternalID"].Value.ToString(),
+                        dr.Cells["ExternalUserID"].Value.ToString(),
+                        dr.Cells["SourceFacility"].Value.ToString(),
+                        (string.IsNullOrEmpty(dr.Cells["SourceFacility_FacilityID"].Value.ToString())) ? null : (global::System.Nullable<int>)dr.Cells["SourceFacility_FacilityID"].Value,
+                        (string.IsNullOrEmpty(dr.Cells["onepass_agreed_terms"].Value.ToString())) ? null : (global::System.Nullable<bool>)dr.Cells["onepass_agreed_terms"].Value,
+                        dr.Cells["XmppUserName"].Value.ToString(),
+                        dr.Cells["XmppPassword"].Value.ToString(),
+                        dr.Cells["GroupPager"].Value.ToString(),
+                        dr.Cells["AnsweringServicePhone"].Value.ToString(),
+                        dr.Cells["AdditionalLocationPhone"].Value.ToString(),
+                        dr.Cells["ContactPrefVoiceOnCall"].Value.ToString(),
+                        dr.Cells["ContactPrefVoiceOffCall"].Value.ToString(),
+                        dr.Cells["ContactPrefNotificationOnCall"].Value.ToString(),
+                        dr.Cells["ContactPrefNotificationOffCall"].Value.ToString(),
+                        dr.Cells["UniquePatientGUID"].Value.ToString(),
+                        dr.Cells["vCard"].Value.ToString(),
+                        dr.Cells["PracticeAreas"].Value.ToString(),
+                        dr.Cells["PracticeFacilities"].Value.ToString(),
+                        dr.Cells["PracticeZipCodes"].Value.ToString(),
+                        dr.Cells["SSN"].Value.ToString(),
+                        dr.Cells["Race"].Value.ToString(),
+                        dr.Cells["VideoAddress"].Value.ToString(),
+                        dr.Cells["UniqueValue"].Value.ToString(),
+                        dr.Cells["Photo"].Value.ToString(),
+                        dr.Cells["Country"].Value.ToString(),
+                        dr.Cells["FileServiceKey"].Value.ToString(),
+                        dr.Cells["ExternalAuthUserName"].Value.ToString(),
+                        dr.Cells["VideoType"].Value.ToString(),
+                        dr.Cells["PrimarySpecialty"].Value.ToString()
+                      );
+                  if (UserID != 0)
+                  {
+                      string GroupNames = dr.Cells["Groups"].Value.ToString();
+                      List<string> strList = GroupNames.Split(',').ToList();
+                      foreach(string str in strList)
+                      {
+                          string groupName = str.Replace("'", "@@");
+                          dbCommandsTo.CopyGroupMap(UserID, groupName);
+                      }
+                      
+                  }
+                    LoadMissingUsers();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

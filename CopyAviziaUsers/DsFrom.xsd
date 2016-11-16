@@ -310,10 +310,34 @@ SELECT GroupID, REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StaffUsersListTableAdapter" GeneratorDataComponentClassName="StaffUsersListTableAdapter" Name="StaffUsersList" UserDataComponentName="StaffUsersListTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="conStrFrom (Settings)" DbObjectName="oneplace_phx_dev.dbo.rz_User" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="conStrFrom (Settings)" DbObjectName="oneplace_phx_dev.dbo.rz_User" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT rz_User.* FROM rz_User INNER JOIN rz_UserRoles ON rz_User.UserID = rz_UserRoles.UserID where Role = 2</CommandText>
+                    <CommandText>
+SELECT        rz_User.UserID,REPLACE(rz_User.UserName,'''','@@')UserName, rz_User.Password, rz_User.Email,REPLACE( rz_User.FirstName ,'''','@@')FirstName,REPLACE( rz_User.LastName ,'''','@@')LastName, rz_User.MiddleName, rz_User.CellPhone, 
+                         rz_User.WorkPhone, rz_User.HomePhone, rz_User.DOB, rz_User.GUID, rz_User.DateCreated, rz_User.DateEdited, rz_User.DateDeleted, rz_User.CreatedBy, 
+                         rz_User.IsPublic, rz_User.IsDomain, rz_User.Inactive, rz_User.ReasonInactive, rz_User.ChangePassword, rz_User.Verified, rz_User.Online, rz_User.IsDeleted, 
+                         rz_User.agreed_terms, rz_User.ResponseID, rz_User.PreferredLanguage, rz_User.FailedLoginAttempts, rz_User.LastLogin, rz_User.LastActive, 
+                         rz_User.HealthVaultID, rz_User.GoogleUserName, rz_User.GooglePassword, rz_User.ConferencingUserName, rz_User.ConferencingPassword, rz_User.IsLocked, 
+                         rz_User.City, rz_User.State, rz_User.Contact, rz_User.ContactPhone, rz_User.PhysPhone, rz_User.ZipCode, rz_User.Sex, rz_User.StaffNPI, 
+                         rz_User.StaffDEANumber, rz_User.StaffMedicalLicenseNumber, rz_User.StaffCredentials, rz_User.PagerNumber, rz_User.FaxNumber, rz_User.Address1, 
+                         rz_User.Address2, rz_User.PhysName, rz_User.PhysAddress, rz_User.onepassuserid, rz_User.TelepresenceNumber, rz_User.ImportedUserID, rz_User.MRN, 
+                         rz_User.CellPhoneVerified, rz_User.ExternalID, rz_User.ExternalUserID, rz_User.SourceFacility, rz_User.SourceFacility_FacilityID, rz_User.onepass_agreed_terms, 
+                         rz_User.PatientNotes, rz_User.XmppUserName, rz_User.XmppPassword, rz_User.GroupPager, rz_User.AnsweringServicePhone, rz_User.AdditionalLocationPhone, 
+                         rz_User.ContactPrefVoiceOnCall, rz_User.ContactPrefVoiceOffCall, rz_User.ContactPrefNotificationOnCall, rz_User.ContactPrefNotificationOffCall, 
+                         rz_User.UniquePatientGUID, rz_User.vCard, rz_User.PracticeAreas, rz_User.PracticeFacilities, rz_User.PracticeZipCodes, rz_User.SSN, rz_User.Race, 
+                         rz_User.ParentUserID,
+						 rz_User.SearchValues, rz_User.VideoAddress, rz_User.UniqueValue, rz_User.Photo, 
+                         rz_User.FileServiceKey, rz_User.ExternalAuthUserName, rz_User.VideoType, 
+                         rz_User.PrimarySpecialty, rz_User.Country, 
+						 (SELECT STUFF((SELECT ',' + rz_Group.GroupName FROM rz_UserGroupMap INNER JOIN rz_Group ON rz_UserGroupMap.GroupID = rz_Group.GroupID 
+						 where rz_UserGroupMap.UserID = rz_User.UserID ORDER BY groupname FOR XML PATH('')), 1, 1, '')) AS Groups
+
+FROM            rz_User INNER JOIN
+                         rz_UserRoles ON rz_User.UserID = rz_UserRoles.UserID
+WHERE        (rz_UserRoles.Role = 2)
+
+</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -401,24 +425,16 @@ SELECT GroupID, REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description
               <Mapping SourceColumn="SSN" DataSetColumn="SSN" />
               <Mapping SourceColumn="Race" DataSetColumn="Race" />
               <Mapping SourceColumn="ParentUserID" DataSetColumn="ParentUserID" />
-              <Mapping SourceColumn="PhysFax" DataSetColumn="PhysFax" />
-              <Mapping SourceColumn="ParentRelationship" DataSetColumn="ParentRelationship" />
-              <Mapping SourceColumn="InsuranceName" DataSetColumn="InsuranceName" />
-              <Mapping SourceColumn="InsuranceGroupNumber" DataSetColumn="InsuranceGroupNumber" />
-              <Mapping SourceColumn="InsurancePolicyNumber" DataSetColumn="InsurancePolicyNumber" />
               <Mapping SourceColumn="SearchValues" DataSetColumn="SearchValues" />
               <Mapping SourceColumn="VideoAddress" DataSetColumn="VideoAddress" />
               <Mapping SourceColumn="UniqueValue" DataSetColumn="UniqueValue" />
               <Mapping SourceColumn="Photo" DataSetColumn="Photo" />
-              <Mapping SourceColumn="PhysNPI" DataSetColumn="PhysNPI" />
-              <Mapping SourceColumn="Attachments" DataSetColumn="Attachments" />
-              <Mapping SourceColumn="Country" DataSetColumn="Country" />
               <Mapping SourceColumn="FileServiceKey" DataSetColumn="FileServiceKey" />
-              <Mapping SourceColumn="RowVersion" DataSetColumn="RowVersion" />
               <Mapping SourceColumn="ExternalAuthUserName" DataSetColumn="ExternalAuthUserName" />
               <Mapping SourceColumn="VideoType" DataSetColumn="VideoType" />
               <Mapping SourceColumn="PrimarySpecialty" DataSetColumn="PrimarySpecialty" />
-              <Mapping SourceColumn="PreferedLanguageCode" DataSetColumn="PreferedLanguageCode" />
+              <Mapping SourceColumn="Groups" DataSetColumn="Groups" />
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -611,7 +627,7 @@ SELECT GroupID, REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -1039,41 +1055,6 @@ SELECT GroupID, REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ParentUserID" msprop:Generator_ColumnVarNameInTable="columnParentUserID" msprop:Generator_ColumnPropNameInRow="ParentUserID" msprop:Generator_ColumnPropNameInTable="ParentUserIDColumn" msprop:Generator_UserColumnName="ParentUserID" type="xs:int" minOccurs="0" />
-              <xs:element name="PhysFax" msprop:Generator_ColumnVarNameInTable="columnPhysFax" msprop:Generator_ColumnPropNameInRow="PhysFax" msprop:Generator_ColumnPropNameInTable="PhysFaxColumn" msprop:Generator_UserColumnName="PhysFax" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ParentRelationship" msprop:Generator_ColumnVarNameInTable="columnParentRelationship" msprop:Generator_ColumnPropNameInRow="ParentRelationship" msprop:Generator_ColumnPropNameInTable="ParentRelationshipColumn" msprop:Generator_UserColumnName="ParentRelationship" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="200" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="InsuranceName" msprop:Generator_ColumnVarNameInTable="columnInsuranceName" msprop:Generator_ColumnPropNameInRow="InsuranceName" msprop:Generator_ColumnPropNameInTable="InsuranceNameColumn" msprop:Generator_UserColumnName="InsuranceName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="400" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="InsuranceGroupNumber" msprop:Generator_ColumnVarNameInTable="columnInsuranceGroupNumber" msprop:Generator_ColumnPropNameInRow="InsuranceGroupNumber" msprop:Generator_ColumnPropNameInTable="InsuranceGroupNumberColumn" msprop:Generator_UserColumnName="InsuranceGroupNumber" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="400" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="InsurancePolicyNumber" msprop:Generator_ColumnVarNameInTable="columnInsurancePolicyNumber" msprop:Generator_ColumnPropNameInRow="InsurancePolicyNumber" msprop:Generator_ColumnPropNameInTable="InsurancePolicyNumberColumn" msprop:Generator_UserColumnName="InsurancePolicyNumber" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="400" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="SearchValues" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSearchValues" msprop:Generator_ColumnPropNameInRow="SearchValues" msprop:Generator_ColumnPropNameInTable="SearchValuesColumn" msprop:Generator_UserColumnName="SearchValues" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1102,27 +1083,6 @@ SELECT GroupID, REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PhysNPI" msprop:Generator_ColumnVarNameInTable="columnPhysNPI" msprop:Generator_ColumnPropNameInRow="PhysNPI" msprop:Generator_ColumnPropNameInTable="PhysNPIColumn" msprop:Generator_UserColumnName="PhysNPI" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Attachments" msprop:Generator_ColumnVarNameInTable="columnAttachments" msprop:Generator_ColumnPropNameInRow="Attachments" msprop:Generator_ColumnPropNameInTable="AttachmentsColumn" msprop:Generator_UserColumnName="Attachments" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="FileServiceKey" msprop:Generator_ColumnVarNameInTable="columnFileServiceKey" msprop:Generator_ColumnPropNameInRow="FileServiceKey" msprop:Generator_ColumnPropNameInTable="FileServiceKeyColumn" msprop:Generator_UserColumnName="FileServiceKey" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1130,7 +1090,6 @@ SELECT GroupID, REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="RowVersion" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowVersion" msprop:Generator_ColumnPropNameInRow="RowVersion" msprop:Generator_ColumnPropNameInTable="RowVersionColumn" msprop:Generator_UserColumnName="RowVersion" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="ExternalAuthUserName" msprop:Generator_ColumnVarNameInTable="columnExternalAuthUserName" msprop:Generator_ColumnPropNameInRow="ExternalAuthUserName" msprop:Generator_ColumnPropNameInTable="ExternalAuthUserNameColumn" msprop:Generator_UserColumnName="ExternalAuthUserName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1152,7 +1111,14 @@ SELECT GroupID, REPLACE(GroupName, '''', '@@') AS GroupName, REPLACE(Description
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PreferedLanguageCode" msprop:Generator_ColumnVarNameInTable="columnPreferedLanguageCode" msprop:Generator_ColumnPropNameInRow="PreferedLanguageCode" msprop:Generator_ColumnPropNameInTable="PreferedLanguageCodeColumn" msprop:Generator_UserColumnName="PreferedLanguageCode" minOccurs="0">
+              <xs:element name="Groups" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGroups" msprop:Generator_ColumnPropNameInRow="Groups" msprop:Generator_ColumnPropNameInTable="GroupsColumn" msprop:Generator_UserColumnName="Groups" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />

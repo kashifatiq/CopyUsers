@@ -125,6 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="db changes\zz_CopyGroup.sql" />
+    <Content Include="db changes\zz_CopyUserGroup.sql" />
+    <Content Include="db changes\zz_CopyUsers.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

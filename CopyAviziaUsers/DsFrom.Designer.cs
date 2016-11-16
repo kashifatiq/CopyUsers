@@ -1693,16 +1693,6 @@ namespace CopyAviziaUsers {
             
             private global::System.Data.DataColumn columnParentUserID;
             
-            private global::System.Data.DataColumn columnPhysFax;
-            
-            private global::System.Data.DataColumn columnParentRelationship;
-            
-            private global::System.Data.DataColumn columnInsuranceName;
-            
-            private global::System.Data.DataColumn columnInsuranceGroupNumber;
-            
-            private global::System.Data.DataColumn columnInsurancePolicyNumber;
-            
             private global::System.Data.DataColumn columnSearchValues;
             
             private global::System.Data.DataColumn columnVideoAddress;
@@ -1711,15 +1701,7 @@ namespace CopyAviziaUsers {
             
             private global::System.Data.DataColumn columnPhoto;
             
-            private global::System.Data.DataColumn columnPhysNPI;
-            
-            private global::System.Data.DataColumn columnAttachments;
-            
-            private global::System.Data.DataColumn columnCountry;
-            
             private global::System.Data.DataColumn columnFileServiceKey;
-            
-            private global::System.Data.DataColumn columnRowVersion;
             
             private global::System.Data.DataColumn columnExternalAuthUserName;
             
@@ -1727,7 +1709,9 @@ namespace CopyAviziaUsers {
             
             private global::System.Data.DataColumn columnPrimarySpecialty;
             
-            private global::System.Data.DataColumn columnPreferedLanguageCode;
+            private global::System.Data.DataColumn columnGroups;
+            
+            private global::System.Data.DataColumn columnCountry;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2412,46 +2396,6 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PhysFaxColumn {
-                get {
-                    return this.columnPhysFax;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ParentRelationshipColumn {
-                get {
-                    return this.columnParentRelationship;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InsuranceNameColumn {
-                get {
-                    return this.columnInsuranceName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InsuranceGroupNumberColumn {
-                get {
-                    return this.columnInsuranceGroupNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InsurancePolicyNumberColumn {
-                get {
-                    return this.columnInsurancePolicyNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn SearchValuesColumn {
                 get {
                     return this.columnSearchValues;
@@ -2484,41 +2428,9 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PhysNPIColumn {
-                get {
-                    return this.columnPhysNPI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AttachmentsColumn {
-                get {
-                    return this.columnAttachments;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CountryColumn {
-                get {
-                    return this.columnCountry;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn FileServiceKeyColumn {
                 get {
                     return this.columnFileServiceKey;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn RowVersionColumn {
-                get {
-                    return this.columnRowVersion;
                 }
             }
             
@@ -2548,9 +2460,17 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PreferedLanguageCodeColumn {
+            public global::System.Data.DataColumn GroupsColumn {
                 get {
-                    return this.columnPreferedLanguageCode;
+                    return this.columnGroups;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CountryColumn {
+                get {
+                    return this.columnCountry;
                 }
             }
             
@@ -2672,24 +2592,16 @@ namespace CopyAviziaUsers {
                         string SSN, 
                         string Race, 
                         int ParentUserID, 
-                        string PhysFax, 
-                        string ParentRelationship, 
-                        string InsuranceName, 
-                        string InsuranceGroupNumber, 
-                        string InsurancePolicyNumber, 
                         string SearchValues, 
                         string VideoAddress, 
                         string UniqueValue, 
                         string Photo, 
-                        string PhysNPI, 
-                        string Attachments, 
-                        string Country, 
                         string FileServiceKey, 
-                        byte[] RowVersion, 
                         string ExternalAuthUserName, 
                         string VideoType, 
                         string PrimarySpecialty, 
-                        string PreferedLanguageCode) {
+                        string Groups, 
+                        string Country) {
                 StaffUsersListRow rowStaffUsersListRow = ((StaffUsersListRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2773,24 +2685,16 @@ namespace CopyAviziaUsers {
                         SSN,
                         Race,
                         ParentUserID,
-                        PhysFax,
-                        ParentRelationship,
-                        InsuranceName,
-                        InsuranceGroupNumber,
-                        InsurancePolicyNumber,
                         SearchValues,
                         VideoAddress,
                         UniqueValue,
                         Photo,
-                        PhysNPI,
-                        Attachments,
-                        Country,
                         FileServiceKey,
-                        RowVersion,
                         ExternalAuthUserName,
                         VideoType,
                         PrimarySpecialty,
-                        PreferedLanguageCode};
+                        Groups,
+                        Country};
                 rowStaffUsersListRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStaffUsersListRow);
                 return rowStaffUsersListRow;
@@ -2901,24 +2805,16 @@ namespace CopyAviziaUsers {
                 this.columnSSN = base.Columns["SSN"];
                 this.columnRace = base.Columns["Race"];
                 this.columnParentUserID = base.Columns["ParentUserID"];
-                this.columnPhysFax = base.Columns["PhysFax"];
-                this.columnParentRelationship = base.Columns["ParentRelationship"];
-                this.columnInsuranceName = base.Columns["InsuranceName"];
-                this.columnInsuranceGroupNumber = base.Columns["InsuranceGroupNumber"];
-                this.columnInsurancePolicyNumber = base.Columns["InsurancePolicyNumber"];
                 this.columnSearchValues = base.Columns["SearchValues"];
                 this.columnVideoAddress = base.Columns["VideoAddress"];
                 this.columnUniqueValue = base.Columns["UniqueValue"];
                 this.columnPhoto = base.Columns["Photo"];
-                this.columnPhysNPI = base.Columns["PhysNPI"];
-                this.columnAttachments = base.Columns["Attachments"];
-                this.columnCountry = base.Columns["Country"];
                 this.columnFileServiceKey = base.Columns["FileServiceKey"];
-                this.columnRowVersion = base.Columns["RowVersion"];
                 this.columnExternalAuthUserName = base.Columns["ExternalAuthUserName"];
                 this.columnVideoType = base.Columns["VideoType"];
                 this.columnPrimarySpecialty = base.Columns["PrimarySpecialty"];
-                this.columnPreferedLanguageCode = base.Columns["PreferedLanguageCode"];
+                this.columnGroups = base.Columns["Groups"];
+                this.columnCountry = base.Columns["Country"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3086,16 +2982,6 @@ namespace CopyAviziaUsers {
                 base.Columns.Add(this.columnRace);
                 this.columnParentUserID = new global::System.Data.DataColumn("ParentUserID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnParentUserID);
-                this.columnPhysFax = new global::System.Data.DataColumn("PhysFax", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhysFax);
-                this.columnParentRelationship = new global::System.Data.DataColumn("ParentRelationship", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnParentRelationship);
-                this.columnInsuranceName = new global::System.Data.DataColumn("InsuranceName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInsuranceName);
-                this.columnInsuranceGroupNumber = new global::System.Data.DataColumn("InsuranceGroupNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInsuranceGroupNumber);
-                this.columnInsurancePolicyNumber = new global::System.Data.DataColumn("InsurancePolicyNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInsurancePolicyNumber);
                 this.columnSearchValues = new global::System.Data.DataColumn("SearchValues", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSearchValues);
                 this.columnVideoAddress = new global::System.Data.DataColumn("VideoAddress", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3104,24 +2990,18 @@ namespace CopyAviziaUsers {
                 base.Columns.Add(this.columnUniqueValue);
                 this.columnPhoto = new global::System.Data.DataColumn("Photo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoto);
-                this.columnPhysNPI = new global::System.Data.DataColumn("PhysNPI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhysNPI);
-                this.columnAttachments = new global::System.Data.DataColumn("Attachments", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAttachments);
-                this.columnCountry = new global::System.Data.DataColumn("Country", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCountry);
                 this.columnFileServiceKey = new global::System.Data.DataColumn("FileServiceKey", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFileServiceKey);
-                this.columnRowVersion = new global::System.Data.DataColumn("RowVersion", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRowVersion);
                 this.columnExternalAuthUserName = new global::System.Data.DataColumn("ExternalAuthUserName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExternalAuthUserName);
                 this.columnVideoType = new global::System.Data.DataColumn("VideoType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVideoType);
                 this.columnPrimarySpecialty = new global::System.Data.DataColumn("PrimarySpecialty", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrimarySpecialty);
-                this.columnPreferedLanguageCode = new global::System.Data.DataColumn("PreferedLanguageCode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPreferedLanguageCode);
+                this.columnGroups = new global::System.Data.DataColumn("Groups", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGroups);
+                this.columnCountry = new global::System.Data.DataColumn("Country", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountry);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID}, true));
                 this.columnUserID.AutoIncrement = true;
@@ -3130,7 +3010,6 @@ namespace CopyAviziaUsers {
                 this.columnUserID.AllowDBNull = false;
                 this.columnUserID.ReadOnly = true;
                 this.columnUserID.Unique = true;
-                this.columnUserName.AllowDBNull = false;
                 this.columnUserName.MaxLength = 50;
                 this.columnPassword.MaxLength = 50;
                 this.columnEmail.MaxLength = 100;
@@ -3196,25 +3075,18 @@ namespace CopyAviziaUsers {
                 this.columnPracticeZipCodes.MaxLength = 250;
                 this.columnSSN.MaxLength = 50;
                 this.columnRace.MaxLength = 250;
-                this.columnPhysFax.MaxLength = 30;
-                this.columnParentRelationship.MaxLength = 200;
-                this.columnInsuranceName.MaxLength = 400;
-                this.columnInsuranceGroupNumber.MaxLength = 400;
-                this.columnInsurancePolicyNumber.MaxLength = 400;
                 this.columnSearchValues.ReadOnly = true;
                 this.columnSearchValues.MaxLength = 527;
                 this.columnVideoAddress.MaxLength = 300;
                 this.columnUniqueValue.MaxLength = 2147483647;
                 this.columnPhoto.MaxLength = 250;
-                this.columnPhysNPI.MaxLength = 250;
-                this.columnAttachments.MaxLength = 2147483647;
-                this.columnCountry.MaxLength = 250;
                 this.columnFileServiceKey.MaxLength = 250;
-                this.columnRowVersion.ReadOnly = true;
                 this.columnExternalAuthUserName.MaxLength = 100;
                 this.columnVideoType.MaxLength = 250;
                 this.columnPrimarySpecialty.MaxLength = 500;
-                this.columnPreferedLanguageCode.MaxLength = 250;
+                this.columnGroups.ReadOnly = true;
+                this.columnGroups.MaxLength = 2147483647;
+                this.columnCountry.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4531,7 +4403,12 @@ namespace CopyAviziaUsers {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string UserName {
                 get {
-                    return ((string)(this[this.tableStaffUsersList.UserNameColumn]));
+                    try {
+                        return ((string)(this[this.tableStaffUsersList.UserNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserName\' in table \'StaffUsersList\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStaffUsersList.UserNameColumn] = value;
@@ -5777,87 +5654,6 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PhysFax {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.PhysFaxColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhysFax\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.PhysFaxColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ParentRelationship {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.ParentRelationshipColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ParentRelationship\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.ParentRelationshipColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string InsuranceName {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.InsuranceNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'InsuranceName\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.InsuranceNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string InsuranceGroupNumber {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.InsuranceGroupNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'InsuranceGroupNumber\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.InsuranceGroupNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string InsurancePolicyNumber {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.InsurancePolicyNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'InsurancePolicyNumber\' in table \'StaffUsersList\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.InsurancePolicyNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string SearchValues {
                 get {
                     try {
@@ -5922,54 +5718,6 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PhysNPI {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.PhysNPIColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhysNPI\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.PhysNPIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Attachments {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.AttachmentsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Attachments\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.AttachmentsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Country {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaffUsersList.CountryColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Country\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.CountryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string FileServiceKey {
                 get {
                     try {
@@ -5981,22 +5729,6 @@ namespace CopyAviziaUsers {
                 }
                 set {
                     this[this.tableStaffUsersList.FileServiceKeyColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] RowVersion {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableStaffUsersList.RowVersionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowVersion\' in table \'StaffUsersList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStaffUsersList.RowVersionColumn] = value;
                 }
             }
             
@@ -6050,18 +5782,46 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PreferedLanguageCode {
+            public string Groups {
                 get {
                     try {
-                        return ((string)(this[this.tableStaffUsersList.PreferedLanguageCodeColumn]));
+                        return ((string)(this[this.tableStaffUsersList.GroupsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PreferedLanguageCode\' in table \'StaffUsersList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Groups\' in table \'StaffUsersList\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableStaffUsersList.PreferedLanguageCodeColumn] = value;
+                    this[this.tableStaffUsersList.GroupsColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Country {
+                get {
+                    try {
+                        return ((string)(this[this.tableStaffUsersList.CountryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Country\' in table \'StaffUsersList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStaffUsersList.CountryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUserNameNull() {
+                return this.IsNull(this.tableStaffUsersList.UserNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUserNameNull() {
+                this[this.tableStaffUsersList.UserNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6930,66 +6690,6 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPhysFaxNull() {
-                return this.IsNull(this.tableStaffUsersList.PhysFaxColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPhysFaxNull() {
-                this[this.tableStaffUsersList.PhysFaxColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsParentRelationshipNull() {
-                return this.IsNull(this.tableStaffUsersList.ParentRelationshipColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetParentRelationshipNull() {
-                this[this.tableStaffUsersList.ParentRelationshipColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInsuranceNameNull() {
-                return this.IsNull(this.tableStaffUsersList.InsuranceNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInsuranceNameNull() {
-                this[this.tableStaffUsersList.InsuranceNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInsuranceGroupNumberNull() {
-                return this.IsNull(this.tableStaffUsersList.InsuranceGroupNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInsuranceGroupNumberNull() {
-                this[this.tableStaffUsersList.InsuranceGroupNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInsurancePolicyNumberNull() {
-                return this.IsNull(this.tableStaffUsersList.InsurancePolicyNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInsurancePolicyNumberNull() {
-                this[this.tableStaffUsersList.InsurancePolicyNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSearchValuesNull() {
                 return this.IsNull(this.tableStaffUsersList.SearchValuesColumn);
             }
@@ -7038,42 +6738,6 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPhysNPINull() {
-                return this.IsNull(this.tableStaffUsersList.PhysNPIColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPhysNPINull() {
-                this[this.tableStaffUsersList.PhysNPIColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAttachmentsNull() {
-                return this.IsNull(this.tableStaffUsersList.AttachmentsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAttachmentsNull() {
-                this[this.tableStaffUsersList.AttachmentsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCountryNull() {
-                return this.IsNull(this.tableStaffUsersList.CountryColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCountryNull() {
-                this[this.tableStaffUsersList.CountryColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFileServiceKeyNull() {
                 return this.IsNull(this.tableStaffUsersList.FileServiceKeyColumn);
             }
@@ -7082,18 +6746,6 @@ namespace CopyAviziaUsers {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFileServiceKeyNull() {
                 this[this.tableStaffUsersList.FileServiceKeyColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRowVersionNull() {
-                return this.IsNull(this.tableStaffUsersList.RowVersionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRowVersionNull() {
-                this[this.tableStaffUsersList.RowVersionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7134,14 +6786,26 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPreferedLanguageCodeNull() {
-                return this.IsNull(this.tableStaffUsersList.PreferedLanguageCodeColumn);
+            public bool IsGroupsNull() {
+                return this.IsNull(this.tableStaffUsersList.GroupsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPreferedLanguageCodeNull() {
-                this[this.tableStaffUsersList.PreferedLanguageCodeColumn] = global::System.Convert.DBNull;
+            public void SetGroupsNull() {
+                this[this.tableStaffUsersList.GroupsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCountryNull() {
+                return this.IsNull(this.tableStaffUsersList.CountryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCountryNull() {
+                this[this.tableStaffUsersList.CountryColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9343,24 +9007,16 @@ FROM            rz_Group";
             tableMapping.ColumnMappings.Add("SSN", "SSN");
             tableMapping.ColumnMappings.Add("Race", "Race");
             tableMapping.ColumnMappings.Add("ParentUserID", "ParentUserID");
-            tableMapping.ColumnMappings.Add("PhysFax", "PhysFax");
-            tableMapping.ColumnMappings.Add("ParentRelationship", "ParentRelationship");
-            tableMapping.ColumnMappings.Add("InsuranceName", "InsuranceName");
-            tableMapping.ColumnMappings.Add("InsuranceGroupNumber", "InsuranceGroupNumber");
-            tableMapping.ColumnMappings.Add("InsurancePolicyNumber", "InsurancePolicyNumber");
             tableMapping.ColumnMappings.Add("SearchValues", "SearchValues");
             tableMapping.ColumnMappings.Add("VideoAddress", "VideoAddress");
             tableMapping.ColumnMappings.Add("UniqueValue", "UniqueValue");
             tableMapping.ColumnMappings.Add("Photo", "Photo");
-            tableMapping.ColumnMappings.Add("PhysNPI", "PhysNPI");
-            tableMapping.ColumnMappings.Add("Attachments", "Attachments");
-            tableMapping.ColumnMappings.Add("Country", "Country");
             tableMapping.ColumnMappings.Add("FileServiceKey", "FileServiceKey");
-            tableMapping.ColumnMappings.Add("RowVersion", "RowVersion");
             tableMapping.ColumnMappings.Add("ExternalAuthUserName", "ExternalAuthUserName");
             tableMapping.ColumnMappings.Add("VideoType", "VideoType");
             tableMapping.ColumnMappings.Add("PrimarySpecialty", "PrimarySpecialty");
-            tableMapping.ColumnMappings.Add("PreferedLanguageCode", "PreferedLanguageCode");
+            tableMapping.ColumnMappings.Add("Groups", "Groups");
+            tableMapping.ColumnMappings.Add("Country", "Country");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -9377,8 +9033,42 @@ FROM            rz_Group";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT rz_User.* FROM rz_User INNER JOIN rz_UserRoles ON rz_User.UserID = rz_User" +
-                "Roles.UserID where Role = 2";
+            this._commandCollection[0].CommandText = "\r\nSELECT        rz_User.UserID,REPLACE(rz_User.UserName,\'\'\'\',\'@@\')UserName, rz_Us" +
+                "er.Password, rz_User.Email,REPLACE( rz_User.FirstName ,\'\'\'\',\'@@\')FirstName,REPLA" +
+                "CE( rz_User.LastName ,\'\'\'\',\'@@\')LastName, rz_User.MiddleName, rz_User.CellPhone," +
+                " \r\n                         rz_User.WorkPhone, rz_User.HomePhone, rz_User.DOB, r" +
+                "z_User.GUID, rz_User.DateCreated, rz_User.DateEdited, rz_User.DateDeleted, rz_Us" +
+                "er.CreatedBy, \r\n                         rz_User.IsPublic, rz_User.IsDomain, rz_" +
+                "User.Inactive, rz_User.ReasonInactive, rz_User.ChangePassword, rz_User.Verified," +
+                " rz_User.Online, rz_User.IsDeleted, \r\n                         rz_User.agreed_te" +
+                "rms, rz_User.ResponseID, rz_User.PreferredLanguage, rz_User.FailedLoginAttempts," +
+                " rz_User.LastLogin, rz_User.LastActive, \r\n                         rz_User.Healt" +
+                "hVaultID, rz_User.GoogleUserName, rz_User.GooglePassword, rz_User.ConferencingUs" +
+                "erName, rz_User.ConferencingPassword, rz_User.IsLocked, \r\n                      " +
+                "   rz_User.City, rz_User.State, rz_User.Contact, rz_User.ContactPhone, rz_User.P" +
+                "hysPhone, rz_User.ZipCode, rz_User.Sex, rz_User.StaffNPI, \r\n                    " +
+                "     rz_User.StaffDEANumber, rz_User.StaffMedicalLicenseNumber, rz_User.StaffCre" +
+                "dentials, rz_User.PagerNumber, rz_User.FaxNumber, rz_User.Address1, \r\n          " +
+                "               rz_User.Address2, rz_User.PhysName, rz_User.PhysAddress, rz_User." +
+                "onepassuserid, rz_User.TelepresenceNumber, rz_User.ImportedUserID, rz_User.MRN, " +
+                "\r\n                         rz_User.CellPhoneVerified, rz_User.ExternalID, rz_Use" +
+                "r.ExternalUserID, rz_User.SourceFacility, rz_User.SourceFacility_FacilityID, rz_" +
+                "User.onepass_agreed_terms, \r\n                         rz_User.PatientNotes, rz_U" +
+                "ser.XmppUserName, rz_User.XmppPassword, rz_User.GroupPager, rz_User.AnsweringSer" +
+                "vicePhone, rz_User.AdditionalLocationPhone, \r\n                         rz_User.C" +
+                "ontactPrefVoiceOnCall, rz_User.ContactPrefVoiceOffCall, rz_User.ContactPrefNotif" +
+                "icationOnCall, rz_User.ContactPrefNotificationOffCall, \r\n                       " +
+                "  rz_User.UniquePatientGUID, rz_User.vCard, rz_User.PracticeAreas, rz_User.Pract" +
+                "iceFacilities, rz_User.PracticeZipCodes, rz_User.SSN, rz_User.Race, \r\n          " +
+                "               rz_User.ParentUserID,\r\n\t\t\t\t\t\t rz_User.SearchValues, rz_User.Video" +
+                "Address, rz_User.UniqueValue, rz_User.Photo, \r\n                         rz_User." +
+                "FileServiceKey, rz_User.ExternalAuthUserName, rz_User.VideoType, \r\n             " +
+                "            rz_User.PrimarySpecialty, rz_User.Country, \r\n\t\t\t\t\t\t (SELECT STUFF((S" +
+                "ELECT \',\' + rz_Group.GroupName FROM rz_UserGroupMap INNER JOIN rz_Group ON rz_Us" +
+                "erGroupMap.GroupID = rz_Group.GroupID \r\n\t\t\t\t\t\t where rz_UserGroupMap.UserID = rz" +
+                "_User.UserID ORDER BY groupname FOR XML PATH(\'\')), 1, 1, \'\')) AS Groups\r\n\r\nFROM " +
+                "           rz_User INNER JOIN\r\n                         rz_UserRoles ON rz_User." +
+                "UserID = rz_UserRoles.UserID\r\nWHERE        (rz_UserRoles.Role = 2)\r\n\r\n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

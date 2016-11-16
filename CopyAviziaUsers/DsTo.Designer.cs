@@ -32,6 +32,10 @@ namespace CopyAviziaUsers {
         
         private zz_CopyGroupDataTable tablezz_CopyGroup;
         
+        private zz_CopyUserGroupDataTable tablezz_CopyUserGroup;
+        
+        private zz_CopyUsersDataTable tablezz_CopyUsers;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -71,6 +75,12 @@ namespace CopyAviziaUsers {
                 }
                 if ((ds.Tables["zz_CopyGroup"] != null)) {
                     base.Tables.Add(new zz_CopyGroupDataTable(ds.Tables["zz_CopyGroup"]));
+                }
+                if ((ds.Tables["zz_CopyUserGroup"] != null)) {
+                    base.Tables.Add(new zz_CopyUserGroupDataTable(ds.Tables["zz_CopyUserGroup"]));
+                }
+                if ((ds.Tables["zz_CopyUsers"] != null)) {
+                    base.Tables.Add(new zz_CopyUsersDataTable(ds.Tables["zz_CopyUsers"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -127,6 +137,26 @@ namespace CopyAviziaUsers {
         public zz_CopyGroupDataTable zz_CopyGroup {
             get {
                 return this.tablezz_CopyGroup;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public zz_CopyUserGroupDataTable zz_CopyUserGroup {
+            get {
+                return this.tablezz_CopyUserGroup;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public zz_CopyUsersDataTable zz_CopyUsers {
+            get {
+                return this.tablezz_CopyUsers;
             }
         }
         
@@ -209,6 +239,12 @@ namespace CopyAviziaUsers {
                 if ((ds.Tables["zz_CopyGroup"] != null)) {
                     base.Tables.Add(new zz_CopyGroupDataTable(ds.Tables["zz_CopyGroup"]));
                 }
+                if ((ds.Tables["zz_CopyUserGroup"] != null)) {
+                    base.Tables.Add(new zz_CopyUserGroupDataTable(ds.Tables["zz_CopyUserGroup"]));
+                }
+                if ((ds.Tables["zz_CopyUsers"] != null)) {
+                    base.Tables.Add(new zz_CopyUsersDataTable(ds.Tables["zz_CopyUsers"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -266,6 +302,18 @@ namespace CopyAviziaUsers {
                     this.tablezz_CopyGroup.InitVars();
                 }
             }
+            this.tablezz_CopyUserGroup = ((zz_CopyUserGroupDataTable)(base.Tables["zz_CopyUserGroup"]));
+            if ((initTable == true)) {
+                if ((this.tablezz_CopyUserGroup != null)) {
+                    this.tablezz_CopyUserGroup.InitVars();
+                }
+            }
+            this.tablezz_CopyUsers = ((zz_CopyUsersDataTable)(base.Tables["zz_CopyUsers"]));
+            if ((initTable == true)) {
+                if ((this.tablezz_CopyUsers != null)) {
+                    this.tablezz_CopyUsers.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -284,6 +332,10 @@ namespace CopyAviziaUsers {
             base.Tables.Add(this.tableStaffUsersList);
             this.tablezz_CopyGroup = new zz_CopyGroupDataTable();
             base.Tables.Add(this.tablezz_CopyGroup);
+            this.tablezz_CopyUserGroup = new zz_CopyUserGroupDataTable();
+            base.Tables.Add(this.tablezz_CopyUserGroup);
+            this.tablezz_CopyUsers = new zz_CopyUsersDataTable();
+            base.Tables.Add(this.tablezz_CopyUsers);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -307,6 +359,18 @@ namespace CopyAviziaUsers {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializezz_CopyGroup() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializezz_CopyUserGroup() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializezz_CopyUsers() {
             return false;
         }
         
@@ -376,6 +440,12 @@ namespace CopyAviziaUsers {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void zz_CopyGroupRowChangeEventHandler(object sender, zz_CopyGroupRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void zz_CopyUserGroupRowChangeEventHandler(object sender, zz_CopyUserGroupRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void zz_CopyUsersRowChangeEventHandler(object sender, zz_CopyUsersRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1744,6 +1814,12 @@ namespace CopyAviziaUsers {
             
             private global::System.Data.DataColumn columnCountry;
             
+            private global::System.Data.DataColumn columnExternalAuthUserName;
+            
+            private global::System.Data.DataColumn columnVideoType;
+            
+            private global::System.Data.DataColumn columnPrimarySpecialty;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public StaffUsersListDataTable() {
@@ -2491,6 +2567,30 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ExternalAuthUserNameColumn {
+                get {
+                    return this.columnExternalAuthUserName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VideoTypeColumn {
+                get {
+                    return this.columnVideoType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PrimarySpecialtyColumn {
+                get {
+                    return this.columnPrimarySpecialty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2614,7 +2714,10 @@ namespace CopyAviziaUsers {
                         string UniqueValue, 
                         string Photo, 
                         string FileServiceKey, 
-                        string Country) {
+                        string Country, 
+                        string ExternalAuthUserName, 
+                        string VideoType, 
+                        string PrimarySpecialty) {
                 StaffUsersListRow rowStaffUsersListRow = ((StaffUsersListRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2705,7 +2808,10 @@ namespace CopyAviziaUsers {
                         UniqueValue,
                         Photo,
                         FileServiceKey,
-                        Country};
+                        Country,
+                        ExternalAuthUserName,
+                        VideoType,
+                        PrimarySpecialty};
                 rowStaffUsersListRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStaffUsersListRow);
                 return rowStaffUsersListRow;
@@ -2824,6 +2930,9 @@ namespace CopyAviziaUsers {
                 this.columnPhoto = base.Columns["Photo"];
                 this.columnFileServiceKey = base.Columns["FileServiceKey"];
                 this.columnCountry = base.Columns["Country"];
+                this.columnExternalAuthUserName = base.Columns["ExternalAuthUserName"];
+                this.columnVideoType = base.Columns["VideoType"];
+                this.columnPrimarySpecialty = base.Columns["PrimarySpecialty"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3007,6 +3116,12 @@ namespace CopyAviziaUsers {
                 base.Columns.Add(this.columnFileServiceKey);
                 this.columnCountry = new global::System.Data.DataColumn("Country", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCountry);
+                this.columnExternalAuthUserName = new global::System.Data.DataColumn("ExternalAuthUserName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExternalAuthUserName);
+                this.columnVideoType = new global::System.Data.DataColumn("VideoType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVideoType);
+                this.columnPrimarySpecialty = new global::System.Data.DataColumn("PrimarySpecialty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrimarySpecialty);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID}, true));
                 this.columnUserID.AutoIncrement = true;
@@ -3015,7 +3130,6 @@ namespace CopyAviziaUsers {
                 this.columnUserID.AllowDBNull = false;
                 this.columnUserID.ReadOnly = true;
                 this.columnUserID.Unique = true;
-                this.columnUserName.AllowDBNull = false;
                 this.columnUserName.MaxLength = 50;
                 this.columnPassword.MaxLength = 50;
                 this.columnEmail.MaxLength = 100;
@@ -3090,6 +3204,9 @@ namespace CopyAviziaUsers {
                 this.columnPhoto.MaxLength = 2147483647;
                 this.columnFileServiceKey.MaxLength = 300;
                 this.columnCountry.MaxLength = 250;
+                this.columnExternalAuthUserName.MaxLength = 100;
+                this.columnVideoType.MaxLength = 250;
+                this.columnPrimarySpecialty.MaxLength = 500;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3409,6 +3526,487 @@ namespace CopyAviziaUsers {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "zz_CopyGroupDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class zz_CopyUserGroupDataTable : global::System.Data.TypedTableBase<zz_CopyUserGroupRow> {
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUserGroupDataTable() {
+                this.TableName = "zz_CopyUserGroup";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal zz_CopyUserGroupDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected zz_CopyUserGroupDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUserGroupRow this[int index] {
+                get {
+                    return ((zz_CopyUserGroupRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUserGroupRowChangeEventHandler zz_CopyUserGroupRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUserGroupRowChangeEventHandler zz_CopyUserGroupRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUserGroupRowChangeEventHandler zz_CopyUserGroupRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUserGroupRowChangeEventHandler zz_CopyUserGroupRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addzz_CopyUserGroupRow(zz_CopyUserGroupRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUserGroupRow Addzz_CopyUserGroupRow() {
+                zz_CopyUserGroupRow rowzz_CopyUserGroupRow = ((zz_CopyUserGroupRow)(this.NewRow()));
+                object[] columnValuesArray = new object[0];
+                rowzz_CopyUserGroupRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowzz_CopyUserGroupRow);
+                return rowzz_CopyUserGroupRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                zz_CopyUserGroupDataTable cln = ((zz_CopyUserGroupDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new zz_CopyUserGroupDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUserGroupRow Newzz_CopyUserGroupRow() {
+                return ((zz_CopyUserGroupRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new zz_CopyUserGroupRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(zz_CopyUserGroupRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.zz_CopyUserGroupRowChanged != null)) {
+                    this.zz_CopyUserGroupRowChanged(this, new zz_CopyUserGroupRowChangeEvent(((zz_CopyUserGroupRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.zz_CopyUserGroupRowChanging != null)) {
+                    this.zz_CopyUserGroupRowChanging(this, new zz_CopyUserGroupRowChangeEvent(((zz_CopyUserGroupRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.zz_CopyUserGroupRowDeleted != null)) {
+                    this.zz_CopyUserGroupRowDeleted(this, new zz_CopyUserGroupRowChangeEvent(((zz_CopyUserGroupRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.zz_CopyUserGroupRowDeleting != null)) {
+                    this.zz_CopyUserGroupRowDeleting(this, new zz_CopyUserGroupRowChangeEvent(((zz_CopyUserGroupRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removezz_CopyUserGroupRow(zz_CopyUserGroupRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DsTo ds = new DsTo();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "zz_CopyUserGroupDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class zz_CopyUsersDataTable : global::System.Data.TypedTableBase<zz_CopyUsersRow> {
+            
+            private global::System.Data.DataColumn columnColumn1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUsersDataTable() {
+                this.TableName = "zz_CopyUsers";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal zz_CopyUsersDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected zz_CopyUsersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Column1Column {
+                get {
+                    return this.columnColumn1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUsersRow this[int index] {
+                get {
+                    return ((zz_CopyUsersRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUsersRowChangeEventHandler zz_CopyUsersRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUsersRowChangeEventHandler zz_CopyUsersRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUsersRowChangeEventHandler zz_CopyUsersRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event zz_CopyUsersRowChangeEventHandler zz_CopyUsersRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addzz_CopyUsersRow(zz_CopyUsersRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUsersRow Addzz_CopyUsersRow(int Column1) {
+                zz_CopyUsersRow rowzz_CopyUsersRow = ((zz_CopyUsersRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Column1};
+                rowzz_CopyUsersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowzz_CopyUsersRow);
+                return rowzz_CopyUsersRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                zz_CopyUsersDataTable cln = ((zz_CopyUsersDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new zz_CopyUsersDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnColumn1 = base.Columns["Column1"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn1);
+                this.columnColumn1.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUsersRow Newzz_CopyUsersRow() {
+                return ((zz_CopyUsersRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new zz_CopyUsersRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(zz_CopyUsersRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.zz_CopyUsersRowChanged != null)) {
+                    this.zz_CopyUsersRowChanged(this, new zz_CopyUsersRowChangeEvent(((zz_CopyUsersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.zz_CopyUsersRowChanging != null)) {
+                    this.zz_CopyUsersRowChanging(this, new zz_CopyUsersRowChangeEvent(((zz_CopyUsersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.zz_CopyUsersRowDeleted != null)) {
+                    this.zz_CopyUsersRowDeleted(this, new zz_CopyUsersRowChangeEvent(((zz_CopyUsersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.zz_CopyUsersRowDeleting != null)) {
+                    this.zz_CopyUsersRowDeleting(this, new zz_CopyUsersRowChangeEvent(((zz_CopyUsersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removezz_CopyUsersRow(zz_CopyUsersRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DsTo ds = new DsTo();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "zz_CopyUsersDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4639,7 +5237,12 @@ namespace CopyAviziaUsers {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string UserName {
                 get {
-                    return ((string)(this[this.tableStaffUsersList.UserNameColumn]));
+                    try {
+                        return ((string)(this[this.tableStaffUsersList.UserNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserName\' in table \'StaffUsersList\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStaffUsersList.UserNameColumn] = value;
@@ -6013,6 +6616,66 @@ namespace CopyAviziaUsers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ExternalAuthUserName {
+                get {
+                    try {
+                        return ((string)(this[this.tableStaffUsersList.ExternalAuthUserNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExternalAuthUserName\' in table \'StaffUsersList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStaffUsersList.ExternalAuthUserNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VideoType {
+                get {
+                    try {
+                        return ((string)(this[this.tableStaffUsersList.VideoTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VideoType\' in table \'StaffUsersList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStaffUsersList.VideoTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PrimarySpecialty {
+                get {
+                    try {
+                        return ((string)(this[this.tableStaffUsersList.PrimarySpecialtyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrimarySpecialty\' in table \'StaffUsersList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStaffUsersList.PrimarySpecialtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUserNameNull() {
+                return this.IsNull(this.tableStaffUsersList.UserNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUserNameNull() {
+                this[this.tableStaffUsersList.UserNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPasswordNull() {
                 return this.IsNull(this.tableStaffUsersList.PasswordColumn);
             }
@@ -6970,6 +7633,42 @@ namespace CopyAviziaUsers {
             public void SetCountryNull() {
                 this[this.tableStaffUsersList.CountryColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsExternalAuthUserNameNull() {
+                return this.IsNull(this.tableStaffUsersList.ExternalAuthUserNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetExternalAuthUserNameNull() {
+                this[this.tableStaffUsersList.ExternalAuthUserNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVideoTypeNull() {
+                return this.IsNull(this.tableStaffUsersList.VideoTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVideoTypeNull() {
+                this[this.tableStaffUsersList.VideoTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPrimarySpecialtyNull() {
+                return this.IsNull(this.tableStaffUsersList.PrimarySpecialtyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPrimarySpecialtyNull() {
+                this[this.tableStaffUsersList.PrimarySpecialtyColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -6984,6 +7683,64 @@ namespace CopyAviziaUsers {
             internal zz_CopyGroupRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tablezz_CopyGroup = ((zz_CopyGroupDataTable)(this.Table));
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class zz_CopyUserGroupRow : global::System.Data.DataRow {
+            
+            private zz_CopyUserGroupDataTable tablezz_CopyUserGroup;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal zz_CopyUserGroupRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablezz_CopyUserGroup = ((zz_CopyUserGroupDataTable)(this.Table));
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class zz_CopyUsersRow : global::System.Data.DataRow {
+            
+            private zz_CopyUsersDataTable tablezz_CopyUsers;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal zz_CopyUsersRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablezz_CopyUsers = ((zz_CopyUsersDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Column1 {
+                get {
+                    try {
+                        return ((int)(this[this.tablezz_CopyUsers.Column1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Column1\' in table \'zz_CopyUsers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablezz_CopyUsers.Column1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsColumn1Null() {
+                return this.IsNull(this.tablezz_CopyUsers.Column1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetColumn1Null() {
+                this[this.tablezz_CopyUsers.Column1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -7109,6 +7866,74 @@ namespace CopyAviziaUsers {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public zz_CopyGroupRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class zz_CopyUserGroupRowChangeEvent : global::System.EventArgs {
+            
+            private zz_CopyUserGroupRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUserGroupRowChangeEvent(zz_CopyUserGroupRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUserGroupRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class zz_CopyUsersRowChangeEvent : global::System.EventArgs {
+            
+            private zz_CopyUsersRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUsersRowChangeEvent(zz_CopyUsersRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public zz_CopyUsersRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9227,6 +10052,9 @@ FROM            rz_Group";
             tableMapping.ColumnMappings.Add("Photo", "Photo");
             tableMapping.ColumnMappings.Add("FileServiceKey", "FileServiceKey");
             tableMapping.ColumnMappings.Add("Country", "Country");
+            tableMapping.ColumnMappings.Add("ExternalAuthUserName", "ExternalAuthUserName");
+            tableMapping.ColumnMappings.Add("VideoType", "VideoType");
+            tableMapping.ColumnMappings.Add("PrimarySpecialty", "PrimarySpecialty");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -9243,8 +10071,40 @@ FROM            rz_Group";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT rz_User.* FROM rz_User INNER JOIN rz_UserRoles ON rz_User.UserID = rz_User" +
-                "Roles.UserID where Role = 2";
+            this._commandCollection[0].CommandText = "SELECT        rz_User.UserID,REPLACE(rz_User.UserName,\'\'\'\',\'@@\')UserName, rz_User" +
+                ".Password, rz_User.Email,REPLACE( rz_User.FirstName ,\'\'\'\',\'@@\')FirstName,REPLACE" +
+                "( rz_User.LastName ,\'\'\'\',\'@@\')LastName, rz_User.MiddleName, rz_User.CellPhone, \r" +
+                "\n                         rz_User.WorkPhone, rz_User.HomePhone, rz_User.DOB, rz_" +
+                "User.GUID, rz_User.DateCreated, rz_User.DateEdited, rz_User.DateDeleted, rz_User" +
+                ".CreatedBy, \r\n                         rz_User.IsPublic, rz_User.IsDomain, rz_Us" +
+                "er.Inactive, rz_User.ReasonInactive, rz_User.ChangePassword, rz_User.Verified, r" +
+                "z_User.Online, rz_User.IsDeleted, \r\n                         rz_User.agreed_term" +
+                "s, rz_User.ResponseID, rz_User.PreferredLanguage, rz_User.FailedLoginAttempts, r" +
+                "z_User.LastLogin, rz_User.LastActive, \r\n                         rz_User.HealthV" +
+                "aultID, rz_User.GoogleUserName, rz_User.GooglePassword, rz_User.ConferencingUser" +
+                "Name, rz_User.ConferencingPassword, rz_User.IsLocked, \r\n                        " +
+                " rz_User.City, rz_User.State, rz_User.Contact, rz_User.ContactPhone, rz_User.Phy" +
+                "sPhone, rz_User.ZipCode, rz_User.Sex, rz_User.StaffNPI, \r\n                      " +
+                "   rz_User.StaffDEANumber, rz_User.StaffMedicalLicenseNumber, rz_User.StaffCrede" +
+                "ntials, rz_User.PagerNumber, rz_User.FaxNumber, rz_User.Address1, \r\n            " +
+                "             rz_User.Address2, rz_User.PhysName, rz_User.PhysAddress, rz_User.on" +
+                "epassuserid, rz_User.TelepresenceNumber, rz_User.ImportedUserID, rz_User.MRN, \r\n" +
+                "                         rz_User.CellPhoneVerified, rz_User.ExternalID, rz_User." +
+                "ExternalUserID, rz_User.SourceFacility, rz_User.SourceFacility_FacilityID, rz_Us" +
+                "er.onepass_agreed_terms, \r\n                         rz_User.PatientNotes, rz_Use" +
+                "r.XmppUserName, rz_User.XmppPassword, rz_User.GroupPager, rz_User.AnsweringServi" +
+                "cePhone, rz_User.AdditionalLocationPhone, \r\n                         rz_User.Con" +
+                "tactPrefVoiceOnCall, rz_User.ContactPrefVoiceOffCall, rz_User.ContactPrefNotific" +
+                "ationOnCall, rz_User.ContactPrefNotificationOffCall, \r\n                         " +
+                "rz_User.UniquePatientGUID, rz_User.vCard, rz_User.PracticeAreas, rz_User.Practic" +
+                "eFacilities, rz_User.PracticeZipCodes, rz_User.SSN, rz_User.Race, \r\n            " +
+                "             rz_User.ParentUserID, \r\n                         rz_User.SearchValu" +
+                "es, rz_User.VideoAddress, rz_User.UniqueValue, rz_User.Photo,\t\t\t\t\t  \r\n\t\t\t\t\t\t   r" +
+                "z_User.Country, \r\n                         rz_User.FileServiceKey, rz_User.Exter" +
+                "nalAuthUserName, rz_User.VideoType,\t\t\t\t\t \r\n                         rz_User.Prim" +
+                "arySpecialty\r\nFROM            rz_User INNER JOIN\r\n                         rz_Us" +
+                "erRoles ON rz_User.UserID = rz_UserRoles.UserID\r\nWHERE        (rz_UserRoles.Role" +
+                " = 2)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10032,6 +10892,1519 @@ FROM            rz_Group";
                 this.Adapter.SelectCommand.Parameters[40].Value = ((string)(AtomIconUrl));
             }
             DsTo.zz_CopyGroupDataTable dataTable = new DsTo.zz_CopyGroupDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class zz_CopyUserGroupTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public zz_CopyUserGroupTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CopyAviziaUsers.Properties.Settings.Default.ConStrTo;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.zz_CopyUserGroup";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DsTo.zz_CopyUserGroupDataTable dataTable, global::System.Nullable<int> UserId, string GroupName) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((UserId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((GroupName == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(GroupName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DsTo.zz_CopyUserGroupDataTable GetData(global::System.Nullable<int> UserId, string GroupName) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((UserId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((GroupName == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(GroupName));
+            }
+            DsTo.zz_CopyUserGroupDataTable dataTable = new DsTo.zz_CopyUserGroupDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class zz_CopyUsersTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public zz_CopyUsersTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "zz_CopyUsers";
+            tableMapping.ColumnMappings.Add("Column1", "Column1");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CopyAviziaUsers.Properties.Settings.Default.ConStrTo;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.zz_CopyUsers";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MiddleName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CellPhone", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkPhone", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HomePhone", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOB", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GUID", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateCreated", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateedited", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateDeleted", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreatedBy", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsPublic", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDomain", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Inactive", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReasonInactive", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ChangePassword", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Verified", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Online", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDeleted", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agreed_terms", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ResponseID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PreferredLanguage", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FailedLoginAttempts", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastLogin", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastActive", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoogleUserName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GooglePassword", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConferencingUserName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConferencingPassword", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsLocked", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@State", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ZipCode", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sex", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffNPI", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffDEANumber", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffMedicalLicenseNumber", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PagerNumber", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FaxNumber", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address1", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address2", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@onepassuserid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MRN", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CellPhoneVerified", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExternalID", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExternalUserID", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SourceFacility", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SourceFacility_FacilityID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@onepass_agreed_terms", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@XmppUserName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@XmppPassword", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupPager", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnsweringServicePhone", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdditionalLocationPhone", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPrefVoiceOnCall", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPrefVoiceOffCall", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPrefNotificationOnCall", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPrefNotificationOffCall", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UniquePatientGUID", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@vCard", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PracticeAreas", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PracticeFacilities", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PracticeZipCodes", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SSN", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Race", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VideoAddress", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UniqueValue", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Country", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileServiceKey", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExternalAuthUserName", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VideoType", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrimarySpecialty", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(
+                    DsTo.zz_CopyUsersDataTable dataTable, 
+                    string UserName, 
+                    string Password, 
+                    string Email, 
+                    string FirstName, 
+                    string LastName, 
+                    string MiddleName, 
+                    string CellPhone, 
+                    string WorkPhone, 
+                    string HomePhone, 
+                    global::System.Nullable<global::System.DateTime> DOB, 
+                    string GUID, 
+                    global::System.Nullable<global::System.DateTime> DateCreated, 
+                    global::System.Nullable<global::System.DateTime> dateedited, 
+                    global::System.Nullable<global::System.DateTime> DateDeleted, 
+                    global::System.Nullable<int> CreatedBy, 
+                    global::System.Nullable<int> IsPublic, 
+                    global::System.Nullable<bool> IsDomain, 
+                    string Inactive, 
+                    string ReasonInactive, 
+                    global::System.Nullable<bool> ChangePassword, 
+                    string Verified, 
+                    string Online, 
+                    global::System.Nullable<bool> IsDeleted, 
+                    global::System.Nullable<bool> agreed_terms, 
+                    global::System.Nullable<int> ResponseID, 
+                    string PreferredLanguage, 
+                    global::System.Nullable<int> FailedLoginAttempts, 
+                    global::System.Nullable<global::System.DateTime> LastLogin, 
+                    global::System.Nullable<global::System.DateTime> LastActive, 
+                    string GoogleUserName, 
+                    string GooglePassword, 
+                    string ConferencingUserName, 
+                    string ConferencingPassword, 
+                    global::System.Nullable<bool> IsLocked, 
+                    string City, 
+                    string State, 
+                    string ZipCode, 
+                    string Sex, 
+                    string StaffNPI, 
+                    string StaffDEANumber, 
+                    string StaffMedicalLicenseNumber, 
+                    string PagerNumber, 
+                    string FaxNumber, 
+                    string Address1, 
+                    string Address2, 
+                    global::System.Nullable<int> onepassuserid, 
+                    string MRN, 
+                    global::System.Nullable<bool> CellPhoneVerified, 
+                    string ExternalID, 
+                    string ExternalUserID, 
+                    string SourceFacility, 
+                    global::System.Nullable<int> SourceFacility_FacilityID, 
+                    global::System.Nullable<bool> onepass_agreed_terms, 
+                    string XmppUserName, 
+                    string XmppPassword, 
+                    string GroupPager, 
+                    string AnsweringServicePhone, 
+                    string AdditionalLocationPhone, 
+                    string ContactPrefVoiceOnCall, 
+                    string ContactPrefVoiceOffCall, 
+                    string ContactPrefNotificationOnCall, 
+                    string ContactPrefNotificationOffCall, 
+                    string UniquePatientGUID, 
+                    string vCard, 
+                    string PracticeAreas, 
+                    string PracticeFacilities, 
+                    string PracticeZipCodes, 
+                    string SSN, 
+                    string Race, 
+                    string VideoAddress, 
+                    string UniqueValue, 
+                    string Photo, 
+                    string Country, 
+                    string FileServiceKey, 
+                    string ExternalAuthUserName, 
+                    string VideoType, 
+                    string PrimarySpecialty) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((UserName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(UserName));
+            }
+            if ((Password == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Password));
+            }
+            if ((Email == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Email));
+            }
+            if ((FirstName == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(FirstName));
+            }
+            if ((LastName == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(LastName));
+            }
+            if ((MiddleName == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(MiddleName));
+            }
+            if ((CellPhone == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(CellPhone));
+            }
+            if ((WorkPhone == null)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((string)(WorkPhone));
+            }
+            if ((HomePhone == null)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((string)(HomePhone));
+            }
+            if ((DOB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((System.DateTime)(DOB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((GUID == null)) {
+                this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[11].Value = ((string)(GUID));
+            }
+            if ((DateCreated.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((System.DateTime)(DateCreated.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((dateedited.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[13].Value = ((System.DateTime)(dateedited.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((DateDeleted.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[14].Value = ((System.DateTime)(DateDeleted.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((CreatedBy.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(CreatedBy.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((IsPublic.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(IsPublic.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((IsDomain.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[17].Value = ((bool)(IsDomain.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Inactive == null)) {
+                this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[18].Value = ((string)(Inactive));
+            }
+            if ((ReasonInactive == null)) {
+                this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[19].Value = ((string)(ReasonInactive));
+            }
+            if ((ChangePassword.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[20].Value = ((bool)(ChangePassword.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Verified == null)) {
+                this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[21].Value = ((string)(Verified));
+            }
+            if ((Online == null)) {
+                this.Adapter.SelectCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[22].Value = ((string)(Online));
+            }
+            if ((IsDeleted.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[23].Value = ((bool)(IsDeleted.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((agreed_terms.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[24].Value = ((bool)(agreed_terms.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((ResponseID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[25].Value = ((int)(ResponseID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((PreferredLanguage == null)) {
+                this.Adapter.SelectCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[26].Value = ((string)(PreferredLanguage));
+            }
+            if ((FailedLoginAttempts.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[27].Value = ((int)(FailedLoginAttempts.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((LastLogin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[28].Value = ((System.DateTime)(LastLogin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((LastActive.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[29].Value = ((System.DateTime)(LastActive.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((GoogleUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[30].Value = ((string)(GoogleUserName));
+            }
+            if ((GooglePassword == null)) {
+                this.Adapter.SelectCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[31].Value = ((string)(GooglePassword));
+            }
+            if ((ConferencingUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[32].Value = ((string)(ConferencingUserName));
+            }
+            if ((ConferencingPassword == null)) {
+                this.Adapter.SelectCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[33].Value = ((string)(ConferencingPassword));
+            }
+            if ((IsLocked.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[34].Value = ((bool)(IsLocked.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((City == null)) {
+                this.Adapter.SelectCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[35].Value = ((string)(City));
+            }
+            if ((State == null)) {
+                this.Adapter.SelectCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[36].Value = ((string)(State));
+            }
+            if ((ZipCode == null)) {
+                this.Adapter.SelectCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[37].Value = ((string)(ZipCode));
+            }
+            if ((Sex == null)) {
+                this.Adapter.SelectCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[38].Value = ((string)(Sex));
+            }
+            if ((StaffNPI == null)) {
+                this.Adapter.SelectCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[39].Value = ((string)(StaffNPI));
+            }
+            if ((StaffDEANumber == null)) {
+                this.Adapter.SelectCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[40].Value = ((string)(StaffDEANumber));
+            }
+            if ((StaffMedicalLicenseNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[41].Value = ((string)(StaffMedicalLicenseNumber));
+            }
+            if ((PagerNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[42].Value = ((string)(PagerNumber));
+            }
+            if ((FaxNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[43].Value = ((string)(FaxNumber));
+            }
+            if ((Address1 == null)) {
+                this.Adapter.SelectCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[44].Value = ((string)(Address1));
+            }
+            if ((Address2 == null)) {
+                this.Adapter.SelectCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[45].Value = ((string)(Address2));
+            }
+            if ((onepassuserid.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[46].Value = ((int)(onepassuserid.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((MRN == null)) {
+                this.Adapter.SelectCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[47].Value = ((string)(MRN));
+            }
+            if ((CellPhoneVerified.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[48].Value = ((bool)(CellPhoneVerified.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((ExternalID == null)) {
+                this.Adapter.SelectCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[49].Value = ((string)(ExternalID));
+            }
+            if ((ExternalUserID == null)) {
+                this.Adapter.SelectCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[50].Value = ((string)(ExternalUserID));
+            }
+            if ((SourceFacility == null)) {
+                this.Adapter.SelectCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[51].Value = ((string)(SourceFacility));
+            }
+            if ((SourceFacility_FacilityID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[52].Value = ((int)(SourceFacility_FacilityID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((onepass_agreed_terms.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[53].Value = ((bool)(onepass_agreed_terms.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            if ((XmppUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[54].Value = ((string)(XmppUserName));
+            }
+            if ((XmppPassword == null)) {
+                this.Adapter.SelectCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[55].Value = ((string)(XmppPassword));
+            }
+            if ((GroupPager == null)) {
+                this.Adapter.SelectCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[56].Value = ((string)(GroupPager));
+            }
+            if ((AnsweringServicePhone == null)) {
+                this.Adapter.SelectCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[57].Value = ((string)(AnsweringServicePhone));
+            }
+            if ((AdditionalLocationPhone == null)) {
+                this.Adapter.SelectCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[58].Value = ((string)(AdditionalLocationPhone));
+            }
+            if ((ContactPrefVoiceOnCall == null)) {
+                this.Adapter.SelectCommand.Parameters[59].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[59].Value = ((string)(ContactPrefVoiceOnCall));
+            }
+            if ((ContactPrefVoiceOffCall == null)) {
+                this.Adapter.SelectCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[60].Value = ((string)(ContactPrefVoiceOffCall));
+            }
+            if ((ContactPrefNotificationOnCall == null)) {
+                this.Adapter.SelectCommand.Parameters[61].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[61].Value = ((string)(ContactPrefNotificationOnCall));
+            }
+            if ((ContactPrefNotificationOffCall == null)) {
+                this.Adapter.SelectCommand.Parameters[62].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[62].Value = ((string)(ContactPrefNotificationOffCall));
+            }
+            if ((UniquePatientGUID == null)) {
+                this.Adapter.SelectCommand.Parameters[63].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[63].Value = ((string)(UniquePatientGUID));
+            }
+            if ((vCard == null)) {
+                this.Adapter.SelectCommand.Parameters[64].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[64].Value = ((string)(vCard));
+            }
+            if ((PracticeAreas == null)) {
+                this.Adapter.SelectCommand.Parameters[65].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[65].Value = ((string)(PracticeAreas));
+            }
+            if ((PracticeFacilities == null)) {
+                this.Adapter.SelectCommand.Parameters[66].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[66].Value = ((string)(PracticeFacilities));
+            }
+            if ((PracticeZipCodes == null)) {
+                this.Adapter.SelectCommand.Parameters[67].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[67].Value = ((string)(PracticeZipCodes));
+            }
+            if ((SSN == null)) {
+                this.Adapter.SelectCommand.Parameters[68].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[68].Value = ((string)(SSN));
+            }
+            if ((Race == null)) {
+                this.Adapter.SelectCommand.Parameters[69].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[69].Value = ((string)(Race));
+            }
+            if ((VideoAddress == null)) {
+                this.Adapter.SelectCommand.Parameters[70].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[70].Value = ((string)(VideoAddress));
+            }
+            if ((UniqueValue == null)) {
+                this.Adapter.SelectCommand.Parameters[71].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[71].Value = ((string)(UniqueValue));
+            }
+            if ((Photo == null)) {
+                this.Adapter.SelectCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[72].Value = ((string)(Photo));
+            }
+            if ((Country == null)) {
+                this.Adapter.SelectCommand.Parameters[73].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[73].Value = ((string)(Country));
+            }
+            if ((FileServiceKey == null)) {
+                this.Adapter.SelectCommand.Parameters[74].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[74].Value = ((string)(FileServiceKey));
+            }
+            if ((ExternalAuthUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[75].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[75].Value = ((string)(ExternalAuthUserName));
+            }
+            if ((VideoType == null)) {
+                this.Adapter.SelectCommand.Parameters[76].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[76].Value = ((string)(VideoType));
+            }
+            if ((PrimarySpecialty == null)) {
+                this.Adapter.SelectCommand.Parameters[77].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[77].Value = ((string)(PrimarySpecialty));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DsTo.zz_CopyUsersDataTable GetData(
+                    string UserName, 
+                    string Password, 
+                    string Email, 
+                    string FirstName, 
+                    string LastName, 
+                    string MiddleName, 
+                    string CellPhone, 
+                    string WorkPhone, 
+                    string HomePhone, 
+                    global::System.Nullable<global::System.DateTime> DOB, 
+                    string GUID, 
+                    global::System.Nullable<global::System.DateTime> DateCreated, 
+                    global::System.Nullable<global::System.DateTime> dateedited, 
+                    global::System.Nullable<global::System.DateTime> DateDeleted, 
+                    global::System.Nullable<int> CreatedBy, 
+                    global::System.Nullable<int> IsPublic, 
+                    global::System.Nullable<bool> IsDomain, 
+                    string Inactive, 
+                    string ReasonInactive, 
+                    global::System.Nullable<bool> ChangePassword, 
+                    string Verified, 
+                    string Online, 
+                    global::System.Nullable<bool> IsDeleted, 
+                    global::System.Nullable<bool> agreed_terms, 
+                    global::System.Nullable<int> ResponseID, 
+                    string PreferredLanguage, 
+                    global::System.Nullable<int> FailedLoginAttempts, 
+                    global::System.Nullable<global::System.DateTime> LastLogin, 
+                    global::System.Nullable<global::System.DateTime> LastActive, 
+                    string GoogleUserName, 
+                    string GooglePassword, 
+                    string ConferencingUserName, 
+                    string ConferencingPassword, 
+                    global::System.Nullable<bool> IsLocked, 
+                    string City, 
+                    string State, 
+                    string ZipCode, 
+                    string Sex, 
+                    string StaffNPI, 
+                    string StaffDEANumber, 
+                    string StaffMedicalLicenseNumber, 
+                    string PagerNumber, 
+                    string FaxNumber, 
+                    string Address1, 
+                    string Address2, 
+                    global::System.Nullable<int> onepassuserid, 
+                    string MRN, 
+                    global::System.Nullable<bool> CellPhoneVerified, 
+                    string ExternalID, 
+                    string ExternalUserID, 
+                    string SourceFacility, 
+                    global::System.Nullable<int> SourceFacility_FacilityID, 
+                    global::System.Nullable<bool> onepass_agreed_terms, 
+                    string XmppUserName, 
+                    string XmppPassword, 
+                    string GroupPager, 
+                    string AnsweringServicePhone, 
+                    string AdditionalLocationPhone, 
+                    string ContactPrefVoiceOnCall, 
+                    string ContactPrefVoiceOffCall, 
+                    string ContactPrefNotificationOnCall, 
+                    string ContactPrefNotificationOffCall, 
+                    string UniquePatientGUID, 
+                    string vCard, 
+                    string PracticeAreas, 
+                    string PracticeFacilities, 
+                    string PracticeZipCodes, 
+                    string SSN, 
+                    string Race, 
+                    string VideoAddress, 
+                    string UniqueValue, 
+                    string Photo, 
+                    string Country, 
+                    string FileServiceKey, 
+                    string ExternalAuthUserName, 
+                    string VideoType, 
+                    string PrimarySpecialty) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((UserName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(UserName));
+            }
+            if ((Password == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Password));
+            }
+            if ((Email == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Email));
+            }
+            if ((FirstName == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(FirstName));
+            }
+            if ((LastName == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(LastName));
+            }
+            if ((MiddleName == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(MiddleName));
+            }
+            if ((CellPhone == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(CellPhone));
+            }
+            if ((WorkPhone == null)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((string)(WorkPhone));
+            }
+            if ((HomePhone == null)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((string)(HomePhone));
+            }
+            if ((DOB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((System.DateTime)(DOB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((GUID == null)) {
+                this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[11].Value = ((string)(GUID));
+            }
+            if ((DateCreated.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((System.DateTime)(DateCreated.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((dateedited.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[13].Value = ((System.DateTime)(dateedited.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((DateDeleted.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[14].Value = ((System.DateTime)(DateDeleted.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((CreatedBy.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(CreatedBy.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((IsPublic.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(IsPublic.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((IsDomain.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[17].Value = ((bool)(IsDomain.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Inactive == null)) {
+                this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[18].Value = ((string)(Inactive));
+            }
+            if ((ReasonInactive == null)) {
+                this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[19].Value = ((string)(ReasonInactive));
+            }
+            if ((ChangePassword.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[20].Value = ((bool)(ChangePassword.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Verified == null)) {
+                this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[21].Value = ((string)(Verified));
+            }
+            if ((Online == null)) {
+                this.Adapter.SelectCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[22].Value = ((string)(Online));
+            }
+            if ((IsDeleted.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[23].Value = ((bool)(IsDeleted.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((agreed_terms.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[24].Value = ((bool)(agreed_terms.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((ResponseID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[25].Value = ((int)(ResponseID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((PreferredLanguage == null)) {
+                this.Adapter.SelectCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[26].Value = ((string)(PreferredLanguage));
+            }
+            if ((FailedLoginAttempts.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[27].Value = ((int)(FailedLoginAttempts.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((LastLogin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[28].Value = ((System.DateTime)(LastLogin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((LastActive.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[29].Value = ((System.DateTime)(LastActive.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((GoogleUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[30].Value = ((string)(GoogleUserName));
+            }
+            if ((GooglePassword == null)) {
+                this.Adapter.SelectCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[31].Value = ((string)(GooglePassword));
+            }
+            if ((ConferencingUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[32].Value = ((string)(ConferencingUserName));
+            }
+            if ((ConferencingPassword == null)) {
+                this.Adapter.SelectCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[33].Value = ((string)(ConferencingPassword));
+            }
+            if ((IsLocked.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[34].Value = ((bool)(IsLocked.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((City == null)) {
+                this.Adapter.SelectCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[35].Value = ((string)(City));
+            }
+            if ((State == null)) {
+                this.Adapter.SelectCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[36].Value = ((string)(State));
+            }
+            if ((ZipCode == null)) {
+                this.Adapter.SelectCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[37].Value = ((string)(ZipCode));
+            }
+            if ((Sex == null)) {
+                this.Adapter.SelectCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[38].Value = ((string)(Sex));
+            }
+            if ((StaffNPI == null)) {
+                this.Adapter.SelectCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[39].Value = ((string)(StaffNPI));
+            }
+            if ((StaffDEANumber == null)) {
+                this.Adapter.SelectCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[40].Value = ((string)(StaffDEANumber));
+            }
+            if ((StaffMedicalLicenseNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[41].Value = ((string)(StaffMedicalLicenseNumber));
+            }
+            if ((PagerNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[42].Value = ((string)(PagerNumber));
+            }
+            if ((FaxNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[43].Value = ((string)(FaxNumber));
+            }
+            if ((Address1 == null)) {
+                this.Adapter.SelectCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[44].Value = ((string)(Address1));
+            }
+            if ((Address2 == null)) {
+                this.Adapter.SelectCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[45].Value = ((string)(Address2));
+            }
+            if ((onepassuserid.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[46].Value = ((int)(onepassuserid.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((MRN == null)) {
+                this.Adapter.SelectCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[47].Value = ((string)(MRN));
+            }
+            if ((CellPhoneVerified.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[48].Value = ((bool)(CellPhoneVerified.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((ExternalID == null)) {
+                this.Adapter.SelectCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[49].Value = ((string)(ExternalID));
+            }
+            if ((ExternalUserID == null)) {
+                this.Adapter.SelectCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[50].Value = ((string)(ExternalUserID));
+            }
+            if ((SourceFacility == null)) {
+                this.Adapter.SelectCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[51].Value = ((string)(SourceFacility));
+            }
+            if ((SourceFacility_FacilityID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[52].Value = ((int)(SourceFacility_FacilityID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((onepass_agreed_terms.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[53].Value = ((bool)(onepass_agreed_terms.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            if ((XmppUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[54].Value = ((string)(XmppUserName));
+            }
+            if ((XmppPassword == null)) {
+                this.Adapter.SelectCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[55].Value = ((string)(XmppPassword));
+            }
+            if ((GroupPager == null)) {
+                this.Adapter.SelectCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[56].Value = ((string)(GroupPager));
+            }
+            if ((AnsweringServicePhone == null)) {
+                this.Adapter.SelectCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[57].Value = ((string)(AnsweringServicePhone));
+            }
+            if ((AdditionalLocationPhone == null)) {
+                this.Adapter.SelectCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[58].Value = ((string)(AdditionalLocationPhone));
+            }
+            if ((ContactPrefVoiceOnCall == null)) {
+                this.Adapter.SelectCommand.Parameters[59].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[59].Value = ((string)(ContactPrefVoiceOnCall));
+            }
+            if ((ContactPrefVoiceOffCall == null)) {
+                this.Adapter.SelectCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[60].Value = ((string)(ContactPrefVoiceOffCall));
+            }
+            if ((ContactPrefNotificationOnCall == null)) {
+                this.Adapter.SelectCommand.Parameters[61].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[61].Value = ((string)(ContactPrefNotificationOnCall));
+            }
+            if ((ContactPrefNotificationOffCall == null)) {
+                this.Adapter.SelectCommand.Parameters[62].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[62].Value = ((string)(ContactPrefNotificationOffCall));
+            }
+            if ((UniquePatientGUID == null)) {
+                this.Adapter.SelectCommand.Parameters[63].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[63].Value = ((string)(UniquePatientGUID));
+            }
+            if ((vCard == null)) {
+                this.Adapter.SelectCommand.Parameters[64].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[64].Value = ((string)(vCard));
+            }
+            if ((PracticeAreas == null)) {
+                this.Adapter.SelectCommand.Parameters[65].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[65].Value = ((string)(PracticeAreas));
+            }
+            if ((PracticeFacilities == null)) {
+                this.Adapter.SelectCommand.Parameters[66].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[66].Value = ((string)(PracticeFacilities));
+            }
+            if ((PracticeZipCodes == null)) {
+                this.Adapter.SelectCommand.Parameters[67].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[67].Value = ((string)(PracticeZipCodes));
+            }
+            if ((SSN == null)) {
+                this.Adapter.SelectCommand.Parameters[68].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[68].Value = ((string)(SSN));
+            }
+            if ((Race == null)) {
+                this.Adapter.SelectCommand.Parameters[69].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[69].Value = ((string)(Race));
+            }
+            if ((VideoAddress == null)) {
+                this.Adapter.SelectCommand.Parameters[70].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[70].Value = ((string)(VideoAddress));
+            }
+            if ((UniqueValue == null)) {
+                this.Adapter.SelectCommand.Parameters[71].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[71].Value = ((string)(UniqueValue));
+            }
+            if ((Photo == null)) {
+                this.Adapter.SelectCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[72].Value = ((string)(Photo));
+            }
+            if ((Country == null)) {
+                this.Adapter.SelectCommand.Parameters[73].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[73].Value = ((string)(Country));
+            }
+            if ((FileServiceKey == null)) {
+                this.Adapter.SelectCommand.Parameters[74].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[74].Value = ((string)(FileServiceKey));
+            }
+            if ((ExternalAuthUserName == null)) {
+                this.Adapter.SelectCommand.Parameters[75].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[75].Value = ((string)(ExternalAuthUserName));
+            }
+            if ((VideoType == null)) {
+                this.Adapter.SelectCommand.Parameters[76].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[76].Value = ((string)(VideoType));
+            }
+            if ((PrimarySpecialty == null)) {
+                this.Adapter.SelectCommand.Parameters[77].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[77].Value = ((string)(PrimarySpecialty));
+            }
+            DsTo.zz_CopyUsersDataTable dataTable = new DsTo.zz_CopyUsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

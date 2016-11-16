@@ -51,6 +51,7 @@
             this.lblTotalMissingGroups = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMissingUsersCount = new System.Windows.Forms.Label();
+            this.btnCopyUsers = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvMissingUsers)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -82,11 +83,14 @@
             // gvMissingUsers
             // 
             this.gvMissingUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvMissingUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnCopyUsers});
             this.gvMissingUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvMissingUsers.Location = new System.Drawing.Point(3, 354);
             this.gvMissingUsers.Name = "gvMissingUsers";
             this.gvMissingUsers.Size = new System.Drawing.Size(1290, 229);
             this.gvMissingUsers.TabIndex = 3;
+            this.gvMissingUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMissingUsers_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
@@ -348,6 +352,11 @@
             this.lblMissingUsersCount.Text = "Missing Users Count :";
             this.lblMissingUsersCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnCopyUsers
+            // 
+            this.btnCopyUsers.HeaderText = "Copy User";
+            this.btnCopyUsers.Name = "btnCopyUsers";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +408,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label lblMissingUsersCount;
         private System.Windows.Forms.DataGridViewButtonColumn btnCopyGroup;
+        private System.Windows.Forms.DataGridViewButtonColumn btnCopyUsers;
     }
 }
 
